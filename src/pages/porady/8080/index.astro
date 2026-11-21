@@ -1,9 +1,0 @@
----
-import BaseLayout from '../../../layouts/BaseLayout.astro';
-import markup from '../../../sections/article.html?raw';
-import '../../../styles/article.css';
-import { withBase } from '../../../lib';
----
-<BaseLayout title="Dziwny SMS? Prześlij go na 8080 · Mikołaj Borawski" description="Krótki poradnik dla mieszkańców: co zrobić z podejrzanym SMS-em i jak zgłosić go do CERT Polska na numer 8080." lang="pl" mountName="article">
-  <Fragment set:html={withBase(markup)} />
-</BaseLayout>

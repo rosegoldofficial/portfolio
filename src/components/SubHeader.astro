@@ -1,0 +1,25 @@
+---
+// Simple sticky header for subpages (posts, case study, media kit, legal).
+interface Props { back?: { href: string; label: string }; lang?: 'pl' | 'en' }
+const { back, lang = 'pl' } = Astro.props;
+const base = import.meta.env.BASE_URL.replace(/\/$/, '');
+const home = lang === 'en' ? `${base}/en/` : `${base}/`;
+---
+<header class="hdr sub-hdr">
+  <a href={home} class="sub-logo">borawski<span>_</span></a>
+  <div class="sub-right">
+    {back && <a href={`${base}${back.href}`} class="sub-back">← {back.label}</a>}
+    <a href={lang === 'en' ? 'mailto:kontakt@mikolajborawski.pl' : `${base}/#zapytaj`} class="btn sub-cta">{lang === 'en' ? 'Contact' : 'Kontakt'}</a>
+  </div>
+</header>
+<style>
+  .sub-hdr { display: flex; justify-content: space-between; align-items: center; gap: 16px; padding: 18px 64px; }
+  .sub-logo { font-weight: 700; font-size: 18px; text-decoration: none; color: var(--ink); }
+  .sub-logo span { color: var(--accent); }
+  .sub-right { display: flex; gap: 8px; align-items: center; }
+  .sub-back { display: inline-flex; align-items: center; min-height: 44px; padding: 0 18px; border-radius: 999px; border: 1px solid var(--line-strong); text-decoration: none; font-size: 14px; color: var(--ink); transition: border-color .25s, transform .25s; }
+  .sub-back:hover { border-color: var(--accent); transform: translateX(-2px); }
+  .sub-cta { display: inline-flex; align-items: center; min-height: 44px; padding: 0 20px; border-radius: 999px; background: var(--accent); color: var(--on-accent); text-decoration: none; font-weight: 600; font-size: 14px; }
+  @media (max-width: 900px) { .sub-hdr { padding: 14px 20px; } }
+  @media (max-width: 480px) { .sub-cta { display: none; } }
+</style>

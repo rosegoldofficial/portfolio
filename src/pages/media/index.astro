@@ -1,0 +1,96 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import SubHeader from '../../components/SubHeader.astro';
+import { icon } from '../../lib/icons';
+import '../../styles/prose.css';
+import '../../styles/pages.css';
+const base = import.meta.env.BASE_URL.replace(/\/$/, '');
+const bioShort = 'Mikołaj Borawski (21 l.) z Częstochowy, z dzielnicy Kiedrzyn. Współkoordynował zbiórkę podpisów pod referendum w sprawie odwołania władz miasta w 2026 roku. Zajmuje się cyberbezpieczeństwem i jawnością finansów samorządu.';
+const bioLong = 'Mikołaj Borawski ma 21 lat, urodził się i mieszka w Częstochowie, w dzielnicy Kiedrzyn. W 2026 roku współkoordynował zbiórkę podpisów pod wnioskiem o referendum w sprawie odwołania prezydenta i rady miasta; pod wnioskiem złożono 22 441 podpisów. Interesuje się cyberbezpieczeństwem, szczególnie wykrywaniem zagrożeń i analizą oszustw internetowych, i prowadzi poradnik „Bezpiecznie w sieci” dla mieszkańców. Rozwija z zespołem platformę gier online DungeonHub. Przez 11 lat trenował lekkoatletykę w CKS Budowlani Częstochowa, startował w Mistrzostwach Polski U16. Zawodowo zajmuje się marketingiem i obsługą klienta.';
+const photos = [
+  { f: 'mikolaj-borawski-portret-ciemne.jpg', l: 'Portret, ciemne tło', s: 'JPG · 1113×1392' },
+  { f: 'mikolaj-borawski-portret-jasne.jpg', l: 'Portret, jasne tło', s: 'JPG · 1113×1392' },
+  { f: 'mikolaj-borawski-portret-przezroczyste.png', l: 'Portret bez tła', s: 'PNG · 787×1392', check: true }
+];
+---
+<BaseLayout title="Dla mediów · Mikołaj Borawski" description="Materiały prasowe: biogram, fakty, zdjęcia do pobrania i kontakt dla dziennikarzy.">
+  <div class="page">
+    <SubHeader back={{ href: '/', label: 'Strona główna' }} />
+    <main class="art art--wide">
+      <div class="hero2">
+        <span class="kick in1">~/dla-mediow</span>
+        <h1 class="in2">Dla mediów</h1>
+        <p class="art__lead in3">Biogram, najważniejsze fakty i zdjęcia do pobrania. Wszystko możesz wykorzystać w publikacji. Przy zdjęciach podpisz: fot. archiwum Mikołaja Borawskiego.</p>
+      </div>
+
+      <section class="sec">
+        <h2>Kontakt</h2>
+        <div class="cta-row">
+          <a class="tb tb--solid" href="mailto:kontakt@mikolajborawski.pl?subject=Media"><Fragment set:html={icon.mail(16)} />kontakt@mikolajborawski.pl</a>
+          <a class="tb" href="tel:+48510684160">+48 510 684 160</a>
+        </div>
+        <p class="prose" style="margin:0"><span style="font-size:17px;color:var(--ink-muted)">W temacie maila wpisz „Media”, odpowiadam najszybciej, jak mogę, zwykle tego samego dnia. Wypowiedzi autoryzuję szybko i bez zmieniania sensu.</span></p>
+      </section>
+
+      <section class="sec">
+        <h2>Biogram</h2>
+        <div class="copybox">
+          <header><span class="kick">krótki · {bioShort.length} znaków</span><button type="button" class="tb" data-copy={bioShort}>Kopiuj</button></header>
+          <p>{bioShort}</p>
+        </div>
+        <div class="copybox">
+          <header><span class="kick">dłuższy · {bioLong.length} znaków</span><button type="button" class="tb" data-copy={bioLong}>Kopiuj</button></header>
+          <p>{bioLong}</p>
+        </div>
+      </section>
+
+      <section class="sec">
+        <h2>Fakty</h2>
+        <dl class="facts">
+          <dt>imię i nazwisko</dt><dd>Mikołaj Borawski (pisownia z „ł”)</dd>
+          <dt>wiek</dt><dd>21 lat</dd>
+          <dt>miejsce</dt><dd>Częstochowa, Kiedrzyn</dd>
+          <dt>referendum 2026</dt><dd>współkoordynacja zbiórki podpisów; pod wnioskiem złożono 22 441 podpisów</dd>
+          <dt>zainteresowania</dt><dd>cyberbezpieczeństwo, jawność finansów miasta, sprawy młodych</dd>
+          <dt>sport</dt><dd>11 lat lekkoatletyki, CKS Budowlani Częstochowa, Mistrzostwa Polski U16 (2020)</dd>
+          <dt>projekt</dt><dd>DungeonHub, platforma gier online rozwijana z zespołem</dd>
+          <dt>strona</dt><dd>mikolajborawski.pl</dd>
+        </dl>
+      </section>
+
+      <section class="sec">
+        <h2>O czym mogę mówić</h2>
+        <div class="grid2">
+          <div class="mod"><span class="mod__n">01</span><h3>Oszustwa w sieci</h3><p>SMS-y „dopłać do paczki”, fałszywi konsultanci banku, podrobione głosy bliskich. Jak je rozpoznać i gdzie zgłaszać.</p></div>
+          <div class="mod"><span class="mod__n">02</span><h3>Jawność samorządu</h3><p>Nagrywanie komisji, protokoły w BIP i to, jak mieszkaniec może sprawdzić wydatki miasta.</p></div>
+          <div class="mod"><span class="mod__n">03</span><h3>Referendum od środka</h3><p>Jak wygląda zbiórka ponad 20 tysięcy podpisów: organizacja wolontariuszy, logistyka i terminy.</p></div>
+          <div class="mod"><span class="mod__n">04</span><h3>Młodzi w mieście</h3><p>Młodzieżowa Rada Miasta, pierwsza praca, powody, dla których młodzi wyjeżdżają z Częstochowy.</p></div>
+        </div>
+      </section>
+
+      <section class="sec">
+        <h2>Zdjęcia</h2>
+        <div class="photos">
+          {photos.map(p => (
+            <a class={`photo${p.check ? ' photo--check' : ''}`} href={`${base}/press/${p.f}`} download>
+              <img src={`${base}/press/${p.f}`} alt={`Mikołaj Borawski, ${p.l.toLowerCase()}`} loading="lazy" />
+              <span>{p.l}<small set:html={icon.download(14) + ' ' + p.s} /></span>
+            </a>
+          ))}
+        </div>
+      </section>
+    </main>
+    <div class="toast" role="status" hidden data-toast>Skopiowano</div>
+  </div>
+</BaseLayout>
+<script>
+  document.addEventListener('astro:page-load', () => {
+    const toast = document.querySelector('[data-toast]');
+    for (const b of document.querySelectorAll('[data-copy]')) {
+      b.addEventListener('click', async () => {
+        try { await navigator.clipboard.writeText(b.getAttribute('data-copy') || ''); } catch (e) {}
+        if (toast) { toast.hidden = false; setTimeout(() => { toast.hidden = true; }, 1800); }
+      });
+    }
+  });
+</script>

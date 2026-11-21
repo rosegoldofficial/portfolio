@@ -39,3 +39,15 @@
   [data-mount] img { max-width: 100% !important; height: auto; }
 }
 html, body { overflow-x: clip; }
+/* EN page and shared fixes */
+@media (max-width: 900px) {
+  [data-mount] [style*="padding: 64px"] { padding: 48px 20px !important; }
+  [data-mount] [style*="padding: 36px"] { padding: 24px !important; }
+  [data-mount] h1[style*="font-size: 96px"] { font-size: clamp(44px, 12vw, 72px) !important; }
+  [data-mount] [style*="font-size: 80px"] { font-size: clamp(44px, 12vw, 64px) !important; }
+  [data-mount] [style*="font-size: 52px"] { font-size: clamp(32px, 9vw, 44px) !important; }
+  [data-mount] [style*="width: 520px"] { width: 100% !important; max-width: 420px; }
+  [data-mount] #about > div { min-width: 0; flex: 1 1 100%; }
+  [data-mount] .hdr-nav { order: 3; width: 100%; justify-content: space-between; flex-wrap: nowrap !important; overflow-x: auto; scrollbar-width: none; }
+  [data-mount] #about p, [data-mount] #about h1 { overflow-wrap: anywhere; }
+}

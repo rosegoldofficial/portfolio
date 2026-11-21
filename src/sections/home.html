@@ -2,16 +2,16 @@
   <a href="#tresc" class="skip">Przejdź do treści</a>
   <div class="prog" aria-hidden="true"></div>
   <a href="#top" class="totop" aria-label="Wróć na górę strony">↑</a>
-  <header style="position: relative; display: flex; justify-content: space-between; align-items: center; padding: 22px 64px; flex-wrap: wrap; gap: 16px">
+  <header class="hdr" style="position: relative; display: flex; justify-content: space-between; align-items: center; padding: 22px 64px; flex-wrap: wrap; gap: 16px">
     <a href="/" style="font-weight: 700; font-size: 18px; text-decoration: none; letter-spacing: -0.01em">borawski<span style="color: var(--accent)">_</span></a>
-    <nav class="hdr-nav" aria-label="Główne menu" style="display: flex; gap: 6px; padding: 6px; border: 1px solid var(--line); border-radius: 999px; flex-wrap: wrap">
-      <a href="#top" class="pill" style="display: inline-flex; align-items: center; min-height: 36px; padding: 0 16px; border-radius: 999px; background: var(--surface-raised); text-decoration: none; font-size: 14px">Start</a>
-      <a href="#o-mnie" class="pill" style="display: inline-flex; align-items: center; min-height: 36px; padding: 0 16px; text-decoration: none; font-size: 14px; color: var(--ink-muted)">O mnie</a>
-      <a href="#program" class="pill" style="display: inline-flex; align-items: center; min-height: 36px; padding: 0 16px; text-decoration: none; font-size: 14px; color: var(--ink-muted)">Program</a>
-      <a href="#porady" class="pill" style="display: inline-flex; align-items: center; min-height: 36px; padding: 0 16px; text-decoration: none; font-size: 14px; color: var(--ink-muted)">Dziennik</a>
-      <a href="#poza-polityka" class="pill" style="display: inline-flex; align-items: center; min-height: 36px; padding: 0 16px; text-decoration: none; font-size: 14px; color: var(--ink-muted)">Poza polityką</a>
-      <a href="#porady" class="pill" style="display: inline-flex; align-items: center; min-height: 36px; padding: 0 16px; text-decoration: none; font-size: 14px; color: var(--ink-muted)">Porady</a>
-      <a href="#zapytaj" class="pill" style="display: inline-flex; align-items: center; min-height: 36px; padding: 0 16px; text-decoration: none; font-size: 14px; color: var(--ink-muted)">Zapytaj</a>
+    <nav class="hdr-nav" aria-label="Główne menu" style="position: relative; display: flex; gap: 6px; padding: 6px; border: 1px solid var(--line); border-radius: 999px; flex-wrap: wrap"><span class="nav-ind" aria-hidden="true"></span>
+      <a href="#top" class="pill nav-link" style="display: inline-flex; align-items: center; min-height: 36px; padding: 0 16px; border-radius: 999px; text-decoration: none; font-size: 14px; color: var(--ink-muted)">Start</a>
+      <a href="#o-mnie" class="pill nav-link" style="display: inline-flex; align-items: center; min-height: 36px; padding: 0 16px; border-radius: 999px; text-decoration: none; font-size: 14px; color: var(--ink-muted)">O mnie</a>
+      <a href="#program" class="pill nav-link" style="display: inline-flex; align-items: center; min-height: 36px; padding: 0 16px; border-radius: 999px; text-decoration: none; font-size: 14px; color: var(--ink-muted)">Program</a>
+      <a href="#poza-polityka" class="pill nav-link" style="display: inline-flex; align-items: center; min-height: 36px; padding: 0 16px; border-radius: 999px; text-decoration: none; font-size: 14px; color: var(--ink-muted)">Poza polityką</a>
+      <a href="#porady" class="pill nav-link" style="display: inline-flex; align-items: center; min-height: 36px; padding: 0 16px; border-radius: 999px; text-decoration: none; font-size: 14px; color: var(--ink-muted)">Porady</a>
+      <a href="#quiz" class="pill nav-link" style="display: inline-flex; align-items: center; min-height: 36px; padding: 0 16px; border-radius: 999px; text-decoration: none; font-size: 14px; color: var(--ink-muted)">Quiz</a>
+      <a href="#zapytaj" class="pill nav-link" style="display: inline-flex; align-items: center; min-height: 36px; padding: 0 16px; border-radius: 999px; text-decoration: none; font-size: 14px; color: var(--ink-muted)">Zapytaj</a>
     </nav>
     <div style="display: flex; align-items: center; gap: 8px">
       <button type="button"  aria-label="Powiększ tekst" class="pill hdr-hide" style="min-width: 44px; min-height: 44px; padding: 0 12px; border-radius: 999px; border: 1px solid var(--line-strong); background: ; color: var(--ink); font: inherit; font-weight: 700; font-size: 15px; cursor: pointer" data-on="click:toggleBig" data-tpl='{"style": "min-width: 44px; min-height: 44px; padding: 0 12px; border-radius: 999px; border: 1px solid var(--line-strong); background: {{bigBg}}; color: var(--ink); font: inherit; font-weight: 700; font-size: 15px; cursor: pointer"}'>A+</button>
@@ -79,13 +79,13 @@
 
   <section id="program" class="rv" style="padding: 0 64px 96px; display: flex; flex-direction: column">
     <h2 style="margin: 0 0 24px; font-weight: 600; font-size: 56px; letter-spacing: -0.04em">Od tego zacznę</h2>
-    <a href="#" class="row" style="display: grid; grid-template-columns: 80px minmax(0, 1fr) minmax(0, 1fr) 40px; gap: 24px; align-items: center; padding: 28px 0; border-top: 1px solid var(--line); text-decoration: none">
+    <a href="#m-mrm" data-modal="m-mrm" aria-haspopup="dialog" class="row" style="display: grid; grid-template-columns: 80px minmax(0, 1fr) minmax(0, 1fr) 40px; gap: 24px; align-items: center; padding: 28px 0; border-top: 1px solid var(--line); text-decoration: none">
       <span style="font-family: 'JetBrains Mono', monospace; color: var(--accent)">01</span><span style="font-size: 30px; font-weight: 500; letter-spacing: -0.02em">Młodzieżowa Rada bez polityki</span><span style="color: var(--ink-muted); font-size: 17px">Jawny nabór i realny wpływ młodych.</span><span class="arr" style="font-size: 24px">→</span>
     </a>
-    <a href="#" class="row" style="display: grid; grid-template-columns: 80px minmax(0, 1fr) minmax(0, 1fr) 40px; gap: 24px; align-items: center; padding: 28px 0; border-top: 1px solid var(--line); text-decoration: none">
+    <a href="#m-finanse" data-modal="m-finanse" aria-haspopup="dialog" class="row" style="display: grid; grid-template-columns: 80px minmax(0, 1fr) minmax(0, 1fr) 40px; gap: 24px; align-items: center; padding: 28px 0; border-top: 1px solid var(--line); text-decoration: none">
       <span style="font-family: 'JetBrains Mono', monospace; color: var(--accent)">02</span><span style="font-size: 30px; font-weight: 500; letter-spacing: -0.02em">Jawne finanse miasta</span><span style="color: var(--ink-muted); font-size: 17px">Wydatki i nagrania komisji w sieci.</span><span class="arr" style="font-size: 24px">→</span>
     </a>
-    <a href="#" class="row" style="display: grid; grid-template-columns: 80px minmax(0, 1fr) minmax(0, 1fr) 40px; gap: 24px; align-items: center; padding: 28px 0; border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); text-decoration: none">
+    <a href="#m-osiedla" data-modal="m-osiedla" aria-haspopup="dialog" class="row" style="display: grid; grid-template-columns: 80px minmax(0, 1fr) minmax(0, 1fr) 40px; gap: 24px; align-items: center; padding: 28px 0; border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); text-decoration: none">
       <span style="font-family: 'JetBrains Mono', monospace; color: var(--accent)">03</span><span style="font-size: 30px; font-weight: 500; letter-spacing: -0.02em">Bezpieczne osiedla</span><span style="color: var(--ink-muted); font-size: 17px">Światło, przejścia, zgłoszenia usterek.</span><span class="arr" style="font-size: 24px">→</span>
     </a>
   </section>
@@ -136,7 +136,7 @@
     </div>
     <div style="display: grid; grid-template-columns: repeat(12, minmax(0, 1fr)); gap: 16px">
 
-      <a href="#" class="card tilt"   style="grid-column: span 12; border: 1px solid var(--accent-line); border-radius: 24px; padding: 40px; background: var(--accent-deep); display: grid; grid-template-columns: repeat(12, minmax(0, 1fr)); gap: 32px; text-decoration: none; position: relative; overflow: hidden" data-on="mousemove:tilt;mouseleave:untilt">
+      <a href="/projekty/dungeonhub/" class="card tilt"   style="grid-column: span 12; border: 1px solid var(--accent-line); border-radius: 24px; padding: 40px; background: var(--accent-deep); display: grid; grid-template-columns: repeat(12, minmax(0, 1fr)); gap: 32px; text-decoration: none; position: relative; overflow: hidden" data-on="mousemove:tilt;mouseleave:untilt">
         <div style="position: absolute; right: -120px; top: -160px; width: 520px; height: 520px; border-radius: 50%; background: radial-gradient(circle, var(--glow-22) 0%, var(--glow-0) 65%)"></div>
         <div style="grid-column: span 7; display: flex; flex-direction: column; gap: 20px; position: relative">
           <div style="display: flex; gap: 10px; align-items: center; flex-wrap: wrap">
@@ -163,21 +163,21 @@
         </div>
       </a>
 
-      <a href="#" class="card"  style="grid-column: span 4; border: 1px solid var(--line); border-radius: 20px; padding: 32px; background: var(--surface); display: flex; flex-direction: column; justify-content: space-between; gap: 36px; min-height: 300px; text-decoration: none" data-on="mousemove:spot">
+      <a href="#m-cyber" data-modal="m-cyber" aria-haspopup="dialog" class="card"  style="grid-column: span 4; border: 1px solid var(--line); border-radius: 20px; padding: 32px; background: var(--surface); display: flex; flex-direction: column; justify-content: space-between; gap: 36px; min-height: 300px; text-decoration: none" data-on="mousemove:spot">
         <div style="display: flex; justify-content: space-between; align-items: center"><span style="font-family: 'JetBrains Mono', monospace; font-size: 12px; color: var(--accent)">security</span><span class="arr" style="font-size: 22px">↗</span></div>
         <div style="display: flex; flex-direction: column; gap: 10px">
           <span style="font-size: 34px; font-weight: 600; letter-spacing: -0.03em; line-height: 1.05">Cyberbezpieczeństwo</span>
           <span style="color: var(--ink-muted); font-size: 16px; line-height: 1.5">Analizuję ruch sieciowy w Wiresharku, ćwiczę na labach i śledzę ostrzeżenia o nowych kampaniach oszustów. Najbardziej wciąga mnie wykrywanie zagrożeń, zanim komuś zrobią krzywdę, i tłumaczenie ich po ludzku, stąd poradnik na tej stronie. Moim marzeniem jest praca w zespole Blue Team albo Cyber Threat Intelligence.</span>
         </div>
       </a>
-      <a href="#" class="card"  style="grid-column: span 4; border: 1px solid var(--line); border-radius: 20px; padding: 32px; background: var(--surface); display: flex; flex-direction: column; justify-content: space-between; gap: 36px; min-height: 300px; text-decoration: none" data-on="mousemove:spot">
+      <a href="#m-sport" data-modal="m-sport" aria-haspopup="dialog" class="card"  style="grid-column: span 4; border: 1px solid var(--line); border-radius: 20px; padding: 32px; background: var(--surface); display: flex; flex-direction: column; justify-content: space-between; gap: 36px; min-height: 300px; text-decoration: none" data-on="mousemove:spot">
         <div style="display: flex; justify-content: space-between; align-items: center"><span style="font-family: 'JetBrains Mono', monospace; font-size: 12px; color: var(--accent)">sport</span><span class="arr" style="font-size: 22px">↗</span></div>
         <div style="display: flex; flex-direction: column; gap: 10px">
           <span style="font-size: 34px; font-weight: 600; letter-spacing: -0.03em; line-height: 1.05">11 lat biegania</span>
           <span style="color: var(--ink-muted); font-size: 16px; line-height: 1.5">Zawodnik CKS Budowlani Częstochowa, start w Mistrzostwach Polski U16. Rekordy: 400 m 51,29 s, 800 m 2:10,27, 1000 m 2:47,35. Dyscyplina, która dziś przydaje się wszędzie.</span>
         </div>
       </a>
-      <a href="#" class="card"  style="grid-column: span 4; border: 1px solid var(--line); border-radius: 20px; padding: 32px; background: var(--surface); display: flex; flex-direction: column; justify-content: space-between; gap: 36px; min-height: 300px; text-decoration: none" data-on="mousemove:spot">
+      <a href="#m-media" data-modal="m-media" aria-haspopup="dialog" class="card"  style="grid-column: span 4; border: 1px solid var(--line); border-radius: 20px; padding: 32px; background: var(--surface); display: flex; flex-direction: column; justify-content: space-between; gap: 36px; min-height: 300px; text-decoration: none" data-on="mousemove:spot">
         <div style="display: flex; justify-content: space-between; align-items: center"><span style="font-family: 'JetBrains Mono', monospace; font-size: 12px; color: var(--accent)">komunikacja</span><span class="arr" style="font-size: 22px">↗</span></div>
         <div style="display: flex; flex-direction: column; gap: 10px">
           <span style="font-size: 34px; font-weight: 600; letter-spacing: -0.03em; line-height: 1.05">Marketing i media</span>
@@ -222,42 +222,11 @@
       <div style="display: flex; flex-direction: column">
         <span style="font-family: 'JetBrains Mono', monospace; font-size: 13px; color: var(--ink-faint); padding-bottom: 12px"><span data-t="resultsLabel"></span></span>
         <template data-for="results" data-as="p">
-          <a href="#" class="row" style="display: grid; grid-template-columns: 70px 170px minmax(0, 1fr) 70px; gap: 20px; align-items: baseline; padding: 20px 0; border-top: 1px solid var(--line); text-decoration: none"><span style="font-family: 'JetBrains Mono', monospace; color: var(--ink-faint)"><span data-t="p.n"></span></span><span style="font-family: 'JetBrains Mono', monospace; font-size: 12px; color: var(--accent)"><span data-t="p.tag"></span></span><span style="font-size: 22px; font-weight: 500"><span data-t="p.t"></span></span><span class="arr" style="font-size: 22px">→</span></a>
+          <a href="#" data-tpl='{"href": "{{p.href}}"}' class="row" style="display: grid; grid-template-columns: 70px 170px minmax(0, 1fr) 70px; gap: 20px; align-items: baseline; padding: 20px 0; border-top: 1px solid var(--line); text-decoration: none"><span style="font-family: 'JetBrains Mono', monospace; color: var(--ink-faint)"><span data-t="p.n"></span></span><span style="font-family: 'JetBrains Mono', monospace; font-size: 12px; color: var(--accent)"><span data-t="p.tag"></span></span><span style="font-size: 22px; font-weight: 500"><span data-t="p.t"></span></span><span class="arr" style="font-size: 22px">→</span></a>
         </template><div data-for-out="results" style="display: contents"></div>
       </div>
     </div>
-    <div data-if="noQuery">
-    <div style="display: flex; flex-direction: column; gap: 28px">
-    <div style="display: flex; gap: 8px; flex-wrap: wrap">
-      <span style="display: inline-flex; align-items: center; min-height: 36px; padding: 0 16px; border-radius: 999px; background: var(--ink); color: var(--bg); font-size: 14px; font-weight: 600">Wszystkie</span>
-      <span style="display: inline-flex; align-items: center; min-height: 36px; padding: 0 16px; border-radius: 999px; border: 1px solid var(--line-strong); font-size: 14px; color: var(--ink-muted)">Telefon i SMS</span>
-      <span style="display: inline-flex; align-items: center; min-height: 36px; padding: 0 16px; border-radius: 999px; border: 1px solid var(--line-strong); font-size: 14px; color: var(--ink-muted)">Bank i pieniądze</span>
-      <span style="display: inline-flex; align-items: center; min-height: 36px; padding: 0 16px; border-radius: 999px; border: 1px solid var(--line-strong); font-size: 14px; color: var(--ink-muted)">Konta i hasła</span>
-      <span style="display: inline-flex; align-items: center; min-height: 36px; padding: 0 16px; border-radius: 999px; border: 1px solid var(--line-strong); font-size: 14px; color: var(--ink-muted)">Dla seniorów</span>
-    </div>
-    <div style="display: grid; grid-template-columns: repeat(12, minmax(0, 1fr)); gap: 16px">
-      <a href="/porady/8080/" class="feat" style="grid-column: span 6; grid-row: span 2; border-radius: 24px; padding: 40px; background: var(--accent); color: var(--on-accent); display: flex; flex-direction: column; justify-content: space-between; gap: 32px; text-decoration: none; min-height: 460px">
-        <div style="display: flex; justify-content: space-between; font-family: 'JetBrains Mono', monospace; font-size: 12px"><span>#01 · telefon i SMS</span><span>3 min</span></div>
-        <div style="display: flex; flex-direction: column; gap: 16px">
-          <span style="font-size: 48px; font-weight: 600; letter-spacing: -0.04em; line-height: 1">Dziwny SMS? Prześlij go na 8080, zanim klikniesz.</span>
-          <span style="font-size: 18px; line-height: 1.5">Darmowy numer CERT Polska, który blokuje fałszywe strony dla wszystkich. Pokazuję krok po kroku na telefonie.</span>
-        </div>
-        <span style="font-weight: 600">Czytaj →</span>
-      </a>
-      <a href="#" class="card"  style="grid-column: span 3; border: 1px solid var(--line); border-radius: 20px; padding: 24px; background: var(--surface); display: flex; flex-direction: column; gap: 14px; text-decoration: none" data-on="mousemove:spot"><span style="font-family: 'JetBrains Mono', monospace; font-size: 12px; color: var(--accent)">#02 · dla seniorów</span><span style="font-size: 21px; font-weight: 600; line-height: 1.2">„Na wnuczka” 2.0: głos bliskiej osoby może być podrobiony</span><span style="font-size: 14px; color: var(--ink-muted)">Ustalcie rodzinne hasło na takie telefony.</span></a>
-      <a href="#" class="card"  style="grid-column: span 3; border: 1px solid var(--line); border-radius: 20px; padding: 24px; background: var(--surface); display: flex; flex-direction: column; gap: 14px; text-decoration: none" data-on="mousemove:spot"><span style="font-family: 'JetBrains Mono', monospace; font-size: 12px; color: var(--accent)">#03 · bank</span><span style="font-size: 21px; font-weight: 600; line-height: 1.2">„Dzwonię z działu bezpieczeństwa banku”. Rozłącz się.</span><span style="font-size: 14px; color: var(--ink-muted)">Trzy zdania, po których to na pewno oszust.</span></a>
-      <a href="#" class="card"  style="grid-column: span 3; border: 1px solid var(--line); border-radius: 20px; padding: 24px; background: var(--surface); display: flex; flex-direction: column; gap: 14px; text-decoration: none" data-on="mousemove:spot"><span style="font-family: 'JetBrains Mono', monospace; font-size: 12px; color: var(--accent)">#04 · dane</span><span style="font-size: 21px; font-weight: 600; line-height: 1.2">Zastrzeż PESEL w mObywatelu w 2 minuty</span><span style="font-size: 14px; color: var(--ink-muted)">Nikt nie weźmie kredytu na Twoje dane.</span></a>
-      <a href="#" class="card"  style="grid-column: span 3; border: 1px solid var(--line); border-radius: 20px; padding: 24px; background: var(--surface); display: flex; flex-direction: column; gap: 14px; text-decoration: none" data-on="mousemove:spot"><span style="font-family: 'JetBrains Mono', monospace; font-size: 12px; color: var(--accent)">#05 · paczki</span><span style="font-size: 21px; font-weight: 600; line-height: 1.2">„Dopłać 1,99 zł do paczki”: jak rozpoznać fałszywy link</span><span style="font-size: 14px; color: var(--ink-muted)">10 sekund, które ratują konto.</span></a>
-    </div>
-    <div style="display: flex; flex-direction: column">
-      <a href="#" class="row" style="display: grid; grid-template-columns: 70px 170px minmax(0, 1fr) 70px; gap: 20px; align-items: baseline; padding: 20px 0; border-top: 1px solid var(--line); text-decoration: none"><span style="font-family: 'JetBrains Mono', monospace; color: var(--ink-faint)">#06</span><span style="font-family: 'JetBrains Mono', monospace; font-size: 12px; color: var(--accent)">konta i hasła</span><span style="font-size: 22px; font-weight: 500">Weryfikacja dwuetapowa na Facebooku, Gmailu i w banku: 5 minut</span><span style="font-size: 14px; color: var(--ink-faint); text-align: right">4 min</span></a>
-      <a href="#" class="row" style="display: grid; grid-template-columns: 70px 170px minmax(0, 1fr) 70px; gap: 20px; align-items: baseline; padding: 20px 0; border-top: 1px solid var(--line); text-decoration: none"><span style="font-family: 'JetBrains Mono', monospace; color: var(--ink-faint)">#07</span><span style="font-family: 'JetBrains Mono', monospace; font-size: 12px; color: var(--accent)">konta i hasła</span><span style="font-size: 22px; font-weight: 500">Jedno hasło do wszystkiego to otwarte drzwi. Menedżer haseł bez stresu</span><span style="font-size: 14px; color: var(--ink-faint); text-align: right">4 min</span></a>
-      <a href="#" class="row" style="display: grid; grid-template-columns: 70px 170px minmax(0, 1fr) 70px; gap: 20px; align-items: baseline; padding: 20px 0; border-top: 1px solid var(--line); text-decoration: none"><span style="font-family: 'JetBrains Mono', monospace; color: var(--ink-faint)">#08</span><span style="font-family: 'JetBrains Mono', monospace; font-size: 12px; color: var(--accent)">zakupy</span><span style="font-size: 22px; font-weight: 500">Sprzedajesz na OLX lub Vinted? Uważaj na „link do odbioru płatności”</span><span style="font-size: 14px; color: var(--ink-faint); text-align: right">3 min</span></a>
-      <a href="#" class="row" style="display: grid; grid-template-columns: 70px 170px minmax(0, 1fr) 70px; gap: 20px; align-items: baseline; padding: 20px 0; border-top: 1px solid var(--line); text-decoration: none"><span style="font-family: 'JetBrains Mono', monospace; color: var(--ink-faint)">#09</span><span style="font-family: 'JetBrains Mono', monospace; font-size: 12px; color: var(--accent)">telefon</span><span style="font-size: 22px; font-weight: 500">„Przypomnij później” to zły pomysł. Dlaczego aktualizacje są ważne</span><span style="font-size: 14px; color: var(--ink-faint); text-align: right">2 min</span></a>
-      <a href="#" class="row" style="display: grid; grid-template-columns: 70px 170px minmax(0, 1fr) 70px; gap: 20px; align-items: baseline; padding: 20px 0; border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); text-decoration: none"><span style="font-family: 'JetBrains Mono', monospace; color: var(--ink-faint)">#10</span><span style="font-family: 'JetBrains Mono', monospace; font-size: 12px; color: var(--accent)">poza domem</span><span style="font-size: 22px; font-weight: 500">Darmowe Wi‑Fi w galerii i na dworcu: co wolno, a czego lepiej nie</span><span style="font-size: 14px; color: var(--ink-faint); text-align: right">3 min</span></a>
-    </div>
-    </div>
-    </div>
+    <div data-if="noQuery"><!--PORADY--></div>
   </section>
 
   <section id="quiz" class="rv" style="padding: 0 64px 96px">
@@ -408,14 +377,14 @@
         <span style="font-family: 'JetBrains Mono', monospace; font-size: 12px; color: var(--ink-faint); margin-bottom: 4px">strona</span>
         <a href="#o-mnie" class="lnk" style="text-decoration: none; color: var(--ink-soft)">O mnie</a>
         <a href="#program" class="lnk" style="text-decoration: none; color: var(--ink-soft)">Program</a>
-        <a href="#porady" class="lnk" style="text-decoration: none; color: var(--ink-soft)">Dziennik</a>
+        <a href="#quiz" class="lnk" style="text-decoration: none; color: var(--ink-soft)">Quiz</a>
         <a href="#poza-polityka" class="lnk" style="text-decoration: none; color: var(--ink-soft)">Poza polityką</a>
       </nav>
       <nav style="grid-column: span 2; display: flex; flex-direction: column; gap: 10px; font-size: 15px">
         <span style="font-family: 'JetBrains Mono', monospace; font-size: 12px; color: var(--ink-faint); margin-bottom: 4px">pomoc</span>
         <a href="#porady" class="lnk" style="text-decoration: none; color: var(--ink-soft)">Porady cyfrowe</a>
         <a href="#zapytaj" class="lnk" style="text-decoration: none; color: var(--ink-soft)">Zapytaj mnie</a>
-        <a href="mailto:kontakt@mikolajborawski.pl?subject=Media" class="lnk" style="text-decoration: none; color: var(--ink-soft)">Dla mediów</a>
+        <a href="/media/" class="lnk" style="text-decoration: none; color: var(--ink-soft)">Dla mediów</a>
       </nav>
       <nav style="grid-column: span 4; display: flex; flex-direction: column; gap: 10px; font-size: 15px">
         <span style="font-family: 'JetBrains Mono', monospace; font-size: 12px; color: var(--ink-faint); margin-bottom: 4px">formalności</span>
@@ -431,4 +400,5 @@
       <span>zbudowane w Częstochowie · mikolajborawski.pl</span>
     </div>
   </footer>
+<!--MODALS-->
 </div>

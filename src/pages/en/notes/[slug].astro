@@ -1,0 +1,57 @@
+---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+import SubHeader from '../../../components/SubHeader.astro';
+import { notes, dateEn } from '../../../lib/notes';
+import { icon } from '../../../lib/icons';
+import '../../../styles/prose.css';
+
+export function getStaticPaths() {
+  return notes.map((n, i) => ({ params: { slug: n.slug }, props: { i } }));
+}
+const { i } = Astro.props as { i: number };
+const note = notes[i];
+const next = notes[(i + 1) % notes.length];
+const { Content } = note;
+const base = import.meta.env.BASE_URL.replace(/\/$/, '');
+const site = Astro.site ?? new URL('https://mikolajborawski.pl');
+const url = new URL(`/en/notes/${note.slug}/`, site).href;
+---
+<BaseLayout title={`${note.title} · Mikołaj Borawski`} description={note.lead.slice(0, 155)} lang="en">
+  <div class="page">
+    <div class="prog" aria-hidden="true"></div>
+    <SubHeader back={{ href: '/en/#notes', label: 'All notes' }} lang="en" />
+    <article id="wpis" class="art">
+      <div class="art__meta in1">
+        <span class="k">~/notes · {note.tag}</span>
+        <span set:html={icon.clock(14) + ` ${note.minutes} min read`} />
+        <span set:html={icon.calendar(14) + ' ' + dateEn(note.date)} />
+      </div>
+      <h1 class="in2">{note.title}</h1>
+      <p class="art__lead in3">{note.lead}</p>
+      <div class="byline">
+        <img src={`${base}/img/portret.webp`} alt="" width="48" height="48" />
+        <div class="byline__who"><span>Mikołaj Borawski</span><span>blue team in the making, Częstochowa</span></div>
+        <div class="tools noprint">
+          <button type="button" class="tb" data-speak aria-pressed="false"><Fragment set:html={icon.volume(16)} /><span>Listen</span></button>
+        </div>
+      </div>
+      <div class="prose"><Content /></div>
+      <div class="art__end noprint">
+        <span>Questions or corrections? I read every message.</span>
+        <div class="tools">
+          <a class="tb tb--solid" href="https://www.linkedin.com/in/mikolajborawski" target="_blank" rel="noopener"><Fragment set:html={icon.linkedin(16)} />Message me on LinkedIn</a>
+          <button type="button" class="tb" data-share data-url={url} data-title={note.title}><Fragment set:html={icon.share(16)} />Share</button>
+        </div>
+      </div>
+      <a class="nextcard noprint" href={`${base}/en/notes/${next.slug}/`}>
+        <small>next note · {next.tag}</small>
+        <strong>{next.title}</strong>
+      </a>
+    </article>
+    <div class="toast" role="status" hidden data-toast>Link copied</div>
+  </div>
+</BaseLayout>
+<script>
+  import { initPostTools } from '../../../scripts/post.js';
+  document.addEventListener('astro:page-load', initPostTools);
+</script>

@@ -1,15 +1,15 @@
 <div style="font-family: 'Inter Tight', system-ui, sans-serif; color: var(--ink); background: var(--bg); ">
-  <header style="display: flex; justify-content: space-between; align-items: center; padding: 22px 64px; flex-wrap: wrap; gap: 16px">
+  <header class="hdr" style="display: flex; justify-content: space-between; align-items: center; padding: 22px 64px; flex-wrap: wrap; gap: 16px">
     <a href="/" style="font-weight: 700; font-size: 18px; text-decoration: none">borawski<span style="color: var(--accent)">_</span></a>
-    <nav style="display: flex; gap: 6px; padding: 6px; border: 1px solid var(--line); border-radius: 999px; flex-wrap: wrap">
-      <a href="#about" class="pill" style="display: inline-flex; align-items: center;  padding: 0 16px; border-radius: 999px; background: var(--surface-raised); text-decoration: none; font-size: 14px">About</a>
-      <a href="#projects" class="pill" style="display: inline-flex; align-items: center;  padding: 0 16px; border-radius: 999px; text-decoration: none; font-size: 14px; color: var(--ink-muted)">Projects</a>
-      <a href="#notes" class="pill" style="display: inline-flex; align-items: center;  padding: 0 16px; border-radius: 999px; text-decoration: none; font-size: 14px; color: var(--ink-muted)">Security notes</a>
-      <a href="#contact" class="pill" style="display: inline-flex; align-items: center;  padding: 0 16px; border-radius: 999px; text-decoration: none; font-size: 14px; color: var(--ink-muted)">Contact</a>
+    <nav class="hdr-nav" style="position: relative; display: flex; gap: 6px; padding: 6px; border: 1px solid var(--line); border-radius: 999px; flex-wrap: wrap"><span class="nav-ind" aria-hidden="true"></span>
+      <a href="#about" class="pill nav-link" style="display: inline-flex; align-items: center; min-height: 36px; padding: 0 16px; border-radius: 999px; text-decoration: none; font-size: 14px">About</a>
+      <a href="#projects" class="pill nav-link" style="display: inline-flex; align-items: center; min-height: 36px; padding: 0 16px; border-radius: 999px; text-decoration: none; font-size: 14px; color: var(--ink-muted)">Projects</a>
+      <a href="#notes" class="pill nav-link" style="display: inline-flex; align-items: center; min-height: 36px; padding: 0 16px; border-radius: 999px; text-decoration: none; font-size: 14px; color: var(--ink-muted)">Security notes</a>
+      <a href="#contact" class="pill nav-link" style="display: inline-flex; align-items: center; min-height: 36px; padding: 0 16px; border-radius: 999px; text-decoration: none; font-size: 14px; color: var(--ink-muted)">Contact</a>
     </nav>
-    <div style="display: flex; align-items: center;  padding: 0 6px; border-radius: 999px; border: 1px solid var(--line-strong); font-family: 'JetBrains Mono', monospace; font-size: 13px">
-      <a href="/" class="pill" style="display: inline-flex; align-items: center;  padding: 0 10px; border-radius: 999px; text-decoration: none; color: var(--ink-muted)">PL</a>
-      <span style="display: inline-flex; align-items: center;  padding: 0 10px; border-radius: 999px; background: var(--surface-raised)">EN</span>
+    <div style="display: flex; align-items: center; gap: 10px; min-height: 52px; padding: 0 6px; border-radius: 999px; border: 1px solid var(--line-strong); font-family: 'JetBrains Mono', monospace; font-size: 13px">
+      <a href="/" class="pill" style="display: inline-flex; align-items: center; min-height: 32px; padding: 0 10px; border-radius: 999px; text-decoration: none; color: var(--ink-muted)">PL</a>
+      <span style="display: inline-flex; align-items: center; min-height: 32px; padding: 0 10px; border-radius: 999px; background: var(--surface-raised)">EN</span>
     </div>
   </header>
 
@@ -19,8 +19,8 @@
       <h1 class="u2" style="margin: 0; font-weight: 600; font-size: 96px; line-height: 0.95; letter-spacing: -0.045em">Mikołaj Borawski.<br><span style="color: var(--ink-faint)">Blue team in the making.</span></h1>
       <p class="u3" style="margin: 0; max-width: 560px; font-size: 20px; line-height: 1.55; color: var(--ink-muted)">I analyse network traffic, build things on the internet and explain online threats in plain language. My goal is a role in a Blue Team or Cyber Threat Intelligence team.</p>
       <div class="u3" style="display: flex; gap: 12px; flex-wrap: wrap">
-        <a href="#" style="display: inline-flex; align-items: center;  padding: 0 26px; border-radius: 999px; background: var(--ink); color: var(--bg); text-decoration: none; font-weight: 600">Download CV</a>
-        <a href="mailto:kontakt@mikolajborawski.pl" style="display: inline-flex; align-items: center;  padding: 0 26px; border-radius: 999px; border: 1px solid var(--line-strong); text-decoration: none">Get in touch →</a>
+        <a href="https://www.linkedin.com/in/mikolajborawski" target="_blank" rel="noopener" style="display: inline-flex; align-items: center; gap: 10px; min-height: 52px; padding: 0 26px; border-radius: 999px; background: var(--ink); color: var(--bg); text-decoration: none; font-weight: 600"><!--LI-->Message me on LinkedIn</a>
+        <a href="mailto:kontakt@mikolajborawski.pl" style="display: inline-flex; align-items: center; gap: 10px; min-height: 52px; padding: 0 26px; border-radius: 999px; border: 1px solid var(--line-strong); text-decoration: none">Get in touch →</a>
       </div>
     </div>
     <div style="flex: 0 1 480px; position: relative; height: 720px; display: flex; align-items: flex-end; justify-content: center">
@@ -30,7 +30,7 @@
   </section>
 
   <section id="projects" style="padding: 0 64px 96px; display: grid; grid-template-columns: repeat(12, minmax(0, 1fr)); gap: 16px">
-    <a href="#" class="card" style="grid-column: span 7; border: 1px solid var(--accent-line); border-radius: 24px; padding: 36px; background: var(--accent-deep); display: flex; flex-direction: column; gap: 16px; text-decoration: none">
+    <a href="/projekty/dungeonhub/" class="card" style="grid-column: span 7; border: 1px solid var(--accent-line); border-radius: 24px; padding: 36px; background: var(--accent-deep); display: flex; flex-direction: column; gap: 16px; text-decoration: none">
       <span style="font-family: 'JetBrains Mono', monospace; font-size: 12px; color: var(--accent)">main project / dungeonhub.pl</span>
       <span style="font-size: 52px; font-weight: 600; letter-spacing: -0.04em; line-height: 1">DungeonHub</span>
       <span style="font-size: 19px; line-height: 1.5; color: var(--ink-soft)">An online gaming platform I develop with a team: custom server software, a web portal with a store and rankings, a player knowledge base and AI-assisted community moderation. 250+ players.</span>
@@ -58,9 +58,7 @@
       <h2 style="margin: 0; font-weight: 600; font-size: 52px; letter-spacing: -0.04em">Security notes</h2>
       <span style="font-family: 'JetBrains Mono', monospace; font-size: 13px; color: var(--ink-faint)">~/notes · lab write-ups in English</span>
     </div>
-    <a href="#" class="row" style="display: grid; grid-template-columns: 140px minmax(0, 1fr) 120px; gap: 20px; align-items: baseline; padding: 22px 0; border-top: 1px solid var(--line); text-decoration: none"><span style="font-family: 'JetBrains Mono', monospace; font-size: 13px; color: var(--ink-faint)">[DATE]</span><span style="font-size: 22px; font-weight: 500">[Note: spotting a phishing domain in DNS traffic]</span><span style="font-family: 'JetBrains Mono', monospace; font-size: 12px; color: var(--accent); text-align: right">network</span></a>
-    <a href="#" class="row" style="display: grid; grid-template-columns: 140px minmax(0, 1fr) 120px; gap: 20px; align-items: baseline; padding: 22px 0; border-top: 1px solid var(--line); text-decoration: none"><span style="font-family: 'JetBrains Mono', monospace; font-size: 13px; color: var(--ink-faint)">[DATE]</span><span style="font-size: 22px; font-weight: 500">[Note: how Polish SMS scam campaigns evolve]</span><span style="font-family: 'JetBrains Mono', monospace; font-size: 12px; color: var(--accent); text-align: right">threat intel</span></a>
-    <a href="#" class="row" style="display: grid; grid-template-columns: 140px minmax(0, 1fr) 120px; gap: 20px; align-items: baseline; padding: 22px 0; border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); text-decoration: none"><span style="font-family: 'JetBrains Mono', monospace; font-size: 13px; color: var(--ink-faint)">[DATE]</span><span style="font-size: 22px; font-weight: 500">[Note: hardening a small game server]</span><span style="font-family: 'JetBrains Mono', monospace; font-size: 12px; color: var(--accent); text-align: right">hardening</span></a>
+    <!--NOTES-->
   </section>
 
   <footer id="contact" style="padding: 64px; border-top: 1px solid var(--line); display: flex; justify-content: space-between; align-items: flex-end; flex-wrap: wrap; gap: 32px">

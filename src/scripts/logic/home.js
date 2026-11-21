@@ -50,16 +50,16 @@ const QS = [
 const ROUND = 10;
 const shuffle = () => { const a = QS.map((_, i) => i); for (let i = a.length - 1; i > 0; i--) { const j = Math.floor(Math.random() * (i + 1)); [a[i], a[j]] = [a[j], a[i]]; } return a.slice(0, ROUND); };
 const PORADY = [
-{ n: '#01', tag: 'telefon i SMS', t: 'Dziwny SMS? Prześlij go na 8080, zanim klikniesz', k: 'sms 8080 cert link' },
-{ n: '#02', tag: 'dla seniorów', t: '„Na wnuczka” 2.0: głos bliskiej osoby może być podrobiony', k: 'wnuczek telefon ai głos seniorzy' },
-{ n: '#03', tag: 'bank', t: '„Dzwonię z działu bezpieczeństwa banku”. Rozłącz się.', k: 'bank telefon konsultant' },
-{ n: '#04', tag: 'dane', t: 'Zastrzeż PESEL w mObywatelu w 2 minuty', k: 'pesel mobywatel kredyt dane' },
-{ n: '#05', tag: 'paczki', t: '„Dopłać 1,99 zł do paczki”: jak rozpoznać fałszywy link', k: 'paczka kurier sms link dopłata' },
-{ n: '#06', tag: 'konta i hasła', t: 'Weryfikacja dwuetapowa na Facebooku, Gmailu i w banku: 5 minut', k: 'hasło 2fa konto facebook' },
-{ n: '#07', tag: 'konta i hasła', t: 'Jedno hasło do wszystkiego to otwarte drzwi. Menedżer haseł bez stresu', k: 'hasło menedżer konto' },
-{ n: '#08', tag: 'zakupy', t: 'Sprzedajesz na OLX lub Vinted? Uważaj na „link do odbioru płatności”', k: 'olx vinted zakupy sprzedaż link' },
-{ n: '#09', tag: 'telefon', t: '„Przypomnij później” to zły pomysł. Dlaczego aktualizacje są ważne', k: 'aktualizacje telefon system' },
-{ n: '#10', tag: 'poza domem', t: 'Darmowe Wi‑Fi w galerii i na dworcu: co wolno, a czego lepiej nie', k: 'wifi sieć publiczna' }
+{ n: '#01', href: 'porady/8080/', tag: 'telefon i SMS', t: 'Dziwny SMS? Prześlij go na 8080, zanim klikniesz', k: 'sms 8080 cert link' },
+{ n: '#02', href: 'porady/na-wnuczka-ai/', tag: 'dla seniorów', t: '„Na wnuczka” 2.0: głos bliskiej osoby może być podrobiony', k: 'wnuczek telefon ai głos seniorzy' },
+{ n: '#03', href: 'porady/bank-dzial-bezpieczenstwa/', tag: 'bank', t: '„Dzwonię z działu bezpieczeństwa banku”. Rozłącz się.', k: 'bank telefon konsultant' },
+{ n: '#04', href: 'porady/zastrzez-pesel/', tag: 'dane', t: 'Zastrzeż PESEL w mObywatelu w 2 minuty', k: 'pesel mobywatel kredyt dane' },
+{ n: '#05', href: 'porady/doplata-do-paczki/', tag: 'paczki', t: '„Dopłać 1,99 zł do paczki”: jak rozpoznać fałszywy link', k: 'paczka kurier sms link dopłata' },
+{ n: '#06', href: 'porady/weryfikacja-dwuetapowa/', tag: 'konta i hasła', t: 'Weryfikacja dwuetapowa na Facebooku, Gmailu i w banku: 5 minut', k: 'hasło 2fa konto facebook' },
+{ n: '#07', href: 'porady/menedzer-hasel/', tag: 'konta i hasła', t: 'Jedno hasło do wszystkiego to otwarte drzwi. Menedżer haseł bez stresu', k: 'hasło menedżer konto' },
+{ n: '#08', href: 'porady/olx-vinted-link/', tag: 'zakupy', t: 'Sprzedajesz na OLX lub Vinted? Uważaj na „link do odbioru płatności”', k: 'olx vinted zakupy sprzedaż link' },
+{ n: '#09', href: 'porady/aktualizacje/', tag: 'telefon', t: '„Przypomnij później” to zły pomysł. Dlaczego aktualizacje są ważne', k: 'aktualizacje telefon system' },
+{ n: '#10', href: 'porady/darmowe-wifi/', tag: 'poza domem', t: 'Darmowe Wi‑Fi w galerii i na dworcu: co wolno, a czego lepiej nie', k: 'wifi sieć publiczna' }
 ];
 const LABELS = { jak_dziala_rada: '~/jak-dziala-rada', poza_polityka: '~/poza-polityka', porady_cyfrowe: '~/porady-cyfrowe', quiz: '~/quiz', zapytaj_mnie: '~/zapytaj-mnie' };
 const GLYPHS = '!<>-_\\/[]{}=+*^?#01';

@@ -2,8 +2,10 @@
 import BaseLayout from '../layouts/BaseLayout.astro';
 import markup from '../sections/home.html?raw';
 import '../styles/home.css';
-import { withBase } from '../lib';
+import { withBase } from '../lib/base';
+import { poradyBody, modals } from '../lib/blocks';
+const html = withBase(markup.replace('<!--PORADY-->', poradyBody()).replace('<!--MODALS-->', modals()));
 ---
 <BaseLayout title="Mikołaj Borawski · Częstochowa" description="Mikołaj Borawski, 21 lat, Częstochowa. Patrzę miastu na ręce: jawne finanse, Kiedrzyn, bezpieczeństwo w sieci. Napisz albo zadzwoń." lang="pl" mountName="home">
-  <Fragment set:html={withBase(markup)} />
+  <Fragment set:html={html} />
 </BaseLayout>

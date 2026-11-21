@@ -7,7 +7,7 @@
 //   <template data-for="list" data-as="item"> + <div data-for-out> → repeated rows
 
 // Web3Forms access key for the "Zapytaj mnie" form. Empty = fall back to mailto.
-export const WEB3FORMS_KEY = '';
+export const WEB3FORMS_KEY = '4c83b60c-cab0-44a3-9356-4e12f9210e64';
 export const CONTACT_MAIL = 'kontakt@mikolajborawski.pl';
 
 export class DCLogic {
@@ -34,23 +34,31 @@ export const clearForm = ev => {
   });
 };
 
+const mailtoFallback = (f, topic) => {
+  const body = encodeURIComponent(f.msg + '\n\n' + f.name + ' · ' + f.mail);
+  window.location.href = 'mailto:' + CONTACT_MAIL + '?subject=' + encodeURIComponent(topic || 'Pytanie ze strony') + '&body=' + body;
+  return true;
+};
+
 export async function submitForm(f) {
   const hp = document.querySelector('input[name="botcheck"]');
   if (hp && (hp.checked || hp.value)) return true; // bot: pretend success
-  if (!WEB3FORMS_KEY) {
-    const body = encodeURIComponent(f.msg + '\n\n' + f.name + ' · ' + f.mail);
-    window.location.href = 'mailto:' + CONTACT_MAIL + '?subject=' + encodeURIComponent('Pytanie ze strony') + '&body=' + body;
-    return true;
-  }
+  const topic = document.querySelector('#zapytaj select')?.value || '';
+  if (!WEB3FORMS_KEY) return mailtoFallback(f, topic);
   try {
     const r = await fetch('https://api.web3forms.com/submit', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
-      body: JSON.stringify({ access_key: WEB3FORMS_KEY, subject: 'Pytanie ze strony mikolajborawski.pl', from_name: f.name, email: f.mail, message: f.msg })
+      body: JSON.stringify({
+        access_key: WEB3FORMS_KEY,
+        subject: 'Strona: ' + (topic || 'pytanie') + ' (' + f.name + ')',
+        from_name: 'mikolajborawski.pl',
+        name: f.name, email: f.mail, replyto: f.mail, topic, message: f.msg
+      })
     });
     const j = await r.json();
-    return !!j.success;
-  } catch (e) { return false; }
+    return j.success ? true : mailtoFallback(f, topic);
+  } catch (e) { return mailtoFallback(f, topic); }
 }
 
 const get = (path, vals, scope) => {

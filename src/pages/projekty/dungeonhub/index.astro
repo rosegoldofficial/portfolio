@@ -1,0 +1,72 @@
+---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+import SubHeader from '../../../components/SubHeader.astro';
+import { icon } from '../../../lib/icons';
+import '../../../styles/prose.css';
+import '../../../styles/pages.css';
+const base = import.meta.env.BASE_URL.replace(/\/$/, '');
+const modules = [
+  { n: '01', h: 'Serwer gry', p: 'Serwer Minecraft zbudowany wokół lochów.', li: ['instancje lochów z poziomami trudności i bossami na końcu', 'wymagany skład drużyny i nagrody za ukończenie', 'klany, PvP i postęp postaci'], tags: ['Java'] },
+  { n: '02', h: 'Portal dungeonhub.pl', p: 'Strona, przez którą gracze trafiają na serwer i kupują dodatki.', li: ['status serwera na żywo: liczba graczy i ping', 'sklep z rangami, kluczami i pakietami, płatności BLIK, przelew, PSC, SMS i PayPal', 'rankingi graczy i klanów, regulaminy, kontakt z ekipą'], tags: ['Next.js 15', 'TypeScript', 'Tailwind CSS', 'Docker'] },
+  { n: '03', h: 'Wiki dla graczy', p: 'Baza wiedzy, żeby nowy gracz nie musiał pytać o wszystko na czacie.', li: ['opisy trybów i lochów', 'wyszukiwarka komend', 'FAQ w formie rozwijanych odpowiedzi'], tags: ['dokumentacja'] },
+  { n: '04', h: 'Discord i moderacja AI', p: 'Społeczność żyje na Discordzie, więc tam też trzeba pilnować porządku.', li: ['automatyczna moderacja: spam, wulgaryzmy, ostrzeżenia i wyciszenia', 'role nadawane za aktywność, ankiety i ogłoszenia', 'integracja z serwerem gry: statystyki graczy na Discordzie'], tags: ['Node.js', 'moderacja AI'] }
+];
+---
+<BaseLayout title="DungeonHub · case study · Mikołaj Borawski" description="DungeonHub: platforma gier online, którą rozwijam z zespołem. Serwer gry, portal ze sklepem i rankingami, wiki i moderacja społeczności.">
+  <div class="page">
+    <div class="prog" aria-hidden="true"></div>
+    <SubHeader back={{ href: '/#poza-polityka', label: 'Poza polityką' }} />
+    <main class="art art--wide">
+      <div class="hero2">
+        <span class="kick in1">projekt główny / dungeonhub.pl</span>
+        <h1 class="in2">DungeonHub</h1>
+        <p class="art__lead in3">Platforma gier online, którą rozwijam z zespołem: serwer z lochami i bossami, portal ze sklepem i rankingami, wiki dla graczy i moderacja społeczności. W praktyce mała firma technologiczna, w której odpowiadam za technikę, bezpieczeństwo, płatności, obsługę graczy i marketing.</p>
+      </div>
+
+      <div class="kpis">
+        <div class="kpi"><span>gracze</span><strong>250+</strong><em>w społeczności</em></div>
+        <div class="kpi"><span>moduły</span><strong>4</strong><em>serwer, portal, wiki, Discord</em></div>
+        <div class="kpi"><span>od roku</span><strong>2019</strong><em>pierwsze serwery gier</em></div>
+        <div class="kpi"><span>stack</span><strong>Next.js 15</strong><em>TypeScript, Docker</em></div>
+      </div>
+
+      <section class="sec">
+        <h2>Z czego się składa</h2>
+        <div class="grid2">
+          {modules.map(m => (
+            <div class="mod">
+              <span class="mod__n">{m.n}</span>
+              <h3>{m.h}</h3>
+              <p>{m.p}</p>
+              <ul>{m.li.map(l => <li>{l}</li>)}</ul>
+              <div class="tags">{m.tags.map(t => <span class="tag">{t}</span>)}</div>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      <section class="sec">
+        <h2>Historia</h2>
+        <div class="tl">
+          <div class="tl__i"><span class="tl__y">2019</span><span class="tl__t">Pierwsze serwery gier i społeczności online<small>Pierwsza konfiguracja serwerów i pierwsza społeczność, którą trzeba było prowadzić.</small></span></div>
+          <div class="tl__i"><span class="tl__y">2024</span><span class="tl__t">Własny bot na Discorda<small>Moderacja, ekonomia, mini-gry i połączenie Discorda z serwerem gry.</small></span></div>
+          <div class="tl__i"><span class="tl__y">2026</span><span class="tl__t">Nowy portal dungeonhub.pl<small>Przepisany od zera w Next.js 15 i TypeScript, uruchamiany w kontenerach Docker. Sklep, rankingi, wiki i status serwera w jednym miejscu.</small></span></div>
+        </div>
+      </section>
+
+      <section class="sec">
+        <h2>Czego mnie to nauczyło</h2>
+        <div class="prose">
+          <p>Serwer gier działa całą dobę, a gracze piszą o 3 w nocy, kiedy coś przestaje działać. Trzeba wtedy znaleźć przyczynę w logach, naprawić i jeszcze wytłumaczyć ludziom, co się stało. To ta sama praca, którą chcę wykonywać w cyberbezpieczeństwie: wykryć problem, zrozumieć go i opisać po ludzku.</p>
+          <p>Drugą lekcją jest odpowiedzialność za cudze pieniądze i dane. Sklep, płatności i konta graczy wymagają regulaminów, porządnych zabezpieczeń i szybkiej obsługi reklamacji. Bez tego społeczność traci zaufanie w jeden wieczór.</p>
+        </div>
+        <p class="quote">Najwięcej nauczyłem się nie wtedy, gdy wszystko działało, tylko wtedy, gdy coś się zepsuło i trzeba było to naprawić przed rankiem.</p>
+      </section>
+
+      <div class="cta-row">
+        <a class="btn sub-like tb tb--solid" href="https://dungeonhub.pl" target="_blank" rel="noopener">Wejdź na dungeonhub.pl <Fragment set:html={icon.arrowUpRight(16)} /></a>
+        <a class="tb" href={`${base}/#zapytaj`}>Zapytaj o projekt</a>
+      </div>
+    </main>
+  </div>
+</BaseLayout>
