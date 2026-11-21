@@ -1,8 +1,17 @@
 ---
 import LegalLayout from '../../layouts/LegalLayout.astro';
 ---
-<LegalLayout title="Pliki cookies" description="Strona mikolajborawski.pl nie używa cookies śledzących." updated="listopad 2026">
-  <p>Ta strona nie ustawia plików cookies. Nie ma reklam, pikseli Facebooka ani Google Analytics.</p>
-  <p>W pamięci przeglądarki (localStorage) zapisuję tylko dwie Twoje decyzje: jasny albo ciemny motyw i powiększony tekst. Zostają na Twoim urządzeniu i nigdzie ich nie wysyłam. Wyczyścisz je, usuwając dane strony w ustawieniach przeglądarki.</p>
-  <p>Czcionki ładują się z Google Fonts, więc przeglądarka łączy się z serwerami Google.</p>
+<LegalLayout title="Pliki cookies" description="Informacja o plikach cookies i pamięci przeglądarki w serwisie mikolajborawski.pl." updated="21 listopada 2026">
+  <h2>Pliki cookies</h2>
+  <p>Serwis mikolajborawski.pl nie ustawia plików cookies. Nie korzysta z reklam, pikseli śledzących (np. Meta Pixel) ani z Google Analytics. Z tego powodu nie wyświetla baneru zgody na cookies.</p>
+
+  <h2>Pamięć lokalna przeglądarki</h2>
+  <p>W pamięci przeglądarki (localStorage) zapisywane są wyłącznie ustawienia wybrane przez użytkownika: tryb jasny lub ciemny oraz powiększenie tekstu. Informacje te pozostają na Twoim urządzeniu, nie są przesyłane do administratora ani osób trzecich i służą jedynie zapamiętaniu Twojego wyboru.</p>
+  <p>Ustawienia można usunąć w każdej chwili, czyszcząc dane witryny w ustawieniach przeglądarki.</p>
+
+  <h2>Zasoby zewnętrzne</h2>
+  <p>Czcionki i pozostałe zasoby serwisu są udostępniane z tego samego serwera, bez łączenia się z zewnętrznymi dostawcami. Funkcja „Posłuchaj wpisu” korzysta z syntezy mowy wbudowanej w przeglądarkę lub system operacyjny.</p>
+
+  <h2>Kontakt</h2>
+  <p>Pytania dotyczące tej informacji można kierować na adres <a href="mailto:kontakt@mikolajborawski.pl">kontakt@mikolajborawski.pl</a>. Szczegóły przetwarzania danych osobowych opisuje <a href={`${import.meta.env.BASE_URL.replace(/\/$/, '')}/polityka-prywatnosci/`}>Polityka prywatności</a>.</p>
 </LegalLayout>
