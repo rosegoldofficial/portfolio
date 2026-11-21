@@ -1,0 +1,22 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import SubHeader from '../components/SubHeader.astro';
+import { posts } from '../lib/posts';
+import '../styles/prose.css';
+const base = import.meta.env.BASE_URL.replace(/\/$/, '');
+const picks = posts.slice(0, 3);
+---
+<BaseLayout title="Nie ma takiej strony · Mikołaj Borawski" description="Ta strona nie istnieje albo została przeniesiona." noindex>
+  <div class="page">
+    <SubHeader back={{ href: '/', label: 'Strona główna' }} />
+    <main class="art">
+      <span class="art__meta"><span class="k">błąd 404</span></span>
+      <h1>Tu nic nie ma<span style="color: var(--accent)">_</span></h1>
+      <p class="art__lead">Ta strona nie istnieje albo zmieniła adres. Może przyda się któraś z porad?</p>
+      {picks.map(p => (
+        <a class="nextcard" href={`${base}/porady/${p.slug}/`}><small>{p.num} · {p.tag}</small><strong>{p.title}</strong></a>
+      ))}
+      <a class="tb tb--solid" style="align-self:flex-start" href={`${base}/`}>Wróć na stronę główną</a>
+    </main>
+  </div>
+</BaseLayout>

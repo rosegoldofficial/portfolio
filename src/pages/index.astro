@@ -4,8 +4,11 @@ import markup from '../sections/home.html?raw';
 import '../styles/home.css';
 import { withBase } from '../lib/base';
 import { poradyBody, modals } from '../lib/blocks';
+import { graph, person, website, dungeonhub } from '../lib/seo';
+const site = Astro.site ?? new URL('https://mikolajborawski.pl');
+const ld = graph(website(site), person(site), dungeonhub(site));
 const html = withBase(markup.replace('<!--PORADY-->', poradyBody()).replace('<!--MODALS-->', modals()));
 ---
-<BaseLayout title="Mikołaj Borawski · Częstochowa" description="Mikołaj Borawski, 21 lat, Częstochowa. Patrzę miastu na ręce: jawne finanse, Kiedrzyn, bezpieczeństwo w sieci. Napisz albo zadzwoń." lang="pl" mountName="home" preloadImage={true}>
+<BaseLayout title="Mikołaj Borawski · Częstochowa" description="Mikołaj Borawski, 21 lat, Częstochowa. Patrzę miastu na ręce: jawne finanse, Kiedrzyn, bezpieczeństwo w sieci. Napisz albo zadzwoń." lang="pl" mountName="home" preloadImage={true} alternates={{ pl: "/", en: "/en/" }} type="profile" jsonLd={ld}>
   <Fragment set:html={html} />
 </BaseLayout>

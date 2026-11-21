@@ -4,6 +4,18 @@ import SubHeader from '../../components/SubHeader.astro';
 import { icon } from '../../lib/icons';
 import '../../styles/prose.css';
 import '../../styles/pages.css';
+import { graph, person, breadcrumbs, faqPage } from '../../lib/seo';
+import { posts } from '../../lib/posts';
+const site = Astro.site ?? new URL('https://mikolajborawski.pl');
+const about = [
+  { q: 'Kim jest Mikołaj Borawski?', a: `Mikołaj Borawski ma 21 lat i mieszka w Częstochowie, w dzielnicy Kiedrzyn. Zajmuje się cyberbezpieczeństwem i jawnością finansów samorządu. W 2026 roku współkoordynował zbiórkę podpisów pod referendum w sprawie odwołania władz Częstochowy, a wcześniej założył sieć serwerów Minecraft DungeonHub.` },
+  { q: 'Jaką rolę miał w referendum w Częstochowie?', a: 'Współkoordynował zbiórkę podpisów pod wnioskiem o referendum w sprawie odwołania prezydenta i rady miasta. Pod wnioskiem złożono 22 441 podpisów, a referendum odbyło się 25 października 2026 roku.' },
+  { q: 'Czym zajmuje się zawodowo?', a: 'Pracuje jako specjalista ds. marketingu i obsługi klienta w kancelarii doradztwa prawnego dla branży e-commerce. Rozwija się w cyberbezpieczeństwie i chce pracować w zespole Blue Team albo Cyber Threat Intelligence.' },
+  { q: 'Czym jest DungeonHub?', a: 'To sieć serwerów Minecraft, którą Mikołaj Borawski założył i prowadzi: lobby, tryby gry, serwery podzielone na sektory, portal ze sklepem i rankingami oraz wiki dla graczy. Przez lata współtworzyło ją około 50 osób.' },
+  { q: 'Czym jest poradnik „Bezpiecznie w sieci”?', a: `To ${posts.length} krótkich poradników dla mieszkańców o tym, jak rozpoznać oszustwa przez SMS, telefon i internet, napisanych prostym językiem na stronie mikolajborawski.pl.` },
+  { q: 'Jak się skontaktować?', a: 'Mailowo: kontakt@mikolajborawski.pl, telefonicznie: +48 510 684 160 albo przez formularz „Zapytaj mnie” na stronie głównej.' }
+];
+const ld = graph(person(site), faqPage(about), breadcrumbs(site, [['Mikołaj Borawski', '/'], ['O mnie i dla mediów', '/media/']]));
 const base = import.meta.env.BASE_URL.replace(/\/$/, '');
 const bioShort = 'Mikołaj Borawski (21 l.) z Częstochowy, z dzielnicy Kiedrzyn. Współkoordynował zbiórkę podpisów pod referendum w sprawie odwołania władz miasta w 2026 roku. Zajmuje się cyberbezpieczeństwem i jawnością finansów samorządu.';
 const bioLong = 'Mikołaj Borawski ma 21 lat, urodził się i mieszka w Częstochowie, w dzielnicy Kiedrzyn. W 2026 roku współkoordynował zbiórkę podpisów pod wnioskiem o referendum w sprawie odwołania prezydenta i rady miasta; pod wnioskiem złożono 22 441 podpisów. Interesuje się cyberbezpieczeństwem, szczególnie wykrywaniem zagrożeń i analizą oszustw internetowych, i prowadzi poradnik „Bezpiecznie w sieci” dla mieszkańców. Założył i prowadzi DungeonHub, sieć serwerów Minecraft, przy której przez lata pracowało około 50 osób. Przez 11 lat trenował lekkoatletykę w CKS Budowlani Częstochowa, startował w Mistrzostwach Polski U16. Zawodowo zajmuje się marketingiem i obsługą klienta.';
@@ -14,15 +26,25 @@ const photos = [
   { f: 'mikolaj-borawski-portret-przezroczyste.png', l: 'Portret bez tła', s: 'PNG · 787×1392', check: true }
 ];
 ---
-<BaseLayout title="Dla mediów · Mikołaj Borawski" description="Materiały prasowe: biogram, fakty, zdjęcia do pobrania i kontakt dla dziennikarzy.">
+<BaseLayout title="O mnie i dla mediów · Mikołaj Borawski" description="Kim jest Mikołaj Borawski z Częstochowy: biogram, fakty, odpowiedzi na najczęstsze pytania, zdjęcia do pobrania i kontakt dla dziennikarzy." type="profile" jsonLd={ld}>
   <div class="page">
     <SubHeader back={{ href: '/', label: 'Strona główna' }} />
     <main class="art art--wide">
       <div class="hero2">
         <span class="kick in1">~/dla-mediow</span>
-        <h1 class="in2">Dla mediów</h1>
+        <h1 class="in2">O mnie i dla mediów</h1>
         <p class="art__lead in3">Biogram, najważniejsze fakty i zdjęcia do pobrania. Wszystko możesz wykorzystać w publikacji. Przy zdjęciach podpisz: fot. archiwum Mikołaja Borawskiego.</p>
       </div>
+
+      <section class="sec faq">
+        <h2>O mnie w pytaniach</h2>
+        {about.map((f, i) => (
+          <details open={i === 0}>
+            <summary>{f.q}</summary>
+            <p>{f.a}</p>
+          </details>
+        ))}
+      </section>
 
       <section class="sec">
         <h2>Kontakt</h2>

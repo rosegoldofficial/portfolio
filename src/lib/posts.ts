@@ -7,6 +7,7 @@ export interface PostMeta {
   card: string;
   lead: string;
   date: string | Date;
+  faq?: { q: string; a: string }[];
 }
 export interface Post extends PostMeta {
   minutes: number;

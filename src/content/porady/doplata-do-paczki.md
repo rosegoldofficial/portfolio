@@ -7,6 +7,11 @@ title: "„Dopłać 1,99 zł do paczki”: jak rozpoznać fałszywy link"
 card: "10 sekund, które ratują konto."
 lead: "Zamawiasz dużo przez internet, więc SMS o paczce nikogo nie dziwi. Oszuści o tym wiedzą. Fałszywe strony kurierów wyglądają jak prawdziwe, mają logo, kolory i nawet numer przesyłki."
 date: 2026-11-21
+faq:
+  - q: "Czy kurier może poprosić SMS-em o dopłatę kilku złotych?"
+    a: "Takie SMS-y z linkiem do płatności to niemal zawsze oszustwo. Sprawdź przesyłkę w aplikacji kuriera, a SMS przekaż na 8080."
+  - q: "Jak rozpoznać fałszywy link do kuriera?"
+    a: "Czytaj adres od końca: liczy się to, co stoi tuż przed .pl lub .com. inpost.pl jest prawdziwe, inpost.pl-paczka.top już nie."
 ---
 
 ## Po co im 1,99 zł?

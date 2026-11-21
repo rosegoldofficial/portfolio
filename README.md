@@ -18,6 +18,12 @@ npm run build    # wynik w dist/
 - `src/styles/tokens.css` – kolory i odstępy z design systemu, `responsive.css` – układ na telefon
 - `DESIGN.md` – zasady wyglądu i treści
 
+## Nowa porada
+
+1. Dodaj plik w `src/content/porady/` (wzór: dowolny istniejący wpis, z `faq`).
+2. `python3 tools/graphics.py --fb ~/grafiki` tworzy obrazek do linków (`public/og/porady/`) i grafikę 1080×1350 na Facebooka.
+3. Commit i push.
+
 ## Do zrobienia przed startem
 
 1. Kupić domenę `mikolajborawski.pl`, dodać `public/CNAME` z jej nazwą i usunąć `SITE_BASE`/`SITE_URL` z `.github/workflows/deploy.yml`.

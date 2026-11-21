@@ -7,6 +7,11 @@ title: "Znajomy prosi na Messengerze o BLIK? Najpierw zadzwoń"
 card: "Konto znajomego mogło zostać przejęte."
 lead: "„Hej, możesz mi pomóc? Muszę szybko zapłacić, a nie mam BLIK-a. Podaj kod, oddam wieczorem.” Pisze kolega, z którym rozmawiasz od lat. Tylko że po drugiej stronie siedzi ktoś, kto przejął jego konto na Facebooku."
 date: 2026-11-21
+faq:
+  - q: "Znajomy prosi o kod BLIK na Messengerze. Co zrobić?"
+    a: "Zadzwoń do niego na znany numer. Jego konto mogło zostać przejęte. Nigdy nie podawaj kodu BLIK w wiadomości."
+  - q: "Jak długo jest ważny kod BLIK?"
+    a: "Dwie minuty. Dlatego oszuści naciskają, żeby wszystko działo się szybko."
 ---
 
 ## Dlaczego to działa

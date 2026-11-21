@@ -4,6 +4,7 @@ import SubHeader from '../../components/SubHeader.astro';
 import { posts, dateLabel } from '../../lib/posts';
 import { icon } from '../../lib/icons';
 import '../../styles/prose.css';
+import { graph, article, breadcrumbs, faqPage, person } from '../../lib/seo';
 
 export function getStaticPaths() {
   return posts.map((p, i) => ({ params: { slug: p.slug }, props: { i } }));
@@ -14,9 +15,17 @@ const next = posts[(i + 1) % posts.length];
 const { Content } = post;
 const base = import.meta.env.BASE_URL.replace(/\/$/, '');
 const site = Astro.site ?? new URL('https://mikolajborawski.pl');
-const url = new URL(`/porady/${post.slug}/`, site).href;
+const url = new URL(`${base}/porady/${post.slug}/`, site).href;
+const ogPath = `/og/porady/${post.slug}.png`;
+const faq = post.faq ?? [];
+const ld = graph(
+  article(site, { url, title: post.title, description: post.card + ' ' + post.lead, date: post.date, image: new URL(base + ogPath, site).href, lang: 'pl', section: 'Bezpiecznie w sieci' }),
+  person(site),
+  breadcrumbs(site, [['Mikołaj Borawski', '/'], ['Porady', '/#porady'], [post.title, `/porady/${post.slug}/`]]),
+  ...(faq.length ? [faqPage(faq)] : [])
+);
 ---
-<BaseLayout title={`${post.title} · Mikołaj Borawski`} description={post.card + ' ' + post.lead.slice(0, 120)}>
+<BaseLayout title={`${post.title} · Mikołaj Borawski`} description={(post.card + ' ' + post.lead).slice(0, 158)} image={ogPath} type="article" published={post.date} jsonLd={ld}>
   <div class="page">
     <div class="prog" aria-hidden="true"></div>
     <SubHeader back={{ href: '/#porady', label: 'Wszystkie porady' }} />
@@ -39,6 +48,17 @@ const url = new URL(`/porady/${post.slug}/`, site).href;
       <div class="prose">
         <Content />
       </div>
+      {faq.length > 0 && (
+        <section class="faq">
+          <h2>Najczęstsze pytania</h2>
+          {faq.map((f, i) => (
+            <details open={i === 0}>
+              <summary>{f.q}</summary>
+              <p>{f.a}</p>
+            </details>
+          ))}
+        </section>
+      )}
       <div class="art__end noprint">
         <span>Przyda się komuś z rodziny? Wyślij mu ten wpis.</span>
         <button type="button" class="tb tb--solid" data-share data-url={url} data-title={post.title}><Fragment set:html={icon.share(16)} />Wyślij rodzinie</button>

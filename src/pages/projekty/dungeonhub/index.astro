@@ -4,6 +4,9 @@ import SubHeader from '../../../components/SubHeader.astro';
 import { icon } from '../../../lib/icons';
 import '../../../styles/prose.css';
 import '../../../styles/pages.css';
+import { graph, dungeonhub, person, breadcrumbs } from '../../../lib/seo';
+const site = Astro.site ?? new URL('https://mikolajborawski.pl');
+const ld = graph(dungeonhub(site), person(site), breadcrumbs(site, [['Mikołaj Borawski', '/'], ['Poza polityką', '/#poza-polityka'], ['DungeonHub', '/projekty/dungeonhub/']]));
 const base = import.meta.env.BASE_URL.replace(/\/$/, '');
 const modules = [
   { n: '01', h: 'Sieć serwerów', p: 'To nie jeden serwer, tylko kilka połączonych ze sobą. Gracz wchodzi przez lobby i stamtąd przechodzi do wybranego trybu.', li: ['lobby, które rozdziela graczy między tryby', 'dwa tryby gry, w tym lochy z poziomami trudności, bossami i nagrodami', 'podział na sektory: obciążenie rozkłada się na kilka serwerów, więc sieć nie zwalnia przy większym ruchu', 'klany, PvP i postęp postaci wspólny dla całej sieci'], tags: ['Java', 'lobby', 'sektory'] },
@@ -12,7 +15,7 @@ const modules = [
   { n: '04', h: 'Discord i moderacja AI', p: 'Społeczność żyje na Discordzie, więc tam też trzeba pilnować porządku.', li: ['automatyczna moderacja: spam, wulgaryzmy, ostrzeżenia i wyciszenia', 'role nadawane za aktywność, ankiety i ogłoszenia', 'integracja z serwerem gry: statystyki graczy na Discordzie'], tags: ['Node.js', 'moderacja AI'] }
 ];
 ---
-<BaseLayout title="DungeonHub · case study · Mikołaj Borawski" description="DungeonHub: sieć serwerów Minecraft, którą założyłem i prowadzę. Lobby, dwa tryby, sektory, portal ze sklepem i rankingami, wiki i moderacja społeczności.">
+<BaseLayout title="DungeonHub · case study · Mikołaj Borawski" description="DungeonHub: sieć serwerów Minecraft, którą założyłem i prowadzę. Lobby, dwa tryby, sektory, portal ze sklepem i rankingami, wiki i moderacja społeczności." jsonLd={ld}>
   <div class="page">
     <div class="prog" aria-hidden="true"></div>
     <SubHeader back={{ href: '/#poza-polityka', label: 'Poza polityką' }} />
@@ -20,7 +23,7 @@ const modules = [
       <div class="hero2">
         <span class="kick in1">projekt główny / dungeonhub.pl</span>
         <h1 class="in2">DungeonHub</h1>
-        <p class="art__lead in3">Sieć serwerów Minecraft, którą założyłem i prowadzę: lobby, dwa tryby gry i serwery podzielone na sektory, a obok portal ze sklepem i rankingami, wiki dla graczy i moderacja społeczności. W praktyce mała firma technologiczna, w której jestem założycielem i głównym mózgiem operacyjnym.</p>
+        <p class="art__lead in3">Sieć serwerów Minecraft, którą założyłem i prowadzę: lobby, dwa tryby gry i serwery podzielone na sektory, a obok portal ze sklepem i rankingami, wiki dla graczy i moderacja społeczności. Projekt działa jak mała firma technologiczna, a ja jestem jego założycielem i głównym mózgiem operacyjnym.</p>
       </div>
 
       <div class="kpis">
@@ -58,10 +61,10 @@ const modules = [
       <section class="sec">
         <h2>Historia</h2>
         <div class="tl">
-          <div class="tl__i"><span class="tl__y">2018</span><span class="tl__t">RepliGon Community<small>Społeczność graczy z całej Polski, którą prowadziłem jako właściciel. Zbudowana wokół gry komputerowej, ale przede wszystkim wokół ludzi: w środku działały setki aktywnych osób, a całe community zamknęło się przy blisko tysiącu członków. Tam nauczyłem się zarządzać społecznością.</small></span></div>
-          <div class="tl__i"><span class="tl__y">2019</span><span class="tl__t">Pierwsze serwery gier i społeczności online<small>Pierwsza konfiguracja serwerów i pierwsza społeczność, którą trzeba było prowadzić.</small></span></div>
-          <div class="tl__i"><span class="tl__y">2024</span><span class="tl__t">Własny bot na Discorda<small>Moderacja, ekonomia, mini-gry i połączenie Discorda z serwerami gry.</small></span></div>
-          <div class="tl__i"><span class="tl__y">2026</span><span class="tl__t">Nowy portal dungeonhub.pl<small>Przepisany od zera w Next.js 15 i TypeScript, uruchamiany w kontenerach Docker. Sklep, rankingi, wiki i status serwera w jednym miejscu.</small></span></div>
+          <div class="tl__i"><span class="tl__y">2018</span><span class="tl__t">RepliGon Community<small>Społeczność graczy z całej Polski, którą prowadziłem jako właściciel. Zbudowana wokół gier komputerowych, ale przede wszystkim wokół ludzi: w środku działały setki aktywnych osób, a całe community zamknęło się przy blisko tysiącu członków. Tam nauczyłem się zarządzać społecznością.</small></span></div>
+          <div class="tl__i"><span class="tl__y">2019</span><span class="tl__t">Pierwsze serwery gier i społeczności online<small>Zacząłem tworzyć własne projekty na wielu płaszczyznach naraz: serwery, społeczności, strony i narzędzia. Z każdym kolejnym poznawałem coraz większe nazwiska polskiej sceny i budowałem sieć kontaktów, z której korzystam do dziś.</small></span></div>
+          <div class="tl__i"><span class="tl__y">2024</span><span class="tl__t">Własny bot na Discorda<small>Moderacja, ekonomia, mini-gry i połączenie Discorda z serwerami gry. Dzięki temu społeczność żyje także wtedy, gdy gracze nie są akurat w grze, a ekipa ma jedno miejsce do pilnowania porządku.</small></span></div>
+          <div class="tl__i"><span class="tl__y">2026</span><span class="tl__t">Premiera pierwszego serwera sieci<small>Po kilku latach pracy wystartował pierwszy z kilku serwerów DungeonHub, razem z nowym portalem dungeonhub.pl. Kolejny tryb jest już w przygotowaniu.</small></span></div>
         </div>
       </section>
 

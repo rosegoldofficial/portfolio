@@ -7,6 +7,11 @@ title: "Zastrzeż PESEL w mObywatelu w 2 minuty"
 card: "Nikt nie weźmie kredytu na Twoje dane."
 lead: "Wyciek danych z jakiegoś sklepu, zgubiony dowód, zdjęcie dokumentu wysłane „do weryfikacji”. Wystarczy, żeby ktoś spróbował wziąć kredyt na Ciebie. Zastrzeżenie numeru PESEL to darmowa blokada, którą zdejmujesz w kilka sekund, kiedy sam potrzebujesz kredytu."
 date: 2026-11-21
+faq:
+  - q: "Ile kosztuje zastrzeżenie numeru PESEL?"
+    a: "Nic. Zastrzeżenie i jego cofnięcie są bezpłatne, w aplikacji mObywatel, na gov.pl albo w urzędzie gminy."
+  - q: "Co jeśli chcę wziąć kredyt, a mam zastrzeżony PESEL?"
+    a: "Cofasz zastrzeżenie w mObywatelu od razu albo na wybrany czas, a potem blokada może wrócić sama."
 ---
 
 ## Co daje zastrzeżenie

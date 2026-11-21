@@ -7,6 +7,11 @@ title: "Darmowe Wi‑Fi w galerii i na dworcu: co wolno, a czego lepiej nie"
 card: "Nazwa sieci może kłamać."
 lead: "Darmowe Wi-Fi w galerii, na dworcu albo w kawiarni jest dziś bezpieczniejsze niż dziesięć lat temu, bo prawie każda strona szyfruje połączenie. Ale jedna rzecz nadal jest ryzykowna: sieć, która tylko udaje tę prawdziwą."
 date: 2026-11-21
+faq:
+  - q: "Czy można korzystać z bankowości na publicznym Wi-Fi?"
+    a: "Aplikacje banków szyfrują połączenie, ale najbezpieczniej płacić i logować się na danych komórkowych."
+  - q: "Jak rozpoznać fałszywy hotspot?"
+    a: "Fałszywa sieć często podszywa się pod nazwę miejsca i prosi o hasło do innego serwisu albo dane karty. Prawdziwy hotspot co najwyżej każe zaakceptować regulamin."
 ---
 
 ## Fałszywy hotspot

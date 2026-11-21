@@ -4,6 +4,7 @@ import SubHeader from '../../../components/SubHeader.astro';
 import { notes, dateEn } from '../../../lib/notes';
 import { icon } from '../../../lib/icons';
 import '../../../styles/prose.css';
+import { graph, article, breadcrumbs, person } from '../../../lib/seo';
 
 export function getStaticPaths() {
   return notes.map((n, i) => ({ params: { slug: n.slug }, props: { i } }));
@@ -14,9 +15,14 @@ const next = notes[(i + 1) % notes.length];
 const { Content } = note;
 const base = import.meta.env.BASE_URL.replace(/\/$/, '');
 const site = Astro.site ?? new URL('https://mikolajborawski.pl');
-const url = new URL(`/en/notes/${note.slug}/`, site).href;
+const url = new URL(`${base}/en/notes/${note.slug}/`, site).href;
+const ld = graph(
+  article(site, { url, title: note.title, description: note.lead, date: note.date, image: new URL(base + '/og.jpg', site).href, lang: 'en', section: 'Security notes' }),
+  person(site),
+  breadcrumbs(site, [['Mikołaj Borawski', '/en/'], ['Security notes', '/en/#notes'], [note.title, `/en/notes/${note.slug}/`]])
+);
 ---
-<BaseLayout title={`${note.title} · Mikołaj Borawski`} description={note.lead.slice(0, 155)} lang="en">
+<BaseLayout title={`${note.title} · Mikołaj Borawski`} description={note.lead.slice(0, 155)} lang="en" type="article" published={note.date} jsonLd={ld}>
   <div class="page">
     <div class="prog" aria-hidden="true"></div>
     <SubHeader back={{ href: '/en/#notes', label: 'All notes' }} lang="en" />

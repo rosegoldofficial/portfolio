@@ -7,6 +7,11 @@ title: "Kod QR na parkometrze może prowadzić do oszustów"
 card: "Naklejkę z kodem może przykleić każdy."
 lead: "Kody QR są wszędzie: na parkometrach, ulotkach, w restauracjach i na fakturach. Telefon otwiera link od razu, a adresu prawie nikt nie czyta. Dlatego oszuści naklejają własne kody na prawdziwe, oficjalne tablice."
 date: 2026-11-21
+faq:
+  - q: "Czy kod QR na parkometrze może być niebezpieczny?"
+    a: "Tak. Oszuści naklejają własne kody na oficjalne tablice i prowadzą do fałszywej płatności."
+  - q: "Jak bezpiecznie skanować kody QR?"
+    a: "Przeczytaj adres pokazany przez telefon przed otwarciem i nie wpisuj danych karty na stronie z naklejki."
 ---
 
 ## Jak wygląda atak

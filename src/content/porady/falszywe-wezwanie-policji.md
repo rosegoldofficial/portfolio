@@ -7,6 +7,11 @@ title: "E-mail „z policji” o rzekomym przestępstwie. Nie odpisuj"
 card: "Prawdziwe wezwanie nie przychodzi z Gmaila."
 lead: "Przychodzi poważnie wyglądający e-mail z logo policji albo prokuratury, z pieczątkami i podpisem wysokiego rangą funkcjonariusza. Treść jest szokująca: rzekomo prowadzone jest postępowanie wobec Ciebie i musisz pilnie odpowiedzieć, żeby uniknąć aresztowania. To oszustwo obliczone na wstyd i strach."
 date: 2026-11-21
+faq:
+  - q: "Czy policja wysyła wezwania e-mailem?"
+    a: "Policja i prokuratura nie załatwiają takich spraw mailem z prywatnej skrzynki ani nie oferują umorzenia za przelew."
+  - q: "Co zrobić z e-mailem „z policji” o przestępstwie?"
+    a: "Nie odpisuj i nie płać. Zgłoś wiadomość na incydent.cert.pl, a w razie wątpliwości zadzwoń na komendę."
 ---
 
 ## Po czym to poznać

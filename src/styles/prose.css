@@ -61,3 +61,12 @@
 .prose pre { margin: 0; padding: 20px; border-radius: 16px; border: 1px solid var(--line); background: var(--surface) !important; overflow-x: auto; font-size: 14px; line-height: 1.6; }
 .prose pre code { background: none; padding: 0; font-size: 14px; }
 .prose .table-wrap, .prose table { display: block; overflow-x: auto; }
+.faq { display: flex; flex-direction: column; gap: 10px; margin-top: 12px; }
+.faq h2 { margin: 0 0 8px; font-weight: 600; font-size: 28px; letter-spacing: -0.03em; }
+.faq details { border: 1px solid var(--line); border-radius: 16px; background: var(--surface); padding: 0 20px; transition: border-color .25s; }
+.faq details[open] { border-color: var(--accent-line); }
+.faq summary { list-style: none; cursor: pointer; padding: 18px 32px 18px 0; position: relative; font-size: 18px; font-weight: 600; }
+.faq summary::-webkit-details-marker { display: none; }
+.faq summary::after { content: "+"; position: absolute; right: 0; top: 14px; font-family: var(--font-mono); font-size: 22px; color: var(--accent); transition: transform .3s; }
+.faq details[open] summary::after { transform: rotate(45deg); }
+.faq details p { margin: 0 0 18px; font-size: 17px; line-height: 1.6; color: var(--ink-soft); }

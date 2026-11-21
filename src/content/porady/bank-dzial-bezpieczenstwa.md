@@ -7,6 +7,11 @@ title: "„Dzwonię z działu bezpieczeństwa banku”. Rozłącz się."
 card: "Trzy zdania, po których to na pewno oszust."
 lead: "Na ekranie wyświetla się nazwa Twojego banku albo nawet jego prawdziwy numer. Uprzejmy konsultant mówi, że ktoś próbuje wyprowadzić Twoje pieniądze i trzeba działać natychmiast. To jeden z najskuteczniejszych przekrętów w Polsce, bo brzmi jak troska."
 date: 2026-11-21
+faq:
+  - q: "Czy bank może poprosić o zainstalowanie aplikacji do zdalnego dostępu?"
+    a: "Nie. Bank nigdy nie prosi o instalację AnyDeska, TeamViewera ani podobnych programów. To znak oszustwa."
+  - q: "Czy numer banku wyświetlony na ekranie dowodzi, że dzwoni bank?"
+    a: "Nie. Numer na ekranie można podrobić (spoofing). Rozłącz się i zadzwoń sam na numer z karty lub z aplikacji."
 ---
 
 ## Numer na ekranie można podrobić

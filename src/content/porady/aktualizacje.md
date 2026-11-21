@@ -7,6 +7,11 @@ title: "„Przypomnij później” to zły pomysł. Dlaczego aktualizacje są wa
 card: "Każda łatka zamyka drzwi, przez które ktoś już próbował wejść."
 lead: "Aktualizacja wyskakuje zawsze w złym momencie, więc klikamy „później”. A potem jeszcze raz. Tymczasem spora część tych aktualizacji to nie nowe emotki, tylko łatki na dziury, o których przestępcy już wiedzą."
 date: 2026-11-21
+faq:
+  - q: "Dlaczego aktualizacje telefonu są ważne?"
+    a: "Zawierają łatki na błędy bezpieczeństwa. Po ich publikacji przestępcy wiedzą, czego szukać w telefonach bez aktualizacji."
+  - q: "Jak sprawdzić, czy telefon dostaje jeszcze poprawki?"
+    a: "W ustawieniach sprawdź datę ostatniej poprawki zabezpieczeń. Jeśli ma ponad rok, model prawdopodobnie nie jest już wspierany."
 ---
 
 ## Co jest w aktualizacji

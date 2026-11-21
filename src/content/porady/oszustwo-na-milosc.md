@@ -7,6 +7,11 @@ title: "Lekarz na misji, żołnierz za granicą. Oszustwo „na miłość”"
 card: "Najpierw rozmowy, potem prośba o pieniądze."
 lead: "Zaczyna się od zaproszenia do znajomych albo wiadomości na portalu randkowym. Przystojny lekarz pracujący dla międzynarodowej organizacji, żołnierz na misji, inżynier na platformie wiertniczej. Miesiącami pisze codziennie, jest czuły i uważny. A potem pojawia się problem, który da się rozwiązać tylko pieniędzmi."
 date: 2026-11-21
+faq:
+  - q: "Jak rozpoznać oszustwo na miłość?"
+    a: "Osoba nigdy nie może porozmawiać przez kamerę, szybko mówi o uczuciach, a potem prosi o pieniądze."
+  - q: "Jak sprawdzić zdjęcia osoby z internetu?"
+    a: "Wyszukaj je w wyszukiwarce obrazów Google. Często należą do kogoś zupełnie innego."
 ---
 
 ## Jak to wygląda

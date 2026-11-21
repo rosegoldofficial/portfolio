@@ -7,6 +7,11 @@ title: "„Na wnuczka” 2.0: głos bliskiej osoby może być podrobiony"
 card: "Ustalcie rodzinne hasło na takie telefony."
 lead: "Dzwoni wnuczka. Płacze, miała wypadek, potrzebuje pieniędzy na kaucję albo lekarza. Głos jest jej, intonacja też. Tylko że to nie ona. Programy do podrabiania głosu potrzebują dziś kilkunastu sekund nagrania, a takie nagranie da się wziąć z filmiku w mediach społecznościowych."
 date: 2026-11-21
+faq:
+  - q: "Czy oszust może podrobić głos członka rodziny?"
+    a: "Tak. Programy do klonowania głosu potrzebują kilkunastu sekund nagrania, np. z filmiku w mediach społecznościowych."
+  - q: "Jak sprawdzić, czy dzwoni naprawdę ktoś z rodziny?"
+    a: "Rozłącz się i oddzwoń na numer zapisany od dawna. Pomaga też ustalone wcześniej rodzinne hasło, którego oszust nie zna."
 ---
 
 ## Jak wygląda taki telefon

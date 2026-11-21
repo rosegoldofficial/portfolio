@@ -7,6 +7,11 @@ title: "„Zarabiaj 300 zł dziennie za lajkowanie filmów”. Oszustwo na zadan
 card: "Najpierw płacą Tobie, potem Ty płacisz im."
 lead: "Na WhatsAppie albo Telegramie pisze „rekruterka” z oferty pracy zdalnej. Zadania są proste: polub film, napisz opinię o hotelu, zrób zrzut ekranu. Za pierwsze naprawdę płacą kilkadziesiąt złotych. I właśnie dlatego to działa."
 date: 2026-11-21
+faq:
+  - q: "Czy praca za lajkowanie filmów to oszustwo?"
+    a: "Tak, gdy po kilku małych wypłatach trzeba wpłacić własne pieniądze, żeby dostać kolejne zadania."
+  - q: "Czy prawdziwy pracodawca może kazać mi wpłacić pieniądze?"
+    a: "Nie. Jeśli żeby zarabiać, trzeba najpierw zapłacić, to nie jest praca."
 ---
 
 ## Schemat krok po kroku

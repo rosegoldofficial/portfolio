@@ -5,9 +5,12 @@ import '../../styles/en.css';
 import { withBase } from '../../lib/base';
 import { notes, dateEn } from '../../lib/notes';
 import { icon } from '../../lib/icons';
+import { graph, person, website, dungeonhub } from '../../lib/seo';
+const site = Astro.site ?? new URL('https://mikolajborawski.pl');
+const ld = graph(website(site), person(site), dungeonhub(site));
 const rows = notes.map(n => `<a href="/en/notes/${n.slug}/" class="row mb-prow mb-note"><span class="mb-prow__n">${dateEn(n.date)}</span><span class="mb-prow__tag">${n.tag}</span><span class="mb-prow__t">${n.title}</span><span class="mb-time">${icon.clock(13)}${n.minutes} min</span></a>`).join('');
 const html = withBase(markup.replace('<!--LI-->', icon.linkedin(18)).replace('<!--NOTES-->', `<div class="mb-plist">${rows}</div>`));
 ---
-<BaseLayout title="Mikołaj Borawski · Częstochowa, Poland" description="Mikołaj Borawski: blue team in the making, web developer and local activist from Częstochowa, Poland." lang="en" mountName="en" preloadImage={true}>
+<BaseLayout title="Mikołaj Borawski · Częstochowa, Poland" description="Mikołaj Borawski: blue team in the making, web developer and local activist from Częstochowa, Poland." lang="en" mountName="en" preloadImage={true} alternates={{ pl: "/", en: "/en/" }} type="profile" jsonLd={ld}>
   <Fragment set:html={html} />
 </BaseLayout>

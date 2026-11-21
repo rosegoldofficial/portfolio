@@ -7,6 +7,11 @@ title: "„Zainwestuj 1000 zł, zarób 20 000”. Fałszywe inwestycje ze znanym
 card: "Reklama ze znanym nazwiskiem to dziś najczęstsza przynęta."
 lead: "Na Facebooku albo YouTubie wyskakuje reklama: znany dziennikarz, sportowiec albo polityk „zdradza”, jak zarobić na akcjach dużej spółki albo na kryptowalutach. Film wygląda prawdziwie, bo często jest przerobiony przez sztuczną inteligencję. Za nim stoi jedna z najdroższych pułapek w polskim internecie."
 date: 2026-11-21
+faq:
+  - q: "Czy znani ludzie polecają inwestycje w reklamach na Facebooku?"
+    a: "Nie. Takie reklamy, często z filmem przerobionym przez AI, to prawie zawsze oszustwo."
+  - q: "Jak sprawdzić firmę inwestycyjną?"
+    a: "Sprawdź Listę ostrzeżeń publicznych KNF na knf.gov.pl i to, czy firma ma zezwolenie KNF."
 ---
 
 ## Jak to działa

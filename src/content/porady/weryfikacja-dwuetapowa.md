@@ -7,6 +7,11 @@ title: "Weryfikacja dwuetapowa na Facebooku, Gmailu i w banku: 5 minut"
 card: "Hasło to za mało. Drugi klucz zatrzyma złodzieja."
 lead: "Hasła wyciekają. Nie zawsze z Twojej winy, czasem z serwisu, w którym założyłeś konto dziesięć lat temu. Weryfikacja dwuetapowa sprawia, że samo hasło nikomu nie wystarczy: do zalogowania potrzebny jest jeszcze Twój telefon."
 date: 2026-11-21
+faq:
+  - q: "Czy kod SMS wystarczy jako drugi krok logowania?"
+    a: "Jest lepszy niż nic, ale aplikacja uwierzytelniająca albo klucz dostępu (passkey) są bezpieczniejsze, bo SMS da się przechwycić przy podmianie karty SIM."
+  - q: "Co zrobić, gdy zgubię telefon z weryfikacją dwuetapową?"
+    a: "Użyj kodów zapasowych zapisanych przy włączaniu weryfikacji. Warto je wydrukować albo trzymać w menedżerze haseł."
 ---
 
 ## Jak to działa
