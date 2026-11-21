@@ -85,3 +85,7 @@ W kodzie: `src/styles/tokens.css` (ciemny w `:root`, jasny w `[data-theme="light
 | `--danger` | `#FF8A8A` | `#B3261E` |
 
 Pełne tokeny (typografia, odstępy, promienie, cienie) i podgląd komponentów: design system „Borawski” w Claude.
+
+## Social
+
+Szablony grafik na zdjęcie (news, pilne, cytat, wydarzenie, liczba) generuje `tools/social.py`, baner FB `tools/banner.py`. Formaty: post 1080×1350, kwadrat 1080×1080, story 1080×1920, link 1200×630, baner 1640×624. Etykieta JetBrains Mono w pigułce `accent`, tytuł Inter Tight 700 z jednym słowem w `accent` (`*słowo*`), źródło mono. „Pilne”: pigułka #E0301E. Nakładki do Canvy: `python3 tools/social.py nakladki --out dir`.

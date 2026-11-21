@@ -31,3 +31,11 @@ npm run build    # wynik w dist/
 3. Kod GoatCounter wpisać w `GOATCOUNTER` w `src/layouts/BaseLayout.astro`.
 
 Publikacja: każdy push na `main` buduje i wdraża stronę (GitHub Actions).
+
+## Grafiki social
+
+```
+python3 tools/social.py news --foto zdjecie.jpg --etykieta "Rada miasta" --tytul "Rada przyjęła *budżet*" --zrodlo "BIP UM" --format post --out post.jpg
+python3 tools/social.py nakladki --out nakladki/
+python3 tools/banner.py
+```
