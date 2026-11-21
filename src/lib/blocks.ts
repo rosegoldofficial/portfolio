@@ -86,8 +86,8 @@ export const PROGRAM: ModalDef[] = [
     lead: 'Ciemny chodnik, przejście, na którym kierowcy nie widzą pieszych, przepełniony kosz. Małe rzeczy, które decydują, czy dobrze się mieszka.',
     blocks: [
       { h: 'Dlaczego', body: '<p>Na Kiedrzynie wiele spraw ciągnie się latami, bo nikt ich nie zgłasza do końca. Drogi i przejścia należą do Miejskiego Zarządu Dróg, więc zgłoszenie musi trafić tam, a potem trzeba pilnować odpowiedzi.</p>' },
-      { h: 'Co zrobię', body: ul(['zgłoszę do MZD brakujące oświetlenie i niebezpieczne przejścia, które wskażą mieszkańcy', 'będę wnioskował o dodatkowe kosze tam, gdzie się przepełniają', 'każde zgłoszenie dopiszę do licznika napraw z datą i odpowiedzią urzędu']) },
-      { h: 'Jak to sprawdzisz', body: '<p>Licznik „kiedrzyn.naprawy” na górze strony pokazuje, ile zgłoszeń ma już odpowiedź. Każde będzie miało swój wpis.</p>' }
+      { h: 'Co zrobię', body: ul(['zgłoszę do MZD brakujące oświetlenie i niebezpieczne przejścia, które wskażą mieszkańcy', 'będę wnioskował o dodatkowe kosze tam, gdzie się przepełniają', 'każde zgłoszenie opublikuję tutaj z datą i odpowiedzią urzędu']) },
+      { h: 'Jak to sprawdzisz', body: '<p>Każde zgłoszenie dostanie tu swój wpis: co zgłosiłem, kiedy i co odpowiedział MZD. Bez odpowiedzi też to zobaczysz.</p>' }
     ],
     cta: { label: 'Zgłoś miejsce na osiedlu', href: '#zapytaj' }
   }

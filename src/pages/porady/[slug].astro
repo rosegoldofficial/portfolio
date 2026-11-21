@@ -29,7 +29,7 @@ const url = new URL(`/porady/${post.slug}/`, site).href;
       <h1 class="in2">{post.title}</h1>
       <p class="art__lead in3">{post.lead}</p>
       <div class="byline">
-        <img src={`${base}/img/portret.webp`} alt="" width="48" height="48" />
+        <img src={`${base}/img/avatar-96.webp`} srcset={`${base}/img/avatar-96.webp 1x, ${base}/img/avatar-192.webp 2x`} alt="" width="48" height="48" loading="lazy" decoding="async" />
         <div class="byline__who"><span>Mikołaj Borawski</span><span>uczę się cyberbezpieczeństwa i tłumaczę je po ludzku</span></div>
         <div class="tools noprint">
           <button type="button" class="tb" data-speak aria-pressed="false"><Fragment set:html={icon.volume(16)} /><span>Posłuchaj</span></button>

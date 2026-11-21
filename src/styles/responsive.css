@@ -51,3 +51,6 @@ html, body { overflow-x: clip; }
   [data-mount] .hdr-nav { order: 3; width: 100%; justify-content: space-between; flex-wrap: nowrap !important; overflow-x: auto; scrollbar-width: none; }
   [data-mount] #about p, [data-mount] #about h1 { overflow-wrap: anywhere; }
 }
+@media (max-width: 900px) {
+  [data-mount] #tresc img, [data-mount] #about img { height: auto !important; width: 100% !important; max-width: 420px; }
+}

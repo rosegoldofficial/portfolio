@@ -7,5 +7,5 @@ export default defineConfig({
   site: process.env.SITE_URL || 'https://mikolajborawski.pl',
   base: process.env.SITE_BASE || '/',
   trailingSlash: 'ignore',
-  build: { format: 'directory' }
+  build: { format: 'directory', inlineStylesheets: 'always' }
 });

@@ -168,3 +168,37 @@ dialog.mb-modal.is-closing .mb-modal__box { animation: mbOut .18s ease both; }
 .mb-formerr { margin: 0; display: inline-flex; align-items: center; gap: 10px; min-height: 44px; padding: 0 18px; border-radius: 999px; background: color-mix(in srgb, var(--danger) 14%, transparent); border: 1px solid var(--danger); color: var(--ink); font-size: 15px; font-weight: 500; animation: mbShake .4s ease; }
 @keyframes mbShake { 20%, 60% { transform: translateX(-6px); } 40%, 80% { transform: translateX(6px); } }
 .mb-morebtn { align-self: flex-start; margin-top: 8px; min-height: 48px; padding: 0 22px; color: var(--ink); }
+
+/* ---------- Intro (first visit of the session, home only) ---------- */
+.intro-screen { display: none; }
+html.intro .intro-screen {
+  position: fixed; inset: 0; z-index: 100; display: grid; place-items: center;
+  background: var(--bg); pointer-events: none;
+  transition: background-color .6s ease .15s;
+}
+html.intro body { overflow: hidden; }
+html.intro .hdr-logo { visibility: hidden; }
+html.intro [data-mount] .u1, html.intro [data-mount] .u2, html.intro [data-mount] .u3,
+html.intro [data-mount] .u4, html.intro [data-mount] .gl { animation-play-state: paused !important; }
+.intro__stage { display: flex; flex-direction: column; align-items: flex-start; gap: 18px; }
+.intro__logo {
+  display: inline-block; font-family: var(--font-sans); font-weight: 700; letter-spacing: -0.01em;
+  font-size: clamp(48px, 11vw, 128px); line-height: 1; color: var(--ink); white-space: nowrap;
+  transform-origin: 0 0; will-change: transform;
+}
+.intro__txt { display: inline-block; clip-path: inset(0 100% 0 0); animation: introType .75s steps(8, end) .15s forwards; }
+.intro__cur { color: var(--accent); animation: introBlink .5s steps(1) infinite; }
+.intro__bar { width: 100%; height: 3px; border-radius: 3px; background: var(--line); overflow: hidden; }
+.intro__bar::after { content: ""; display: block; height: 100%; width: 100%; background: var(--accent); transform: scaleX(0); transform-origin: left; animation: introBar 1s cubic-bezier(.6,0,.2,1) .1s forwards; }
+.intro-screen.is-leaving { background: transparent; }
+.intro-screen.is-leaving .intro__bar { opacity: 0; transition: opacity .2s; }
+.intro-screen.is-leaving .intro__cur { animation: none; }
+@keyframes introType { to { clip-path: inset(0 0 0 0); } }
+@keyframes introBlink { 50% { opacity: 0; } }
+@keyframes introBar { to { transform: scaleX(1); } }
+html.intro .hdr > :not(.hdr-logo), html.intro #tresc img, html.intro #tresc .gl { opacity: 0; }
+html.intro-reveal .hdr > :not(.hdr-logo) { animation: mbRevealDown .7s cubic-bezier(.2,.8,.2,1) both; }
+html.intro-reveal .hdr > :nth-child(3) { animation-delay: .08s; }
+html.intro-reveal #tresc img { animation: mbRevealUp 1s .1s cubic-bezier(.2,.8,.2,1) both; }
+@keyframes mbRevealDown { from { opacity: 0; transform: translateY(-14px); } to { opacity: 1; transform: none; } }
+@keyframes mbRevealUp { from { opacity: 0; transform: translateY(40px) scale(.98); filter: blur(8px); } to { opacity: 1; transform: none; filter: none; } }

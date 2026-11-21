@@ -8,6 +8,6 @@ import { icon } from '../../lib/icons';
 const rows = notes.map(n => `<a href="/en/notes/${n.slug}/" class="row mb-prow mb-note"><span class="mb-prow__n">${dateEn(n.date)}</span><span class="mb-prow__tag">${n.tag}</span><span class="mb-prow__t">${n.title}</span><span class="mb-time">${icon.clock(13)}${n.minutes} min</span></a>`).join('');
 const html = withBase(markup.replace('<!--LI-->', icon.linkedin(18)).replace('<!--NOTES-->', `<div class="mb-plist">${rows}</div>`));
 ---
-<BaseLayout title="Mikołaj Borawski · Częstochowa, Poland" description="Mikołaj Borawski: blue team in the making, web developer and local activist from Częstochowa, Poland." lang="en" mountName="en">
+<BaseLayout title="Mikołaj Borawski · Częstochowa, Poland" description="Mikołaj Borawski: blue team in the making, web developer and local activist from Częstochowa, Poland." lang="en" mountName="en" preloadImage={true}>
   <Fragment set:html={html} />
 </BaseLayout>

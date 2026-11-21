@@ -11,7 +11,7 @@
 .art h1 { margin: 0; font-weight: 600; font-size: clamp(40px, 7vw, 64px); line-height: 1; letter-spacing: -0.045em; }
 .art__lead { margin: 0; font-size: 22px; line-height: 1.55; color: var(--ink-soft); }
 .byline { display: flex; align-items: center; gap: 16px; flex-wrap: wrap; padding: 20px 0; border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
-.byline img { width: 48px; height: 48px; border-radius: 50%; object-fit: cover; object-position: top; background: var(--surface-raised); }
+.byline img { width: 48px; height: 48px; border-radius: 50%; object-fit: cover; background: #fff; box-shadow: 0 0 0 2px var(--accent-line); }
 .byline__who { display: flex; flex-direction: column; gap: 2px; flex: 1; min-width: 200px; }
 .byline__who span:first-child { font-weight: 600; }
 .byline__who span:last-child { font-size: 14px; color: var(--ink-muted); }
@@ -43,7 +43,7 @@
 .nextcard:hover { transform: translateY(-4px); border-color: var(--accent); }
 .nextcard small { font-family: var(--font-mono); font-size: 12px; color: var(--accent-text); }
 .nextcard strong { font-size: 21px; font-weight: 600; line-height: 1.25; }
-.toast { position: fixed; left: 50%; bottom: 32px; transform: translateX(-50%); z-index: 70; padding: 14px 22px; border-radius: 999px; background: var(--ink); color: var(--bg); font-weight: 600; animation: tin .35s cubic-bezier(.2,.8,.2,1) both; }
+.toast { position: fixed; left: 50%; bottom: 32px; transform: translateX(-50%); z-index: 70; width: max-content; max-width: min(560px, calc(100% - 32px)); text-align: center; line-height: 1.4; padding: 14px 22px; border-radius: 24px; background: var(--ink); color: var(--bg); font-weight: 600; animation: tin .35s cubic-bezier(.2,.8,.2,1) both; }
 @keyframes tin { from { opacity: 0; transform: translate(-50%, 16px); } to { opacity: 1; transform: translate(-50%, 0); } }
 @keyframes blurin { from { opacity: 0; filter: blur(12px); transform: translateY(16px); } to { opacity: 1; filter: none; transform: none; } }
 .in1 { animation: blurin .9s cubic-bezier(.2,.8,.2,1) both; }

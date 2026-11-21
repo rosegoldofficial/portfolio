@@ -63,9 +63,12 @@ componentDidMount() {
 setTheme(this.state.light);
 const reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 if (reduce) { this.setState({ t: 1 }); return; }
+const run = () => {
 const start = performance.now();
 const step = now => { const t = Math.min(1, (now - start) / 1800); this.setState({ t }); if (t < 1) this.raf = requestAnimationFrame(step); };
 this.raf = requestAnimationFrame(step);
+};
+if (document.documentElement.classList.contains('intro')) document.addEventListener('mb:intro-done', run, { once: true }); else run();
 }
 componentWillUnmount() { cancelAnimationFrame(this.raf); clearTimeout(this.toastT); }
 renderVals() {
@@ -140,6 +143,7 @@ resultsLabel: (() => { const q = s.query.trim().toLowerCase(); const n = PORADY.
 c1: fmt(Math.round(22441 * (1 - Math.pow(1 - s.t, 3)))),
 c2: String(Math.round(11 * (1 - Math.pow(1 - s.t, 3)))),
 c3: Math.round(250 * (1 - Math.pow(1 - s.t, 3))) + '+',
+c4: String(Math.round(PORADY.length * (1 - Math.pow(1 - s.t, 3)))),
 scr: Object.fromEntries(Object.entries(LABELS).map(([k, v]) => [k, s.t >= 0.5 ? v : scramble(v, s.t * 2)])),
 spot: ev => { const el = ev.currentTarget; const r = el.getBoundingClientRect(); el.style.setProperty('--mx', (ev.clientX - r.left) + 'px'); el.style.setProperty('--my', (ev.clientY - r.top) + 'px'); },
 tilt: ev => { const el = ev.currentTarget; const r = el.getBoundingClientRect(); const x = (ev.clientX - r.left) / r.width - 0.5; const y = (ev.clientY - r.top) / r.height - 0.5; el.style.setProperty('--mx', (ev.clientX - r.left) + 'px'); el.style.setProperty('--my', (ev.clientY - r.top) + 'px'); el.style.transform = 'perspective(1200px) rotateX(' + (-y * 4).toFixed(2) + 'deg) rotateY(' + (x * 6).toFixed(2) + 'deg) translateY(-4px)'; },

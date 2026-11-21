@@ -1,5 +1,8 @@
 ---
 import { ClientRouter } from 'astro:transitions';
+import '../styles/fonts.css';
+import interLatin from '../assets/fonts/inter-tight-latin-wght-normal.woff2?url';
+import interLatinExt from '../assets/fonts/inter-tight-latin-ext-wght-normal.woff2?url';
 import '../styles/tokens.css';
 import '../styles/responsive.css';
 import '../styles/blocks.css';
@@ -9,8 +12,9 @@ interface Props {
   description: string;
   lang?: 'pl' | 'en';
   mountName?: 'home' | 'en';
+  preloadImage?: boolean;
 }
-const { title, description, lang = 'pl', mountName } = Astro.props;
+const { title, description, lang = 'pl', mountName, preloadImage } = Astro.props;
 const site = Astro.site ?? new URL('https://mikolajborawski.pl');
 const base = import.meta.env.BASE_URL.replace(/\/$/, '');
 const canonical = new URL(Astro.url.pathname.replace(base, '') || '/', site).href;
@@ -26,6 +30,8 @@ const GOATCOUNTER = '';
     <title>{title}</title>
     <meta name="description" content={description} />
     <link rel="canonical" href={canonical} />
+    <link rel="preload" href={interLatin} as="font" type="font/woff2" crossorigin />
+    <link rel="preload" href={interLatinExt} as="font" type="font/woff2" crossorigin />
     <link rel="icon" href={`${base}/favicon.svg`} type="image/svg+xml" />
     <meta name="theme-color" content="#0A0B0D" />
     <meta property="og:type" content="website" />
@@ -35,21 +41,77 @@ const GOATCOUNTER = '';
     <meta property="og:image" content={ogImage} />
     <meta property="og:locale" content={lang === 'en' ? 'en_GB' : 'pl_PL'} />
     <meta name="twitter:card" content="summary_large_image" />
+    {preloadImage && <link rel="preload" as="image" href={`${base}/img/portret.webp`} imagesrcset={`${base}/img/portret-420.webp 420w, ${base}/img/portret.webp 787w`} imagesizes="(max-width: 900px) 90vw, 420px" fetchpriority="high" />}
     <link rel="alternate" hreflang="pl" href={new URL('/', site).href} />
     <link rel="alternate" hreflang="en" href={new URL('/en/', site).href} />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
     <script is:inline>
       try { if (localStorage.getItem('mb:light') === '1') document.documentElement.dataset.theme = 'light'; } catch (e) {}
     </script>
+    {mountName === 'home' && (
+      <script is:inline>
+        try {
+          var reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+          if (!reduce && !sessionStorage.getItem('mb:intro')) document.documentElement.classList.add('intro');
+        } catch (e) {}
+      </script>
+    )}
     <ClientRouter />
     {GOATCOUNTER && <script is:inline data-goatcounter={`https://${GOATCOUNTER}.goatcounter.com/count`} async src="//gc.zgo.at/count.js"></script>}
   </head>
   <body>
+    {mountName === 'home' && (
+      <div class="intro-screen" aria-hidden="true">
+        <div class="intro__stage">
+          <span class="intro__logo"><span class="intro__txt">borawski</span><span class="intro__cur">_</span></span>
+          <span class="intro__bar"></span>
+        </div>
+      </div>
+    )}
     <div data-mount={mountName}>
       <slot />
     </div>
+    {mountName === 'home' && (
+      <script is:inline>
+        (function () {
+          var html = document.documentElement;
+          if (!html.classList.contains('intro')) return;
+          var box = document.querySelector(".intro-screen");
+          var logo = box && box.querySelector('.intro__logo');
+          var target = document.querySelector('.hdr-logo');
+          var finish = function () {
+            html.classList.remove('intro');
+            if (box) box.remove();
+            try { sessionStorage.setItem('mb:intro', '1'); } catch (e) {}
+            document.dispatchEvent(new Event('mb:intro-done'));
+          };
+          if (!box || !logo || !target) return finish();
+          var fly = function () {
+            var a = logo.getBoundingClientRect();
+            var b = target.getBoundingClientRect();
+            var s = b.width / a.width;
+            box.classList.add('is-leaving');
+            logo.style.transition = 'transform .75s cubic-bezier(.7,0,.2,1)';
+            logo.style.transform = 'translate(' + (b.left - a.left) + 'px,' + (b.top - a.top) + 'px) scale(' + s + ')';
+            setTimeout(function () {
+              target.style.visibility = 'visible';
+              html.classList.add('intro-reveal');
+              setTimeout(function () { html.classList.remove('intro-reveal'); }, 1400);
+              html.classList.remove('intro');
+              document.dispatchEvent(new Event('mb:intro-done'));
+              box.style.transition = 'opacity .25s ease';
+              box.style.opacity = '0';
+              setTimeout(function () { box.remove(); }, 260);
+              try { sessionStorage.setItem('mb:intro', '1'); } catch (e) {}
+            }, 760);
+          };
+          var ready = document.fonts && document.fonts.ready ? document.fonts.ready : Promise.resolve();
+          var minTime = new Promise(function (r) { setTimeout(r, 1150); });
+          var cap = new Promise(function (r) { setTimeout(r, 2500); });
+          Promise.race([Promise.all([ready, minTime]), cap]).then(fly);
+          setTimeout(function () { if (html.classList.contains('intro')) finish(); }, 4500);
+        })();
+      </script>
+    )}
     <script>
       import { mount } from '../scripts/bind.js';
       import { initUI } from '../scripts/ui.js';
