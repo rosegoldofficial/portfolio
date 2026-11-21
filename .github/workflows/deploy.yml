@@ -23,7 +23,7 @@ jobs:
         with:
           node-version: 24
         env:
-          # Usuń SITE_BASE i SITE_URL, gdy domena mikolajborawski.pl będzie podpięta (plik public/CNAME).
+          # Remove SITE_BASE and SITE_URL once mikolajborawski.pl is connected (public/CNAME).
           SITE_BASE: /portfolio
           SITE_URL: https://rosegoldofficial.github.io
   deploy:
