@@ -2,7 +2,7 @@
 n: 8
 slug: olx-vinted-link
 tag: zakupy
-cats: [bank]
+cats: [bank, zakupy]
 title: "Sprzedajesz na OLX lub Vinted? Uważaj na „link do odbioru płatności”"
 card: "Żeby dostać pieniądze, nie podajesz danych karty."
 lead: "Wystawiasz kurtkę za 120 zł. Po pięciu minutach pisze kupujący: „Biorę, już zapłaciłem, odbierz pieniądze tu”. Link wygląda jak strona serwisu albo kuriera. To najpopularniejszy przekręt na sprzedających w Polsce."

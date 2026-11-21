@@ -11,12 +11,12 @@ date: 2026-11-21
 
 | Lure | Pretext | Real goal |
 |---|---|---|
-| Parcel surcharge | „Dopłać 1,99 zł”, address problem | card data, then 3-D Secure or BLIK codes |
+| Parcel surcharge | “Dopłać 1,99 zł”, address problem | card data, then 3-D Secure or BLIK codes |
 | Energy or gas | disconnection tonight over a small debt | card data on a fake payment page |
-| Tax refund | „nadpłata podatku”, claim within 24 h | online banking credentials |
-| Marketplace payout | buyer on OLX or Vinted „already paid” | card data under the pretext of receiving money |
-| „Hi mum” | new number, urgent transfer | direct transfer or BLIK code |
-| Bank security team | suspicious transaction, call follows | remote access app, transfer to a „safe account” |
+| Tax refund | “nadpłata podatku”, claim within 24 h | online banking credentials |
+| Marketplace payout | buyer on OLX or Vinted “already paid” | card data under the pretext of receiving money |
+| “Hi mum” | new number, urgent transfer | direct transfer or BLIK code |
+| Bank security team | suspicious transaction, call follows | remote access app, transfer to a “safe account” |
 
 ## What they have in common
 
@@ -29,7 +29,7 @@ date: 2026-11-21
 
 Phishing kits are reused across brands. The same page template switches between a courier, a utility and a bank with a change of logo. Domains are cheap and short-lived, so blocking individual URLs only works if it happens within hours. That is why fast reporting matters more than perfect analysis.
 
-> **Defender's takeaway:** user education should target the second step, not the first. People will click links. What saves the account is refusing to type a code that „cancels” or „receives” something.
+> **Defender's takeaway:** user education should target the second step, not the first. People will click links. What saves the account is refusing to type a code that “cancels” or “receives” something.
 
 ## What reduces the damage
 

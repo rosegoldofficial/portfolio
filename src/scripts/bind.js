@@ -34,6 +34,13 @@ export const clearForm = ev => {
   });
 };
 
+export const focusFirstError = e => {
+  const map = { name: 'input:setName', mail: 'input:setMail', msg: 'input:setMsg', ok: 'change:setOk' };
+  const key = ['name', 'mail', 'msg', 'ok'].find(k => e[k]);
+  const el = key && document.querySelector(`[data-on="${map[key]}"]`);
+  if (el) { el.focus({ preventScroll: true }); el.scrollIntoView({ block: 'center', behavior: 'smooth' }); }
+};
+
 const mailtoFallback = (f, topic) => {
   const body = encodeURIComponent(f.msg + '\n\n' + f.name + ' · ' + f.mail);
   window.location.href = 'mailto:' + CONTACT_MAIL + '?subject=' + encodeURIComponent(topic || 'Pytanie ze strony') + '&body=' + body;
@@ -42,7 +49,7 @@ const mailtoFallback = (f, topic) => {
 
 export async function submitForm(f) {
   const hp = document.querySelector('input[name="botcheck"]');
-  if (hp && (hp.checked || hp.value)) return true; // bot: pretend success
+  if (hp && hp.checked) return true; // bot: pretend success
   const topic = document.querySelector('#zapytaj select')?.value || '';
   if (!WEB3FORMS_KEY) return mailtoFallback(f, topic);
   try {

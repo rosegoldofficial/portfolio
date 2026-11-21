@@ -20,7 +20,9 @@ export const CATS: { id: string; label: string }[] = [
   { id: 'sms', label: 'Telefon i SMS' },
   { id: 'bank', label: 'Bank i pieniądze' },
   { id: 'konta', label: 'Konta i hasła' },
-  { id: 'seniorzy', label: 'Dla seniorów' }
+  { id: 'zakupy', label: 'Zakupy i ogłoszenia' },
+  { id: 'seniorzy', label: 'Dla seniorów' },
+  { id: 'dzieci', label: 'Dzieci i gry' }
 ];
 
 export const posts: Post[] = Object.values(mods)
@@ -39,3 +41,9 @@ export const posts: Post[] = Object.values(mods)
 
 export const dateLabel = (d: string | Date) =>
   new Date(d).toLocaleDateString('pl-PL', { day: 'numeric', month: 'long', year: 'numeric' });
+
+export const pl = (n: number, one: string, few: string, many: string) =>
+  n === 1 ? one : (n % 10 >= 2 && n % 10 <= 4 && (n % 100 < 12 || n % 100 > 14)) ? few : many;
+
+export const searchIndex = () =>
+  JSON.stringify(posts.map(p => ({ n: p.num, href: `porady/${p.slug}/`, tag: p.tag, t: p.title, k: [p.card, p.lead, p.cats.join(' ')].join(' ') })));

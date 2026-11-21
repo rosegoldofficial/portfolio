@@ -6,13 +6,13 @@ import '../../../styles/prose.css';
 import '../../../styles/pages.css';
 const base = import.meta.env.BASE_URL.replace(/\/$/, '');
 const modules = [
-  { n: '01', h: 'Serwer gry', p: 'Serwer Minecraft zbudowany wokół lochów.', li: ['instancje lochów z poziomami trudności i bossami na końcu', 'wymagany skład drużyny i nagrody za ukończenie', 'klany, PvP i postęp postaci'], tags: ['Java'] },
+  { n: '01', h: 'Sieć serwerów', p: 'To nie jeden serwer, tylko kilka połączonych ze sobą. Gracz wchodzi przez lobby i stamtąd przechodzi do wybranego trybu.', li: ['lobby, które rozdziela graczy między tryby', 'dwa tryby gry, w tym lochy z poziomami trudności, bossami i nagrodami', 'podział na sektory: obciążenie rozkłada się na kilka serwerów, więc sieć nie zwalnia przy większym ruchu', 'klany, PvP i postęp postaci wspólny dla całej sieci'], tags: ['Java', 'lobby', 'sektory'] },
   { n: '02', h: 'Portal dungeonhub.pl', p: 'Strona, przez którą gracze trafiają na serwer i kupują dodatki.', li: ['status serwera na żywo: liczba graczy i ping', 'sklep z rangami, kluczami i pakietami, płatności BLIK, przelew, PSC, SMS i PayPal', 'rankingi graczy i klanów, regulaminy, kontakt z ekipą'], tags: ['Next.js 15', 'TypeScript', 'Tailwind CSS', 'Docker'] },
   { n: '03', h: 'Wiki dla graczy', p: 'Baza wiedzy, żeby nowy gracz nie musiał pytać o wszystko na czacie.', li: ['opisy trybów i lochów', 'wyszukiwarka komend', 'FAQ w formie rozwijanych odpowiedzi'], tags: ['dokumentacja'] },
   { n: '04', h: 'Discord i moderacja AI', p: 'Społeczność żyje na Discordzie, więc tam też trzeba pilnować porządku.', li: ['automatyczna moderacja: spam, wulgaryzmy, ostrzeżenia i wyciszenia', 'role nadawane za aktywność, ankiety i ogłoszenia', 'integracja z serwerem gry: statystyki graczy na Discordzie'], tags: ['Node.js', 'moderacja AI'] }
 ];
 ---
-<BaseLayout title="DungeonHub · case study · Mikołaj Borawski" description="DungeonHub: platforma gier online, którą rozwijam z zespołem. Serwer gry, portal ze sklepem i rankingami, wiki i moderacja społeczności.">
+<BaseLayout title="DungeonHub · case study · Mikołaj Borawski" description="DungeonHub: sieć serwerów Minecraft, którą założyłem i prowadzę. Lobby, dwa tryby, sektory, portal ze sklepem i rankingami, wiki i moderacja społeczności.">
   <div class="page">
     <div class="prog" aria-hidden="true"></div>
     <SubHeader back={{ href: '/#poza-polityka', label: 'Poza polityką' }} />
@@ -20,14 +20,14 @@ const modules = [
       <div class="hero2">
         <span class="kick in1">projekt główny / dungeonhub.pl</span>
         <h1 class="in2">DungeonHub</h1>
-        <p class="art__lead in3">Platforma gier online, którą rozwijam z zespołem: serwer z lochami i bossami, portal ze sklepem i rankingami, wiki dla graczy i moderacja społeczności. W praktyce mała firma technologiczna, w której odpowiadam za technikę, bezpieczeństwo, płatności, obsługę graczy i marketing.</p>
+        <p class="art__lead in3">Sieć serwerów Minecraft, którą założyłem i prowadzę: lobby, dwa tryby gry i serwery podzielone na sektory, a obok portal ze sklepem i rankingami, wiki dla graczy i moderacja społeczności. W praktyce mała firma technologiczna, w której jestem założycielem i głównym mózgiem operacyjnym.</p>
       </div>
 
       <div class="kpis">
         <div class="kpi"><span>gracze</span><strong>250+</strong><em>w społeczności</em></div>
-        <div class="kpi"><span>moduły</span><strong>4</strong><em>serwer, portal, wiki, Discord</em></div>
+        <div class="kpi"><span>zespół</span><strong>~50</strong><em>osób przez lata</em></div>
         <div class="kpi"><span>od roku</span><strong>2019</strong><em>pierwsze serwery gier</em></div>
-        <div class="kpi"><span>stack</span><strong>Next.js 15</strong><em>TypeScript, Docker</em></div>
+        <div class="kpi"><span>moja rola</span><strong>założyciel</strong><em>i główny mózg operacyjny</em></div>
       </div>
 
       <section class="sec">
@@ -46,10 +46,21 @@ const modules = [
       </section>
 
       <section class="sec">
+        <h2>Moja rola</h2>
+        <div class="grid2">
+          <div class="mod"><span class="mod__n">ludzie</span><h3>Zespół</h3><p>Przez lata przez projekt przewinęło się około 50 osób: administracja, moderacja i developerzy. Rekrutuję, dzielę zadania, rozwiązuję konflikty i pilnuję, żeby każdy wiedział, za co odpowiada.</p></div>
+          <div class="mod"><span class="mod__n">operacje</span><h3>Decyzje i całość</h3><p>Jako założyciel odpowiadam za kierunek, budżet, płatności, regulaminy i to, żeby sieć działała całą dobę. Gdy coś pada, to ja koordynuję naprawę.</p></div>
+          <div class="mod"><span class="mod__n">technika</span><h3>Architektura</h3><p>Układ sieci, lobby, tryby i sektory, wdrożenia w kontenerach Docker i portal w Next.js 15. Bezpieczeństwo kont i infrastruktury to część mojej codziennej pracy.</p></div>
+          <div class="mod"><span class="mod__n">scena</span><h3>Poza DungeonHubem</h3><p>Często pomagam przy innych projektach na polskiej scenie Minecrafta i znam wielu właścicieli, administratorów i developerów z całego kraju.</p></div>
+        </div>
+      </section>
+
+      <section class="sec">
         <h2>Historia</h2>
         <div class="tl">
+          <div class="tl__i"><span class="tl__y">wcześniej</span><span class="tl__t">RepliGon<small>Moja dawna społeczność online, którą prowadziłem jako właściciel. Nie projekt w Minecrafcie, tylko miejsce dla ludzi, ale to tam nauczyłem się zarządzać społecznością.</small></span></div>
           <div class="tl__i"><span class="tl__y">2019</span><span class="tl__t">Pierwsze serwery gier i społeczności online<small>Pierwsza konfiguracja serwerów i pierwsza społeczność, którą trzeba było prowadzić.</small></span></div>
-          <div class="tl__i"><span class="tl__y">2024</span><span class="tl__t">Własny bot na Discorda<small>Moderacja, ekonomia, mini-gry i połączenie Discorda z serwerem gry.</small></span></div>
+          <div class="tl__i"><span class="tl__y">2024</span><span class="tl__t">Własny bot na Discorda<small>Moderacja, ekonomia, mini-gry i połączenie Discorda z serwerami gry.</small></span></div>
           <div class="tl__i"><span class="tl__y">2026</span><span class="tl__t">Nowy portal dungeonhub.pl<small>Przepisany od zera w Next.js 15 i TypeScript, uruchamiany w kontenerach Docker. Sklep, rankingi, wiki i status serwera w jednym miejscu.</small></span></div>
         </div>
       </section>
@@ -57,7 +68,7 @@ const modules = [
       <section class="sec">
         <h2>Czego mnie to nauczyło</h2>
         <div class="prose">
-          <p>Serwer gier działa całą dobę, a gracze piszą o 3 w nocy, kiedy coś przestaje działać. Trzeba wtedy znaleźć przyczynę w logach, naprawić i jeszcze wytłumaczyć ludziom, co się stało. To ta sama praca, którą chcę wykonywać w cyberbezpieczeństwie: wykryć problem, zrozumieć go i opisać po ludzku.</p>
+          <p>Sieć serwerów działa całą dobę, a gracze piszą o 3 w nocy, kiedy coś przestaje działać. Trzeba wtedy znaleźć przyczynę w logach, naprawić i jeszcze wytłumaczyć ludziom, co się stało. To ta sama praca, którą chcę wykonywać w cyberbezpieczeństwie: wykryć problem, zrozumieć go i opisać po ludzku.</p>
           <p>Drugą lekcją jest odpowiedzialność za cudze pieniądze i dane. Sklep, płatności i konta graczy wymagają regulaminów, porządnych zabezpieczeń i szybkiej obsługi reklamacji. Bez tego społeczność traci zaufanie w jeden wieczór.</p>
         </div>
         <p class="quote">Najwięcej nauczyłem się nie wtedy, gdy wszystko działało, tylko wtedy, gdy coś się zepsuło i trzeba było to naprawić przed rankiem.</p>

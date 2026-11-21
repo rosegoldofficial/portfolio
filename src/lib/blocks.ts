@@ -1,6 +1,7 @@
 // HTML blocks injected into the converted home markup (see pages/index.astro).
-import { posts, CATS } from './posts';
+import { posts, CATS, pl, searchIndex } from './posts';
 import { icon } from './icons';
+import { notes } from './notes';
 
 const esc = (s: string) => s.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
 const href = (slug: string) => `/porady/${slug}/`;
@@ -28,12 +29,14 @@ export function poradyBody(): string {
       </a>
       ${cards.map(p => `<a href="${href(p.slug)}" class="card mb-pcard" data-on="mousemove:spot"><span class="mb-pcard__k">${p.num} · ${esc(p.tag)}</span><span class="mb-pcard__t">${esc(p.title)}</span><span class="mb-pcard__d">${esc(p.card)}</span>${time(p.minutes)}</a>`).join('')}
     </div>
-    <div class="mb-plist">${rows.map(row).join('')}</div>
+    <div class="mb-plist" data-more-list>${rows.map((p, i) => i >= 6 ? row(p).replace('class="row mb-prow"', 'class="row mb-prow" data-more hidden') : row(p)).join('')}</div>
+    ${rows.length > 6 ? `<button type="button" class="mb-chip mb-morebtn" data-more-btn>Pokaż wszystkie porady (${posts.length})</button>` : ''}
   </div>
   <div data-view="filtered" hidden>
     <div class="mb-plist">${posts.map(row).join('')}</div>
   </div>
-</div>`;
+</div>
+<script type="application/json" id="porady-data">${searchIndex()}</script>`;
 }
 
 // ---------- Modals ----------
@@ -97,7 +100,7 @@ export const POZA: ModalDef[] = [
     blocks: [
       { h: 'Jak się uczę', body: ul(['analizuję ruch sieciowy w Wiresharku i szukam w nim anomalii', 'ćwiczę na labach: wykrywanie ataków, analiza logów, podstawy hardeningu', 'czytam ostrzeżenia CERT Polska i śledzę nowe kampanie oszustów w Polsce']) },
       { h: 'Dokąd zmierzam', body: '<p>Chcę pracować w zespole Blue Team albo Cyber Threat Intelligence: wykrywać zagrożenia, zanim zrobią komuś krzywdę, i pisać o nich raporty, które da się zrozumieć. Dlatego uczę się też angielskiego na poziomie C2.</p>' },
-      { h: 'Na tej stronie', body: '<p>Dziesięć poradników dla mieszkańców, quiz „Czy to oszustwo?” i notatki z labów po angielsku w wersji EN.</p>' }
+      { h: 'Na tej stronie', body: `<p>${posts.length} ${pl(posts.length, 'poradnik', 'poradniki', 'poradników')} dla mieszkańców, quiz „Czy to oszustwo?” i ${notes.length} ${pl(notes.length, 'notatka', 'notatki', 'notatek')} o bezpieczeństwie po angielsku w wersji EN.</p>` }
     ],
     cta: { label: 'Przeczytaj porady', href: '#porady' }
   },
@@ -117,11 +120,12 @@ export const POZA: ModalDef[] = [
   },
   {
     id: 'm-media', kicker: 'komunikacja', title: 'Marketing i media',
-    lead: 'Na co dzień specjalista ds. marketingu i obsługi klienta w kancelarii doradztwa prawnego dla branży e-commerce. Po godzinach robię wszystko sam: od grafiki po stronę, którą czytasz.',
+    lead: 'Zawodowo zajmuję się marketingiem i obsługą klienta w kancelarii, która doradza prawnie sklepom internetowym. Prywatnie sam przygotowuję materiały do wszystkiego, co robię: od ulotki po tę stronę.',
     blocks: [
-      { h: 'Co robię', body: ul(['grafiki, ulotki i plakaty, także do druku', 'krótkie wideo i montaż do social mediów', 'prowadzenie profili na Facebooku, Instagramie i TikToku', 'projekt i kod tej strony']) },
-      { h: 'Kampania referendalna', body: '<p>Przy referendum w Częstochowie w 2026 roku robiłem materiały i koordynowałem zbiórkę podpisów. Pod wnioskiem złożono 22 441 podpisów.</p>' },
-      { h: 'Obsługa klienta', body: '<p>W pracy odpowiadam ludziom, którzy mają problem i chcą konkretnej odpowiedzi. Ta sama zasada działa w polityce: odpisać szybko i po ludzku.</p>' }
+      { h: 'W pracy', body: '<p>Tworzę treści i grafiki, które w prosty sposób pokazują, w czym kancelaria może pomóc sklepom internetowym. Rozmawiam też z osobami, które się zgłaszają: ustalam, czego potrzebują, i przekazuję sprawę dalej.</p>' },
+      { h: 'Po godzinach', body: ul(['projektuję grafiki, ulotki i plakaty, także do druku', 'nagrywam i montuję krótkie filmy do mediów społecznościowych', 'prowadzę swoje profile na Facebooku, Instagramie i TikToku', 'zaprojektowałem i zakodowałem tę stronę']) },
+      { h: 'Przy referendum', body: '<p>W kampanii referendalnej w Częstochowie w 2026 roku przygotowywałem materiały i koordynowałem zbiórkę podpisów. Pod wnioskiem złożono 22 441 podpisów.</p>' },
+      { h: 'Czego mnie to uczy', body: '<p>Jak powiedzieć coś skomplikowanego w jednym zdaniu, które zrozumie każdy. Przydaje się to w polityce, w obsłudze klienta i przy tłumaczeniu zagrożeń w sieci.</p>' }
     ],
     cta: { label: 'Zobacz moje profile', href: '#kontakt' }
   }

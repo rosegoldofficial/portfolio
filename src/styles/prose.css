@@ -30,8 +30,8 @@
 .prose ul { margin: 0; padding-left: 22px; display: flex; flex-direction: column; gap: 8px; }
 .prose ul li::marker { color: var(--accent); }
 .prose ol { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 12px; counter-reset: step; }
-.prose ol > li { counter-increment: step; display: grid; grid-template-columns: 56px minmax(0, 1fr); gap: 16px; padding: 20px; border: 1px solid var(--line); border-radius: 16px; background: var(--surface); font-size: 18px; line-height: 1.55; color: var(--ink); }
-.prose ol > li::before { content: counter(step, decimal-leading-zero); font-family: var(--font-mono); font-size: 22px; color: var(--accent); }
+.prose ol > li { counter-increment: step; position: relative; padding: 20px 20px 20px 76px; border: 1px solid var(--line); border-radius: 16px; background: var(--surface); font-size: 18px; line-height: 1.55; color: var(--ink); }
+.prose ol > li::before { content: counter(step, decimal-leading-zero); position: absolute; left: 20px; top: 18px; font-family: var(--font-mono); font-size: 22px; color: var(--accent); }
 .prose blockquote { margin: 8px 0; border-radius: 20px; padding: 24px 28px; background: var(--accent-tint); border: 1px solid var(--accent); }
 .prose blockquote p { color: var(--ink); font-size: 18px; line-height: 1.6; }
 .prose table { width: 100%; border-collapse: collapse; font-size: 16px; }
@@ -50,7 +50,7 @@
 .in2 { animation: blurin .9s .12s cubic-bezier(.2,.8,.2,1) both; }
 .in3 { animation: blurin .9s .24s cubic-bezier(.2,.8,.2,1) both; }
 @media (prefers-reduced-motion: reduce) { .in1, .in2, .in3, .toast { animation: none; } }
-@media (max-width: 600px) { .art { padding: 40px 20px 72px; } .art__lead { font-size: 19px; } .prose h2 { font-size: 28px; } .prose ol > li { grid-template-columns: 40px minmax(0,1fr); padding: 16px; } }
+@media (max-width: 600px) { .art { padding: 40px 20px 72px; } .art__lead { font-size: 19px; } .prose h2 { font-size: 28px; } .prose ol > li { padding: 16px 16px 16px 60px; } .prose ol > li::before { left: 16px; top: 15px; } }
 @media print {
   .hdr, .noprint, .prog, .sub-hdr { display: none !important; }
   html, body, .page { background: #fff !important; color: #000 !important; }

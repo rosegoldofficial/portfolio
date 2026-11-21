@@ -2,7 +2,7 @@
 n: 5
 slug: doplata-do-paczki
 tag: paczki
-cats: [sms]
+cats: [sms, zakupy]
 title: "„Dopłać 1,99 zł do paczki”: jak rozpoznać fałszywy link"
 card: "10 sekund, które ratują konto."
 lead: "Zamawiasz dużo przez internet, więc SMS o paczce nikogo nie dziwi. Oszuści o tym wiedzą. Fałszywe strony kurierów wyglądają jak prawdziwe, mają logo, kolory i nawet numer przesyłki."

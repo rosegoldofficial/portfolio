@@ -144,12 +144,12 @@
             <span style="font-family: 'JetBrains Mono', monospace; font-size: 12px; color: var(--ink-faint)">/ dungeonhub.pl</span>
           </div>
           <span style="font-size: 64px; font-weight: 600; letter-spacing: -0.04em; line-height: 0.95">DungeonHub</span>
-          <span style="font-size: 22px; line-height: 1.45; color: var(--ink-soft)">Platforma gier online, którą rozwijam z zespołem. Od zera: własne oprogramowanie serwera, portal ze sklepem i rankingami, baza wiedzy dla graczy i system moderacji społeczności oparty na AI.</span>
-          <span style="font-size: 17px; line-height: 1.55; color: var(--ink-muted)">W praktyce to mała firma technologiczna: architektura, bezpieczeństwo, płatności, obsługa użytkowników i marketing. Tu nauczyłem się prowadzić projekt, w którym coś się psuje o 3 w nocy i trzeba to naprawić.</span>
+          <span style="font-size: 22px; line-height: 1.45; color: var(--ink-soft)">Sieć serwerów Minecraft, którą założyłem i prowadzę. Lobby, dwa tryby gry i serwery podzielone na sektory, do tego portal ze sklepem i rankingami, wiki dla graczy i moderacja społeczności oparta na AI.</span>
+          <span style="font-size: 17px; line-height: 1.55; color: var(--ink-muted)">W praktyce to mała firma technologiczna. Przez lata przewinęło się przez nią około 50 osób, a ja odpowiadam za całość: ludzi, technikę, bezpieczeństwo, płatności i marketing. Tu nauczyłem się prowadzić projekt, w którym coś się psuje o 3 w nocy i trzeba to naprawić.</span>
         </div>
         <div style="grid-column: span 5; display: flex; flex-direction: column; gap: 12px; justify-content: flex-end; position: relative">
           <div style="display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px">
-            <div style="border: 1px solid var(--line); border-radius: 16px; padding: 18px; display: flex; flex-direction: column; gap: 4px"><span style="font-family: 'JetBrains Mono', monospace; font-size: 11px; color: var(--ink-faint)">moduły</span><span style="font-size: 30px; font-weight: 600">4</span><span style="font-size: 13px; color: var(--ink-muted)">serwer, portal, wiki, moderacja AI</span></div>
+            <div style="border: 1px solid var(--line); border-radius: 16px; padding: 18px; display: flex; flex-direction: column; gap: 4px"><span style="font-family: 'JetBrains Mono', monospace; font-size: 11px; color: var(--ink-faint)">moduły</span><span style="font-size: 30px; font-weight: 600">4</span><span style="font-size: 13px; color: var(--ink-muted)">sieć serwerów, portal, wiki, moderacja AI</span></div>
             <div style="border: 1px solid var(--line); border-radius: 16px; padding: 18px; display: flex; flex-direction: column; gap: 4px"><span style="font-family: 'JetBrains Mono', monospace; font-size: 11px; color: var(--ink-faint)">gracze</span><span style="font-size: 30px; font-weight: 600"><span data-t="c3"></span></span><span style="font-size: 13px; color: var(--ink-muted)">graczy w społeczności</span></div>
           </div>
           <div style="display: flex; flex-wrap: wrap; gap: 8px">
@@ -315,7 +315,7 @@
           <textarea rows="5"  placeholder="Napisz, o co chodzi. Im konkretniej, tym szybciej pomogę." class="inp" style="padding: 14px 16px; border-radius: 14px; border: 1px solid ; background: var(--bg); color: var(--ink); font: inherit; font-size: 16px; resize: vertical" data-on="input:setMsg" data-tpl='{"style": "padding: 14px 16px; border-radius: 14px; border: 1px solid {{errMsgBorder}}; background: var(--bg); color: var(--ink); font: inherit; font-size: 16px; resize: vertical"}'></textarea>
           <div data-if="e.msg" hidden><span style="font-size: 13px; color: var(--danger)">Napisz choć jedno zdanie (min. 10 znaków).</span></div>
         </label>
-        <input type="text" name="botcheck" tabIndex="-1" autoComplete="off" aria-hidden="true" style="position: absolute; left: -9999px; width: 1px; height: 1px; opacity: 0">
+        <input type="checkbox" name="botcheck" tabindex="-1" autocomplete="off" aria-hidden="true" style="position: absolute; left: -9999px; width: 1px; height: 1px; opacity: 0">
         <label style="display: flex; gap: 12px; align-items: flex-start; font-size: 14px; line-height: 1.5; color: var(--ink-muted)">
           <input type="checkbox"  style="width: 20px; height: 20px; margin-top: 2px; accent-color: var(--accent)" data-on="change:setOk">
           Zgadzam się na użycie mojego imienia i adresu e-mail wyłącznie do odpowiedzi na to pytanie. Szczegóły w polityce prywatności.
@@ -323,7 +323,8 @@
         <div data-if="e.ok" hidden><span style="font-size: 13px; color: var(--danger)">Bez zgody nie mogę odpisać, zaznacz pole powyżej.</span></div>
         <div style="display: flex; justify-content: space-between; align-items: center; gap: 16px; flex-wrap: wrap">
           <span style="font-family: 'JetBrains Mono', monospace; font-size: 12px; color: var(--ink-faint)">bez spamu · odpowiadam osobiście</span>
-          <button type="button"  class="btn" style="min-height: 56px; padding: 0 32px; border: 0; border-radius: 999px; background: var(--accent); color: var(--on-accent); font: inherit; font-size: 17px; font-weight: 600; cursor: pointer" data-on="click:send">Wyślij pytanie →</button>
+          <button type="button"  class="btn" style="min-height: 56px; padding: 0 32px; border: 0; border-radius: 999px; background: var(--accent); color: var(--on-accent); font: inherit; font-size: 17px; font-weight: 600; cursor: pointer" data-on="click:send"><span data-t="sendLabel"></span></button>
+          <div data-if="hasErrors" hidden><p role="alert" class="mb-formerr"><span data-t="errSummary"></span></p></div>
         </div>
       </form>
       </div>

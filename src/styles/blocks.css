@@ -165,3 +165,6 @@ dialog.mb-modal.is-closing .mb-modal__box { animation: mbOut .18s ease both; }
 }
 .mb-note { grid-template-columns: 120px 120px minmax(0, 1fr) 90px; }
 @media (max-width: 900px) { .mb-note { grid-template-columns: minmax(0, 1fr) auto; } .mb-note .mb-prow__n { grid-column: 1; grid-row: 1; } .mb-note .mb-prow__tag { grid-column: 1; grid-row: 2; } .mb-note .mb-prow__t { grid-column: 1 / -1; grid-row: 3; } .mb-note .mb-time { grid-column: 2; grid-row: 1; } }
+.mb-formerr { margin: 0; display: inline-flex; align-items: center; gap: 10px; min-height: 44px; padding: 0 18px; border-radius: 999px; background: color-mix(in srgb, var(--danger) 14%, transparent); border: 1px solid var(--danger); color: var(--ink); font-size: 15px; font-weight: 500; animation: mbShake .4s ease; }
+@keyframes mbShake { 20%, 60% { transform: translateX(-6px); } 40%, 80% { transform: translateX(6px); } }
+.mb-morebtn { align-self: flex-start; margin-top: 8px; min-height: 48px; padding: 0 22px; color: var(--ink); }

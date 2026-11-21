@@ -24,7 +24,7 @@ Authentication-Results: mx.google.com;
 2. **DKIM** verifies a cryptographic signature. `header.d` is the domain that signed the message.
 3. **DMARC** ties them together: it passes only if SPF or DKIM passed **and** that domain aligns with the visible `From:` domain. `p=reject` means the domain owner asked receivers to drop failures.
 
-> **The trap:** a phishing message from `example-pl-verify.com` can pass SPF, DKIM and DMARC perfectly, because the attacker owns that domain and configured it properly. A pass means „this really came from that domain”. You still have to ask whether that domain should be talking to you.
+> **The trap:** a phishing message from `example-pl-verify.com` can pass SPF, DKIM and DMARC perfectly, because the attacker owns that domain and configured it properly. A pass means “this really came from that domain”. You still have to ask whether that domain should be talking to you.
 
 ## Quick triage
 

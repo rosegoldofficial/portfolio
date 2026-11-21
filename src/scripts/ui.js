@@ -97,7 +97,7 @@ export function initUI() {
   // Advice filters.
   const box = document.querySelector('.mb-porady');
   if (box) {
-    const chips = [...box.querySelectorAll('.mb-chip')];
+    const chips = [...box.querySelectorAll('.mb-chip[data-filter]')];
     const all = box.querySelector('[data-view="all"]');
     const filtered = box.querySelector('[data-view="filtered"]');
     for (const chip of chips) {
@@ -112,6 +112,17 @@ export function initUI() {
       });
     }
   }
+
+  // "Show all" for the long advice list.
+  const moreBtn = document.querySelector('[data-more-btn]');
+  if (moreBtn) on(moreBtn, 'click', () => {
+    const list = document.querySelector('[data-more-list]');
+    for (const r of list.querySelectorAll('[data-more]')) r.hidden = false;
+    list.closest('[data-view]')?.classList.remove('is-in');
+    void list.offsetWidth;
+    list.closest('[data-view]')?.classList.add('is-in');
+    moreBtn.remove();
+  });
 
   return () => off.forEach(fn => fn());
 }

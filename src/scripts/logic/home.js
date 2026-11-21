@@ -1,4 +1,4 @@
-import { DCLogic, setTheme, savePref, loadPref, clearForm, submitForm } from '../bind.js';
+import { DCLogic, setTheme, savePref, loadPref, clearForm, submitForm, focusFirstError } from '../bind.js';
 const QS = [
 { from: 'Kurier · SMS', text: 'Twoja paczka czeka w punkcie. Dopłać 1,99 zł za zmianę adresu doręczenia: kurier-doplata.com/p/8812', scam: true, why: 'Kurierzy nie każą dopłacać grosików przez linki z dziwnych domen. Ta strona wyłudza dane karty. Prześlij SMS na 8080.' },
 { from: 'Twój bank · SMS', text: 'Kod BLIK 482 913 do płatności 89,99 zł w sklepie internetowym. Nikomu nie podawaj tego kodu.', scam: false, why: 'Zwykłe potwierdzenie płatności, którą sam zleciłeś: bez linku, z ostrzeżeniem. Jeśli niczego nie kupowałeś, zadzwoń do banku.' },
@@ -49,18 +49,7 @@ const QS = [
 
 const ROUND = 10;
 const shuffle = () => { const a = QS.map((_, i) => i); for (let i = a.length - 1; i > 0; i--) { const j = Math.floor(Math.random() * (i + 1)); [a[i], a[j]] = [a[j], a[i]]; } return a.slice(0, ROUND); };
-const PORADY = [
-{ n: '#01', href: 'porady/8080/', tag: 'telefon i SMS', t: 'Dziwny SMS? Prześlij go na 8080, zanim klikniesz', k: 'sms 8080 cert link' },
-{ n: '#02', href: 'porady/na-wnuczka-ai/', tag: 'dla seniorów', t: '„Na wnuczka” 2.0: głos bliskiej osoby może być podrobiony', k: 'wnuczek telefon ai głos seniorzy' },
-{ n: '#03', href: 'porady/bank-dzial-bezpieczenstwa/', tag: 'bank', t: '„Dzwonię z działu bezpieczeństwa banku”. Rozłącz się.', k: 'bank telefon konsultant' },
-{ n: '#04', href: 'porady/zastrzez-pesel/', tag: 'dane', t: 'Zastrzeż PESEL w mObywatelu w 2 minuty', k: 'pesel mobywatel kredyt dane' },
-{ n: '#05', href: 'porady/doplata-do-paczki/', tag: 'paczki', t: '„Dopłać 1,99 zł do paczki”: jak rozpoznać fałszywy link', k: 'paczka kurier sms link dopłata' },
-{ n: '#06', href: 'porady/weryfikacja-dwuetapowa/', tag: 'konta i hasła', t: 'Weryfikacja dwuetapowa na Facebooku, Gmailu i w banku: 5 minut', k: 'hasło 2fa konto facebook' },
-{ n: '#07', href: 'porady/menedzer-hasel/', tag: 'konta i hasła', t: 'Jedno hasło do wszystkiego to otwarte drzwi. Menedżer haseł bez stresu', k: 'hasło menedżer konto' },
-{ n: '#08', href: 'porady/olx-vinted-link/', tag: 'zakupy', t: 'Sprzedajesz na OLX lub Vinted? Uważaj na „link do odbioru płatności”', k: 'olx vinted zakupy sprzedaż link' },
-{ n: '#09', href: 'porady/aktualizacje/', tag: 'telefon', t: '„Przypomnij później” to zły pomysł. Dlaczego aktualizacje są ważne', k: 'aktualizacje telefon system' },
-{ n: '#10', href: 'porady/darmowe-wifi/', tag: 'poza domem', t: 'Darmowe Wi‑Fi w galerii i na dworcu: co wolno, a czego lepiej nie', k: 'wifi sieć publiczna' }
-];
+const PORADY = (() => { try { return JSON.parse(document.getElementById('porady-data').textContent); } catch (e) { return []; } })();
 const LABELS = { jak_dziala_rada: '~/jak-dziala-rada', poza_polityka: '~/poza-polityka', porady_cyfrowe: '~/porady-cyfrowe', quiz: '~/quiz', zapytaj_mnie: '~/zapytaj-mnie' };
 const GLYPHS = '!<>-_\\/[]{}=+*^?#01';
 const scramble = (str, p) => str.split('').map((ch, i) => (i / str.length) < p || ch === ' ' ? ch : GLYPHS[Math.floor(Math.random() * GLYPHS.length)]).join('');
@@ -134,9 +123,13 @@ setName: ev => this.setState({ f: { ...this.state.f, name: ev.target.value } }),
 setMail: ev => this.setState({ f: { ...this.state.f, mail: ev.target.value } }),
 setMsg: ev => this.setState({ f: { ...this.state.f, msg: ev.target.value } }),
 setOk: ev => this.setState({ f: { ...this.state.f, ok: ev.target.checked } }),
-send: () => { const f = this.state.f; const e = { name: !f.name.trim(), mail: !/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(f.mail.trim()), msg: f.msg.trim().length < 10, ok: !f.ok }; const bad = Object.values(e).some(Boolean); this.setState({ e }); if (!bad) submitForm(f).then(ok => this.setState({ sent: ok, sendErr: !ok })); },
-resetForm: ev => { clearForm(ev); this.setState({ sent: false, sendErr: false, e: {}, f: { name: '', mail: '', msg: '', ok: false } }); },
+send: () => { if (this.state.sending) return; const f = this.state.f; const e = { name: !f.name.trim(), mail: !/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(f.mail.trim()), msg: f.msg.trim().length < 10, ok: !f.ok }; const bad = Object.values(e).some(Boolean); this.setState({ e, tried: true }); if (bad) { focusFirstError(e); return; } this.setState({ sending: true }); submitForm({ ...f, msg: f.msg.trim() }).then(ok => this.setState({ sent: ok, sendErr: !ok, sending: false })); },
+resetForm: ev => { clearForm(ev); this.setState({ tried: false, sent: false, sendErr: false, e: {}, f: { name: '', mail: '', msg: '', ok: false } }); },
 sent: s.sent, notSent: !s.sent,
+sendLabel: s.sending ? 'Wysyłam…' : 'Wyślij pytanie →',
+errCount: Object.values(s.e).filter(Boolean).length,
+errSummary: (() => { const n = Object.values(s.e).filter(Boolean).length; return n === 1 ? 'Popraw 1 pole zaznaczone na czerwono.' : 'Popraw ' + n + ' pola zaznaczone na czerwono.'; })(),
+hasErrors: s.tried && Object.values(s.e).some(Boolean),
 shareQuiz: () => { const data = { title: 'Czy to oszustwo? Quiz', text: 'Sprawdź, czy rozpoznasz oszustwo SMS-owe. 10 pytań, minuta.', url: 'https://mikolajborawski.pl/#quiz' }; if (navigator.share) { navigator.share(data).catch(() => {}); } else { try { navigator.clipboard.writeText(data.url); } catch (err) {} this.setState({ copied: true }); clearTimeout(this.toastT); this.toastT = setTimeout(() => this.setState({ copied: false }), 2200); } },
 query: s.query,
 setQuery: ev => this.setState({ query: ev.target.value }),
