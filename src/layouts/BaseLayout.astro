@@ -1,0 +1,72 @@
+---
+import { ClientRouter } from 'astro:transitions';
+import '../styles/tokens.css';
+import '../styles/responsive.css';
+
+interface Props {
+  title: string;
+  description: string;
+  lang?: 'pl' | 'en';
+  mountName?: 'home' | 'article' | 'en';
+}
+const { title, description, lang = 'pl', mountName } = Astro.props;
+const site = Astro.site ?? new URL('https://mikolajborawski.pl');
+const base = import.meta.env.BASE_URL.replace(/\/$/, '');
+const canonical = new URL(Astro.url.pathname.replace(base, '') || '/', site).href;
+const ogImage = new URL('/og.jpg', site).href;
+// GoatCounter: paste your code (e.g. "mikolajborawski") to turn on cookie-free stats.
+const GOATCOUNTER = '';
+---
+<!doctype html>
+<html lang={lang} data-theme="dark">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{title}</title>
+    <meta name="description" content={description} />
+    <link rel="canonical" href={canonical} />
+    <link rel="icon" href={`${base}/favicon.svg`} type="image/svg+xml" />
+    <meta name="theme-color" content="#0A0B0D" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:url" content={canonical} />
+    <meta property="og:image" content={ogImage} />
+    <meta property="og:locale" content={lang === 'en' ? 'en_GB' : 'pl_PL'} />
+    <meta name="twitter:card" content="summary_large_image" />
+    <link rel="alternate" hreflang="pl" href={new URL('/', site).href} />
+    <link rel="alternate" hreflang="en" href={new URL('/en/', site).href} />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+    <script is:inline>
+      try { if (localStorage.getItem('mb:light') === '1') document.documentElement.dataset.theme = 'light'; } catch (e) {}
+    </script>
+    <ClientRouter />
+    {GOATCOUNTER && <script is:inline data-goatcounter={`https://${GOATCOUNTER}.goatcounter.com/count`} async src="//gc.zgo.at/count.js"></script>}
+  </head>
+  <body>
+    <div data-mount={mountName}>
+      <slot />
+    </div>
+    <script>
+      import { mount } from '../scripts/bind.js';
+      const loaders = {
+        home: () => import('../scripts/logic/home.js'),
+        article: () => import('../scripts/logic/article.js'),
+        en: () => import('../scripts/logic/en.js')
+      };
+      let unmount = null;
+      document.addEventListener('astro:page-load', async () => {
+        unmount?.(); unmount = null;
+        const host = document.querySelector('[data-mount]');
+        const name = host?.getAttribute('data-mount');
+        const root = host?.firstElementChild;
+        if (!name || !root || !loaders[name]) return;
+        const mod = await loaders[name]();
+        unmount = mount(root, mod.default, {});
+      });
+      document.addEventListener('astro:before-swap', () => { unmount?.(); unmount = null; });
+    </script>
+  </body>
+</html>

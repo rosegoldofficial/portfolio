@@ -1,0 +1,77 @@
+/* Borawski — generated from the design system tokens.json (Noc = dark, Dzień = light) */
+:root {
+  --font-sans: "Inter Tight", system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, monospace;
+  --acc: var(--accent);
+  --accl: var(--accent-line);
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-5: 24px;
+  --space-6: 32px;
+  --space-7: 40px;
+  --space-8: 56px;
+  --space-9: 64px;
+  --space-10: 96px;
+  --radius-sm: 14px;
+  --radius-md: 20px;
+  --radius-lg: 28px;
+  --radius-pill: 999px;
+  --bg: #0A0B0D;
+  --surface: #101114;
+  --surface-raised: #1A1C20;
+  --line: #24262B;
+  --line-strong: #34373D;
+  --ink: #EDEDED;
+  --ink-soft: #D4D6DA;
+  --ink-muted: #A3A6AD;
+  --ink-faint: #8A8E96;
+  --accent: #FF5B1F;
+  --accent-text: #FF7A45;
+  --accent-tint: #1A0F0A;
+  --accent-line: #3A2418;
+  --on-accent: #0A0B0D;
+  --success: #3DDC97;
+  --danger: #FF8A8A;
+  --accent-deep: #140E0B;
+  --glow-45: rgba(255,91,31,0.45);
+  --glow-22: rgba(255,91,31,0.22);
+  --glow-08: rgba(255,91,31,0.08);
+  --glow-0: rgba(255,91,31,0);
+  --shadow-glow: 0 24px 60px -30px #FF5B1F;
+  --shadow-pop: 0 30px 80px -20px #000000;
+  color-scheme: dark;
+}
+[data-theme="light"] {
+  --bg: #F6F5F2;
+  --surface: #FFFFFF;
+  --surface-raised: #EFEDE8;
+  --line: #DAD7D0;
+  --line-strong: #A9A59C;
+  --ink: #111214;
+  --ink-soft: #2A2C31;
+  --ink-muted: #4A4D55;
+  --ink-faint: #5F626A;
+  --accent: #E04A12;
+  --accent-text: #B23C0E;
+  --accent-tint: #FFEBE1;
+  --accent-line: #F4C2AC;
+  --on-accent: #0A0B0D;
+  --success: #127A52;
+  --danger: #B3261E;
+  --accent-deep: #FFF3EE;
+  --glow-45: rgba(224,74,18,0.28);
+  --glow-22: rgba(224,74,18,0.14);
+  --glow-08: rgba(224,74,18,0.05);
+  --glow-0: rgba(224,74,18,0);
+  --shadow-glow: 0 24px 60px -30px #E04A12;
+  --shadow-pop: 0 30px 80px -20px rgba(0,0,0,.35);
+  color-scheme: light;
+}
+html { background: var(--bg); color: var(--ink); -webkit-text-size-adjust: 100%; }
+@media (prefers-reduced-motion: no-preference) { html { scroll-behavior: smooth; } }
+body { margin: 0; background: var(--bg); color: var(--ink); font-family: var(--font-sans); }
+img { max-width: 100%; }
+[data-if] { display: contents; }
+[data-if][hidden] { display: none; }

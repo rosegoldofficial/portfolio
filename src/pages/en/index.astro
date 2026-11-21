@@ -1,0 +1,9 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import markup from '../../sections/en.html?raw';
+import '../../styles/en.css';
+import { withBase } from '../../lib';
+---
+<BaseLayout title="Mikołaj Borawski · Częstochowa, Poland" description="Mikołaj Borawski: blue team in the making, web developer and local activist from Częstochowa, Poland." lang="en" mountName="en">
+  <Fragment set:html={withBase(markup)} />
+</BaseLayout>

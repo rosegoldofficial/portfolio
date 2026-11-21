@@ -1,0 +1,16 @@
+
+
+a{color:var(--ink)}a:hover{color:var(--ink)}
+@keyframes blur{from{opacity:0;filter:blur(14px);transform:translateY(20px)}to{opacity:1;filter:blur(0);transform:none}}
+@keyframes glow{from{opacity:0;transform:scale(.7)}to{opacity:1;transform:none}}
+.u1{animation:blur 1s cubic-bezier(.2,.8,.2,1) both}
+.u2{animation:blur 1s .15s cubic-bezier(.2,.8,.2,1) both}
+.u3{animation:blur 1s .3s cubic-bezier(.2,.8,.2,1) both}
+.gl{animation:glow 1.6s .2s ease-out both}
+.card{transition:transform .45s cubic-bezier(.2,.8,.2,1),border-color .3s,box-shadow .45s}
+.card:hover{transform:translateY(-6px);border-color:var(--accent) !important;box-shadow:0 24px 60px -30px var(--accent)}
+.row{transition:padding .35s cubic-bezier(.2,.8,.2,1)}
+.row:hover{padding-left:16px !important}
+.pill{transition:background-color .25s,color .25s}
+.pill:hover{background:var(--surface-raised);color:var(--ink) !important}
+@media (prefers-reduced-motion: reduce){*{animation:none !important;transition:none !important}}
