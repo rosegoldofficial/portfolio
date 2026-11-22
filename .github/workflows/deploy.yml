@@ -5,7 +5,7 @@ on:
     branches: [main]
   workflow_dispatch:
   schedule:
-    # 23:05 UTC = 00:05 w Polsce zimą (01:05 latem). Codzienny build publikuje porady z dzisiejszą datą.
+    # 23:05 UTC = 00:05 Warsaw (winter). Nightly build publishes posts dated today.
     - cron: '5 23 * * *'
 
 permissions:
