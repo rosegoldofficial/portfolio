@@ -136,15 +136,17 @@ const GOATCOUNTER = '';
     <script>
       import { mount } from '../scripts/bind.js';
       import { initUI } from '../scripts/ui.js';
+      import { initOrphans } from '../scripts/orphans.js';
       const loaders = {
         home: () => import('../scripts/logic/home.js'),
         en: () => import('../scripts/logic/en.js')
       };
       let unmount = null;
       let unui = null;
+      let unorph = null;
       document.addEventListener('astro:page-load', async () => {
         unmount?.(); unmount = null;
-        unui?.(); unui = initUI();
+        unui?.(); unui = initUI(); unorph?.(); unorph = initOrphans();
         const host = document.querySelector('[data-mount]');
         const name = host?.getAttribute('data-mount');
         const root = host?.firstElementChild;
@@ -152,7 +154,7 @@ const GOATCOUNTER = '';
         const mod = await loaders[name]();
         unmount = mount(root, mod.default, {});
       });
-      document.addEventListener('astro:before-swap', () => { unmount?.(); unmount = null; unui?.(); unui = null; });
+      document.addEventListener('astro:before-swap', () => { unmount?.(); unmount = null; unui?.(); unui = null; unorph?.(); unorph = null; });
     </script>
   </body>
 </html>
