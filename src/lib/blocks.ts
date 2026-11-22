@@ -30,10 +30,11 @@ export function poradyBody(): string {
       ${cards.map(p => `<a href="${href(p.slug)}" class="card mb-pcard" data-on="mousemove:spot"><span class="mb-pcard__k">${p.num} · ${esc(p.tag)}</span><span class="mb-pcard__t">${esc(p.title)}</span><span class="mb-pcard__d">${esc(p.card)}</span>${time(p.minutes)}</a>`).join('')}
     </div>
     <div class="mb-plist" data-more-list>${rows.map((p, i) => i >= 6 ? row(p).replace('class="row mb-prow"', 'class="row mb-prow" data-more hidden') : row(p)).join('')}</div>
-    ${rows.length > 6 ? `<button type="button" class="mb-chip mb-morebtn" data-more-btn>Pokaż wszystkie porady (${posts.length})</button>` : ''}
+    <div class="mb-pfoot">${rows.length > 6 ? `<button type="button" class="mb-chip mb-morebtn" data-more-btn>Pokaż wszystkie porady (${posts.length})</button>` : ''}<a href="/porady/losowa/" class="mb-rand">${icon.dices(18)}Wylosuj poradę</a></div>
   </div>
   <div data-view="filtered" hidden>
     <div class="mb-plist">${posts.map(row).join('')}</div>
+    <div class="mb-pfoot"><a href="/porady/losowa/" class="mb-rand">${icon.dices(18)}Wylosuj poradę</a></div>
   </div>
 </div>
 <script type="application/json" id="porady-data">${searchIndex()}</script>`;

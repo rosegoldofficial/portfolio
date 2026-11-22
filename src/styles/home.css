@@ -83,3 +83,6 @@ a{color:var(--ink)}a:hover{color:var(--ink)}
 .qz-ans { min-height: 196px; }
 .qz-msg { min-height: 118px; box-sizing: border-box; }
 @media (max-width: 900px) { .qz-ans { min-height: 270px; } .qz-msg { min-height: 0; } }
+.mb-pfoot { display: flex; align-items: center; justify-content: space-between; gap: 12px; flex-wrap: wrap; margin-top: 16px; }
+.mb-pfoot .mb-morebtn { margin-top: 0; }
+.mb-pfoot .mb-rand { margin-left: auto; }

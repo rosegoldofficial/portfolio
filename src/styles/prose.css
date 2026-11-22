@@ -74,7 +74,7 @@
 .randcard { display: flex; flex-direction: column; gap: 6px; justify-content: center; padding: 24px; border: 1px dashed var(--line-strong); border-radius: 20px; text-decoration: none; color: var(--ink); transition: transform .4s cubic-bezier(.2,.8,.2,1), border-color .3s, background-color .3s; }
 .randcard small { font-family: var(--font-mono); font-size: 12px; color: var(--ink-faint); }
 .randcard strong { font-size: 19px; font-weight: 600; }
-.randcard__ic { color: var(--accent); display: inline-flex; transition: transform .5s cubic-bezier(.2,.8,.2,1); }
+.randcard__ic { color: var(--accent); display: inline-flex; align-self: flex-start; transform-origin: 50% 50%; transition: transform .5s cubic-bezier(.2,.8,.2,1); }
 .randcard:hover { transform: translateY(-4px); border-color: var(--accent); background: var(--accent-tint); }
 .randcard:hover .randcard__ic { transform: rotate(-20deg) scale(1.08); }
 @media (max-width: 640px) { .art__pick { grid-template-columns: minmax(0, 1fr); } }
