@@ -30,7 +30,7 @@ const abs = (path: string) => new URL(base + path, site).href;
 const canonical = new URL(Astro.url.pathname, site).href;
 const ogImage = image ? (image.startsWith('http') ? image : abs(image)) : abs('/og.jpg');
 // GoatCounter: paste your code (e.g. "mikolajborawski") to turn on cookie-free stats.
-const GOATCOUNTER = '';
+const GOATCOUNTER = 'rosegold';
 ---
 <!doctype html>
 <html lang={lang} data-theme="dark">
