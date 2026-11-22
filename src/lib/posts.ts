@@ -23,7 +23,8 @@ export const CATS: { id: string; label: string }[] = [
   { id: 'konta', label: 'Konta i hasła' },
   { id: 'zakupy', label: 'Zakupy i ogłoszenia' },
   { id: 'seniorzy', label: 'Dla seniorów' },
-  { id: 'dzieci', label: 'Dzieci i gry' }
+  { id: 'dzieci', label: 'Dzieci i gry' },
+  { id: 'przewodniki', label: 'Dłuższe poradniki' }
 ];
 
 export const posts: Post[] = Object.values(mods)
