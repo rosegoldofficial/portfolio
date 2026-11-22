@@ -2,7 +2,7 @@
 // together with the next word, so no line ends on a lone "w" or "3".
 const NB = ' ';
 const SINGLE = /(^|[\s („"«'\[\/—-])([aiouwzAIOUWZ])[ \t\n\r]+(?=\S)/g;
-const NUM = /(\d)[ \t\n\r]+(?=[\p{L}%§])/gu;
+const NUM = /(\d)[ \t\n\r]+(?=[\p{L}%§]|\d{3}\b)/gu;
 
 export function fixText(s) {
   if (!s || !/\s/.test(s)) return s;
