@@ -3,6 +3,7 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
 import SubHeader from '../../components/SubHeader.astro';
 import { posts, dateLabel } from '../../lib/posts';
 import { icon } from '../../lib/icons';
+import { QUIZ } from '../../lib/quizzes';
 import '../../styles/prose.css';
 import { graph, article, breadcrumbs, faqPage, person } from '../../lib/seo';
 
@@ -18,6 +19,8 @@ const site = Astro.site ?? new URL('https://mikolajborawski.pl');
 const url = new URL(`${base}/porady/${post.slug}/`, site).href;
 const ogPath = `/og/porady/${post.slug}.png`;
 const faq = post.faq ?? [];
+const quiz = QUIZ[post.slug] ?? [];
+const qWord = (n: number) => (n === 1 ? 'pytanie' : n < 5 ? 'pytania' : 'pytań');
 const ld = graph(
   article(site, { url, title: post.title, description: post.card + ' ' + post.lead, date: post.date, image: new URL(base + ogPath, site).href, lang: 'pl', section: 'Bezpiecznie w sieci' }),
   person(site),
@@ -60,11 +63,46 @@ const ld = graph(
           ))}
         </section>
       )}
+      {quiz.length > 0 && (
+        <section class="rq noprint" data-quiz={post.slug} data-answers={JSON.stringify(quiz.map((q) => q.a))} aria-labelledby="rq-title">
+          <div class="rq__head">
+            <span class="rq__k" set:html={icon.check(14) + ' sprawdź się'} />
+            <h2 id="rq-title">Mini quiz: {quiz.length} {qWord(quiz.length)}</h2>
+            <p>Sprawdź, co zostało w głowie. Po poprawnych odpowiedziach odblokujesz następną poradę.</p>
+          </div>
+          <ol class="rq__list">
+            {quiz.map((q, qi) => (
+              <li class="rq__q" data-why={q.why} data-ref={q.ref ?? ''}>
+                <fieldset>
+                  <legend><span class="rq__n">{qi + 1}</span>{q.q}</legend>
+                  <div class="rq__opts">
+                    {q.o.map((o, oi) => (
+                      <label class="rq__opt"><input type="radio" name={`rq${qi}`} value={oi} /><span>{o}</span></label>
+                    ))}
+                  </div>
+                </fieldset>
+                <div class="rq__fb" hidden></div>
+              </li>
+            ))}
+          </ol>
+          <div class="rq__foot">
+            <button type="button" class="tb tb--solid" data-rq-check>Sprawdź odpowiedzi</button>
+            <p class="rq__score" role="status" aria-live="polite"></p>
+          </div>
+        </section>
+      )}
       <div class="art__end noprint">
         <span>Przyda się komuś z rodziny? Wyślij mu ten wpis.</span>
         <button type="button" class="tb tb--solid" data-share data-url={url} data-title={post.title}><Fragment set:html={icon.share(16)} />Wyślij rodzinie</button>
       </div>
-      <div class="art__pick noprint">
+      {quiz.length > 0 && (
+        <div class="rq-lock noprint" data-rq-lock>
+          <span set:html={icon.lock(18)} />
+          <p>Następna porada i losowanie odblokują się po quizie powyżej.</p>
+          <button type="button" class="rq-lock__skip" data-rq-skip>pomiń</button>
+        </div>
+      )}
+      <div class={`art__pick noprint${quiz.length > 0 ? ' is-locked' : ''}`} data-rq-pick>
         <a class="nextcard" href={`${base}/porady/${next.slug}/`}>
         <small>następna porada · {next.num}</small>
         <strong>{next.title}</strong>
@@ -82,5 +120,6 @@ const ld = graph(
 </BaseLayout>
 <script>
   import { initPostTools } from '../../scripts/post.js';
-  document.addEventListener('astro:page-load', initPostTools);
+  import { initRevise } from '../../scripts/revise.js';
+  document.addEventListener('astro:page-load', () => { initPostTools(); initRevise(); });
 </script>
