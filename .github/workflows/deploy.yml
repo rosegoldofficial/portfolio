@@ -25,10 +25,6 @@ jobs:
       - uses: withastro/action@v3
         with:
           node-version: 24
-        env:
-          # Remove SITE_BASE and SITE_URL once mikolajborawski.pl is connected (public/CNAME).
-          SITE_BASE: /portfolio
-          SITE_URL: https://rosegoldofficial.github.io
   deploy:
     needs: build
     runs-on: ubuntu-latest

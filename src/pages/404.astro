@@ -4,19 +4,102 @@ import SubHeader from '../components/SubHeader.astro';
 import { posts } from '../lib/posts';
 import '../styles/prose.css';
 const base = import.meta.env.BASE_URL.replace(/\/$/, '');
-const picks = posts.slice(0, 3);
+const site = (import.meta.env.SITE || 'https://mikolajborawski.pl').replace(/^https?:\/\//, '').replace(/\/$/, '');
+const idx = posts.map((p) => ({ s: p.slug, t: p.title, n: p.num, g: p.tag, k: [p.slug.replace(/-/g, ' '), p.title, p.card, p.cats.join(' ')].join(' ') }));
+const latest = posts.slice(-3).reverse();
 ---
-<BaseLayout title="Nie ma takiej strony · Mikołaj Borawski" description="Ta strona nie istnieje albo została przeniesiona." noindex>
+<BaseLayout title="Nie ma takiej strony · Mikołaj Borawski" description="Ta strona nie istnieje albo zmieniła adres." noindex>
   <div class="page">
     <SubHeader back={{ href: '/', label: 'Strona główna' }} />
-    <main class="art">
+    <main class="art e404">
       <span class="art__meta"><span class="k">błąd 404</span></span>
-      <h1>Tu nic nie ma<span style="color: var(--accent)">_</span></h1>
-      <p class="art__lead">Ta strona nie istnieje albo zmieniła adres. Może przyda się któraś z porad?</p>
-      {picks.map(p => (
-        <a class="nextcard" href={`${base}/porady/${p.slug}/`}><small>{p.num} · {p.tag}</small><strong>{p.title}</strong></a>
-      ))}
-      <a class="tb tb--solid" style="align-self:flex-start" href={`${base}/`}>Wróć na stronę główną</a>
+      <h1>Ten link prowadzi donikąd<span style="color: var(--accent)">_</span></h1>
+
+      <div class="e404__scan" role="status" aria-label="Wynik sprawdzenia adresu">
+        <div class="e404__bar"><i></i><i></i><i></i><span>sprawdzam link</span></div>
+        <div class="e404__code"><span class="l"><b class="p">$</b> sprawdź <span class="u" data-e404-url>{site}/…</span></span>
+          <span class="l ok">✓ domena: {site}, prawdziwa</span>
+          <span class="l ok">✓ połączenie szyfrowane (HTTPS)</span>
+          <span class="l ok">✓ nikt nie prosi o hasło ani kod BLIK</span>
+          <span class="l bad">✗ strona: nie istnieje</span>
+          <span class="l v">wynik: bezpieczny, tylko pusty</span></div>
+      </div>
+
+      <p class="art__lead">Dobrze, że sprawdzasz, dokąd prowadzi link. Tak samo czytaj adresy w&nbsp;SMS‑ach i&nbsp;mailach, zanim cokolwiek wpiszesz. Tej strony nie ma albo zmieniła adres.</p>
+
+      <div class="e404__guess" data-e404-guess hidden>
+        <small>Chodziło Ci o…?</small>
+        <a class="nextcard" data-e404-link href="#"><small data-e404-num></small><strong data-e404-title></strong></a>
+      </div>
+
+      <div class="e404__latest" data-e404-latest>
+        <small class="e404__label">Najnowsze porady</small>
+        {latest.map((p) => (
+          <a class="nextcard" href={`${base}/porady/${p.slug}/`}><small>{p.num} · {p.tag}</small><strong>{p.title}</strong></a>
+        ))}
+      </div>
+
+      <div class="e404__acts">
+        <a class="tb tb--solid" href={`${base}/`}>Strona główna</a>
+        <a class="tb" href={`${base}/#porady`}>Wszystkie porady</a>
+        <a class="tb" href={`${base}/porady/losowa/`}>Wylosuj poradę</a>
+        <a class="tb" href={`${base}/#zapytaj`}>Zgłoś zepsuty link</a>
+      </div>
     </main>
   </div>
+
+  <script is:inline define:vars={{ idx, base, site }}>
+    (function () {
+      var path = decodeURIComponent(location.pathname);
+      if (base && path.indexOf(base) === 0) path = path.slice(base.length);
+      var u = document.querySelector('[data-e404-url]');
+      if (u) u.textContent = site + (path.length > 48 ? path.slice(0, 45) + '…' : path);
+      var norm = function (s) { return s.toLowerCase().normalize('NFD').replace(/[̀-ͯ]/g, '').replace(/ł/g, 'l'); };
+      var words = norm(path).split(/[^a-z0-9]+/).filter(function (w) { return w.length > 2 && w !== 'porady' && w !== 'html'; });
+      if (!words.length) return;
+      var best = null, top = 0;
+      idx.forEach(function (p) {
+        var k = norm(p.k), sc = 0;
+        words.forEach(function (w) { if (k.indexOf(w) > -1) sc += w.length; else if (w.length > 4 && k.indexOf(w.slice(0, 5)) > -1) sc += 3; });
+        if (norm(p.s) === words.join('-')) sc += 100;
+        if (sc > top) { top = sc; best = p; }
+      });
+      var total = words.reduce(function (a, w) { return a + w.length; }, 0);
+      if (!best || top < 4 || (top < 100 && top / total < 0.6)) return;
+      var g = document.querySelector('[data-e404-guess]');
+      g.querySelector('[data-e404-link]').href = base + '/porady/' + best.s + '/';
+      g.querySelector('[data-e404-num]').textContent = best.n + ' · ' + best.g;
+      g.querySelector('[data-e404-title]').textContent = best.t;
+      g.hidden = false;
+    })();
+  </script>
 </BaseLayout>
+
+<style>
+  .e404 h1 { text-wrap: balance; }
+  .e404__scan { border: 1px solid var(--line); border-radius: 20px; background: var(--surface); overflow: hidden; }
+  .e404__bar { display: flex; align-items: center; gap: 6px; padding: 12px 16px; border-bottom: 1px solid var(--line); font-family: var(--font-mono); font-size: 12px; color: var(--ink-faint); }
+  .e404__bar i { width: 10px; height: 10px; border-radius: 50%; background: var(--line-strong); }
+  .e404__bar i:first-child { background: var(--accent); }
+  .e404__bar span { margin-left: 8px; }
+  .e404__code { margin: 0; padding: 20px; font-family: var(--font-mono); font-size: 14px; line-height: 1.9; word-break: break-word; color: var(--ink-soft); }
+  .e404__scan .l { display: block; opacity: 0; animation: e404in .35s ease forwards; }
+  .e404__scan .l:nth-child(2) { animation-delay: .35s; }
+  .e404__scan .l:nth-child(3) { animation-delay: .6s; }
+  .e404__scan .l:nth-child(4) { animation-delay: .85s; }
+  .e404__scan .l:nth-child(5) { animation-delay: 1.25s; }
+  .e404__scan .l:nth-child(6) { animation-delay: 1.6s; }
+  .e404__scan .p { color: var(--accent); font-weight: 400; }
+  .e404__scan .u { color: var(--ink); }
+  .e404__scan .ok { color: var(--success); }
+  .e404__scan .bad { color: var(--accent); }
+  .e404__scan .v { color: var(--ink); margin-top: 6px; }
+  .e404__guess[hidden] { display: none; }
+  .e404__guess, .e404__latest { display: flex; flex-direction: column; gap: 12px; }
+  .e404__guess > small, .e404__label { font-family: var(--font-mono); font-size: 12px; color: var(--ink-faint); text-transform: lowercase; }
+  .e404__acts { display: flex; flex-wrap: wrap; gap: 10px; }
+  @media (max-width: 480px) { .e404__code { font-size: 12.5px; padding: 16px; } }
+  @keyframes e404in { from { opacity: 0; transform: translateY(4px); } to { opacity: 1; transform: none; } }
+  @media (prefers-reduced-motion: reduce) { .e404__scan .l { animation: none; opacity: 1; } }
+  @media print { .e404__scan .l { opacity: 1; animation: none; } }
+</style>
