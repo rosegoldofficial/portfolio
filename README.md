@@ -39,3 +39,5 @@ python3 tools/social.py news --foto zdjecie.jpg --etykieta "Rada miasta" --tytul
 python3 tools/social.py nakladki --out nakladki/
 python3 tools/banner.py
 ```
+
+Grafiki do publikacji przez API (Instagram wymaga publicznego linku) trafiają do `public/social/<rrrr-mm-dd-slug>/`, patrz `public/social/README.md`. Wrapper tekstu w `tools/` nie zostawia pojedynczych liter ani liczb na końcu linii.

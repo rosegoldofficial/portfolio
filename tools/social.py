@@ -56,7 +56,12 @@ def rich_lines(d, text, f, width):
     for t in toks:
         test = ' '.join(w for w, _ in cur + [t])
         if d.textlength(test, font=f) <= width or not cur: cur.append(t)
-        else: lines.append(cur); cur = [t]
+        else:
+            # Polish typography: never end a line on a lone one-letter word (w, i, z...) or a bare number.
+            carry = []
+            while len(cur) > 1 and (len(cur[-1][0]) == 1 or cur[-1][0].isdigit()):
+                carry.insert(0, cur.pop())
+            lines.append(cur); cur = carry + [t]
     if cur: lines.append(cur)
     return lines
 

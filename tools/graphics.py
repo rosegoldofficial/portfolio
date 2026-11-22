@@ -38,7 +38,12 @@ def wrap(draw, text, f, width):
     for w in text.split():
         t = (cur + ' ' + w).strip()
         if draw.textlength(t, font=f) <= width: cur = t
-        else: lines.append(cur); cur = w
+        else:
+            words = cur.split()
+            carry = []
+            while len(words) > 1 and (len(words[-1]) == 1 or words[-1].isdigit()):
+                carry.insert(0, words.pop())
+            lines.append(' '.join(words)); cur = ' '.join(carry + [w])
     if cur: lines.append(cur)
     return lines
 
