@@ -72,3 +72,14 @@ a{color:var(--ink)}a:hover{color:var(--ink)}
 .srch .inp,.srch .inp:focus,.srch .inp:focus-visible{outline:none !important;box-shadow:none !important;border-radius:0}
 .srch .inp::placeholder{color:var(--ink-faint);opacity:1}
 .srch .inp::-webkit-search-cancel-button{-webkit-appearance:none;appearance:none;width:18px;height:18px;cursor:pointer;background:var(--ink-faint);-webkit-mask:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='2.4' stroke-linecap='round'%3E%3Cpath d='M6 6l12 12M18 6L6 18'/%3E%3C/svg%3E") center/contain no-repeat;mask:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='2.4' stroke-linecap='round'%3E%3Cpath d='M6 6l12 12M18 6L6 18'/%3E%3C/svg%3E") center/contain no-repeat}
+
+/* Porady header: random button, search with description beside it */
+.mb-rand { display: inline-flex; align-items: center; gap: 10px; min-height: 48px; padding: 0 20px; border-radius: 999px; border: 1px solid var(--line-strong); color: var(--ink); text-decoration: none; font-size: 15px; font-weight: 600; transition: border-color .25s, background-color .25s, transform .25s; }
+.mb-rand svg { color: var(--acc); transition: transform .5s cubic-bezier(.2,.8,.2,1); }
+@media (hover:hover) { .mb-rand:hover { border-color: var(--acc); background: var(--accl); transform: translateY(-2px); } .mb-rand:hover svg { transform: rotate(-20deg) scale(1.1); } }
+.pr-top { display: flex; align-items: center; justify-content: space-between; gap: 24px 40px; flex-wrap: wrap; }
+.pr-top .srch { flex: 1 1 420px; }
+/* Quiz: answer area keeps one height, so the panel does not jump */
+.qz-ans { min-height: 196px; }
+.qz-msg { min-height: 118px; box-sizing: border-box; }
+@media (max-width: 900px) { .qz-ans { min-height: 270px; } .qz-msg { min-height: 0; } }

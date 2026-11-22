@@ -1,0 +1,24 @@
+---
+import { posts } from '../../lib/posts';
+const base = import.meta.env.BASE_URL.replace(/\/$/, '');
+const slugs = posts.map((p) => p.slug);
+---
+<!doctype html>
+<html lang="pl">
+<head>
+  <meta charset="utf-8" />
+  <meta name="robots" content="noindex" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Losuję poradę… · Mikołaj Borawski</title>
+  <style>html,body{margin:0;height:100%;background:#0A0B0D;color:#9a9ea6;font:16px system-ui,sans-serif;display:grid;place-items:center}a{color:#FF5B1F}</style>
+  <script is:inline define:vars={{ slugs, base }}>
+    (function () {
+      var skip = new URLSearchParams(location.search).get('z');
+      var pool = slugs.filter(function (s) { return s !== skip; });
+      var pick = pool[Math.floor(Math.random() * pool.length)];
+      location.replace(base + '/porady/' + pick + '/');
+    })();
+  </script>
+</head>
+<body><p>Losuję poradę… <a href={`${base}/#porady`}>wszystkie porady</a></p></body>
+</html>

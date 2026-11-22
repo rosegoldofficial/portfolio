@@ -43,6 +43,7 @@ const ld = graph(
         <div class="tools noprint">
           <button type="button" class="tb" data-speak aria-pressed="false"><Fragment set:html={icon.volume(16)} /><span>Posłuchaj</span></button>
           <button type="button" class="tb" data-print><Fragment set:html={icon.printer(16)} />Wydrukuj ściągę</button>
+          <a class="tb" href={`${base}/porady/losowa/?z=${post.slug}`}><Fragment set:html={icon.dices(16)} />Wylosuj poradę</a>
         </div>
       </div>
       <div class="prose">
@@ -63,11 +64,18 @@ const ld = graph(
         <span>Przyda się komuś z rodziny? Wyślij mu ten wpis.</span>
         <button type="button" class="tb tb--solid" data-share data-url={url} data-title={post.title}><Fragment set:html={icon.share(16)} />Wyślij rodzinie</button>
       </div>
-      <a class="nextcard noprint" href={`${base}/porady/${next.slug}/`}>
+      <div class="art__pick noprint">
+        <a class="nextcard" href={`${base}/porady/${next.slug}/`}>
         <small>następna porada · {next.num}</small>
         <strong>{next.title}</strong>
         <span class="mb-time" set:html={icon.clock(13) + `${next.minutes} min`} />
-      </a>
+        </a>
+        <a class="randcard" href={`${base}/porady/losowa/?z=${post.slug}`}>
+          <span class="randcard__ic" set:html={icon.dices(28)} />
+          <small>nie wiesz, co dalej?</small>
+          <strong>Wylosuj poradę</strong>
+        </a>
+      </div>
     </article>
     <div class="toast" role="status" hidden data-toast>Link skopiowany, wklej go rodzinie</div>
   </div>

@@ -211,13 +211,16 @@
         <span style="font-family: 'JetBrains Mono', monospace; font-size: 13px; color: var(--ink-faint)"><span data-t="scr.porady_cyfrowe"></span></span>
         <h2 style="margin: 0; font-weight: 600; font-size: 56px; letter-spacing: -0.04em">Bezpiecznie w sieci</h2>
       </div>
-      <p style="margin: 0; max-width: 460px; color: var(--ink-muted); font-size: 17px; line-height: 1.5">Krótkie poradniki dla mieszkańców: jak nie dać się oszukać przez telefon, SMS i internet. Bez żargonu, do przeczytania w 3 minuty i wysłania babci.</p>
+      <a href="/porady/losowa/" class="mb-rand"><!--DICE-->Wylosuj poradę</a>
     </div>
+    <div class="pr-top">
     <label class="srch" style="display: flex; align-items: center; gap: 12px; min-height: 56px; padding: 0 20px; border-radius: 999px; border: 1px solid var(--line-strong); background: var(--surface); max-width: 560px">
       <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--ink-faint)" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="M20 20l-4-4"/></svg>
       <span style="position: absolute; left: -9999px">Szukaj w poradach</span>
       <input type="search"  placeholder="Szukaj: SMS, bank, hasło, paczka…" class="inp" style="flex: 1; min-height: 52px; border: 0; background: transparent; color: var(--ink); font: inherit; font-size: 16px" data-on="input:setQuery">
     </label>
+      <p class="pr-desc" style="margin: 0; max-width: 520px; color: var(--ink-muted); font-size: 17px; line-height: 1.5">Krótkie poradniki dla mieszkańców: jak nie dać się oszukać przez telefon, SMS i internet. Bez żargonu, do przeczytania w 3 minuty i wysłania babci. Dla chętnych są też dłuższe przewodniki.</p>
+    </div>
     <div data-if="hasQuery" hidden>
       <div style="display: flex; flex-direction: column">
         <span style="font-family: 'JetBrains Mono', monospace; font-size: 13px; color: var(--ink-faint); padding-bottom: 12px"><span data-t="resultsLabel"></span></span>
@@ -244,10 +247,11 @@
       <div style="grid-column: span 7; display: flex; flex-direction: column; gap: 18px">
         <div data-if="notDone">
           <div style="display: flex; flex-direction: column; gap: 18px">
-            <div style="align-self: flex-start; max-width: 560px; background: var(--surface-raised); border-radius: 22px 22px 22px 6px; padding: 20px 22px; display: flex; flex-direction: column; gap: 8px; box-shadow: 0 20px 50px -30px #000000">
+            <div class="qz-msg" style="align-self: flex-start; max-width: 560px; background: var(--surface-raised); border-radius: 22px 22px 22px 6px; padding: 20px 22px; display: flex; flex-direction: column; gap: 8px; box-shadow: 0 20px 50px -30px #000000">
               <span style="font-family: 'JetBrains Mono', monospace; font-size: 12px; color: var(--ink-muted)"><span data-t="cur.from"></span></span>
               <span style="font-size: 19px; line-height: 1.5"><span data-t="cur.text"></span></span>
             </div>
+            <div class="qz-ans">
             <div data-if="notAnswered">
               <div style="display: flex; gap: 12px; flex-wrap: wrap">
                 <button type="button"  class="btn" style="min-height: 56px; padding: 0 28px; border: 0; border-radius: 999px; background: var(--accent); color: var(--on-accent); font: inherit; font-size: 17px; font-weight: 600; cursor: pointer" data-on="click:pickScam">To oszustwo</button>
@@ -260,6 +264,7 @@
                 <span style="font-size: 17px; line-height: 1.55; color: var(--ink-soft)"><span data-t="cur.why"></span></span>
                 <button type="button"  class="btn" style="align-self: flex-start; min-height: 48px; padding: 0 22px; margin-top: 6px; border: 0; border-radius: 999px; background: var(--ink); color: var(--bg); font: inherit; font-size: 15px; font-weight: 600; cursor: pointer" data-on="click:next"><span data-t="nextLabel"></span></button>
               </div>
+            </div>
             </div>
           </div>
         </div>

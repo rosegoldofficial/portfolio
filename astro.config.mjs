@@ -27,6 +27,6 @@ export default defineConfig({
   site: process.env.SITE_URL || 'https://mikolajborawski.pl',
   base: process.env.SITE_BASE || '/',
   trailingSlash: 'ignore',
-  integrations: [polishOrphans, sitemap({ filter: (page) => !page.includes('/404') })],
+  integrations: [polishOrphans, sitemap({ filter: (page) => !page.includes('/404') && !page.includes('/losowa') })],
   build: { format: 'directory', inlineStylesheets: 'always' }
 });
