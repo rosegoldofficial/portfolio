@@ -80,9 +80,12 @@ a{color:var(--ink)}a:hover{color:var(--ink)}
 .pr-top { display: flex; align-items: center; justify-content: space-between; gap: 24px 40px; flex-wrap: wrap; }
 .pr-top .srch { flex: 1 1 420px; }
 /* Quiz: answer area keeps one height, so the panel does not jump */
-.qz-ans { min-height: 196px; }
-.qz-msg { min-height: 118px; box-sizing: border-box; }
-@media (max-width: 900px) { .qz-ans { min-height: 270px; } .qz-msg { min-height: 0; } }
+/* Reserved for the longest message in the pool, so the card never changes height between questions. */
+.qz-ans { min-height: 226px; }
+.qz-msg { min-height: 152px; box-sizing: border-box; }
+.qz-right { min-height: 396px; }
+@media (max-width: 1200px) { .qz-ans { min-height: 252px; } .qz-msg { min-height: 180px; } .qz-right { min-height: 450px; } }
+@media (max-width: 900px) { .qz-ans { min-height: 278px; } .qz-msg { min-height: 238px; } .qz-right { min-height: 0; } }
 .mb-pfoot { display: flex; align-items: center; justify-content: space-between; gap: 12px; flex-wrap: wrap; margin-top: 16px; }
 .mb-pfoot .mb-morebtn { margin-top: 0; }
 .mb-pfoot .mb-rand { margin-left: auto; }
