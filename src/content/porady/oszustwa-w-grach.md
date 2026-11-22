@@ -6,7 +6,7 @@ cats: [dzieci, konta]
 title: "Darmowe skiny, „admin serwera” i fałszywe Nitro. Oszustwa w grach"
 card: "Znam to od środka: prowadzę serwery gier od 2019 roku."
 lead: "Konta w grach są warte prawdziwe pieniądze: przedmioty, skiny, waluty. Dlatego młodzi gracze są jednym z ulubionych celów oszustów. Prowadzę sieć serwerów Minecraft i widzę te schematy na co dzień."
-date: 2026-11-21
+date: 2026-11-18
 faq:
   - q: "Czy administrator serwera może poprosić o hasło do konta?"
     a: "Nie. Prawdziwa administracja nigdy nie potrzebuje Twojego hasła."

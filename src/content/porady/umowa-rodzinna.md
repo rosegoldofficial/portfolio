@@ -6,7 +6,7 @@ cats: [dzieci, przewodniki]
 title: "Dziecko w internecie od 8 do 16 lat. Rozmowy, ustawienia i rodzinna umowa"
 card: "Co ustawić i o czym rozmawiać na każdym etapie."
 lead: "Pierwszy tablet w wieku 8 lat, pierwszy własny telefon w czwartej klasie, Instagram i TikTok w wieku 13 lat. Każdy etap wymaga innych ustawień i innej rozmowy. Ten przewodnik nie straszy i nie zakazuje wszystkiego. Pokazuje, co realnie działa w domu: kontrola rodzicielska tam, gdzie ma sens, i zasady, które dziecko rozumie."
-date: 2026-11-22
+date: 2026-12-21
 faq:
   - q: "Od ilu lat dziecko może mieć konto w mediach społecznościowych?"
     a: "Regulaminy większości platform (Instagram, TikTok, Facebook, Snapchat) wymagają co najmniej 13 lat. Dla młodszych dzieci zakładanie konta z fałszywą datą urodzenia wyłącza zabezpieczenia przewidziane dla nastolatków."

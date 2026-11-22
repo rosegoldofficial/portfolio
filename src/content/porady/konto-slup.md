@@ -6,7 +6,7 @@ cats: [bank]
 title: "„Przyjmij przelew i przekaż dalej, 10% dla Ciebie”. Tak zostajesz słupem"
 card: "Łatwa praca, która może skończyć się zarzutami."
 lead: "Ogłoszenie albo wiadomość: praca zdalna, kilka przelewów tygodniowo, prowizja od każdej kwoty. Potrzebne tylko konto bankowe. W praktyce przez Twoje konto przechodzą pieniądze ukradzione innym ludziom, a Ty stajesz się pierwszą osobą, do której trafią śledczy."
-date: 2026-11-22
+date: 2026-12-01
 faq:
   - q: "Co grozi za udostępnienie konta do przelewów obcych pieniędzy?"
     a: "Konto zwykle zostaje zablokowane, a właściciel może usłyszeć zarzuty, np. udziału w praniu pieniędzy. Nieświadomość nie zawsze chroni."

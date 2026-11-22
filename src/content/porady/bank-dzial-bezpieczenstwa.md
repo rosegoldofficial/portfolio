@@ -6,7 +6,7 @@ cats: [bank, seniorzy]
 title: "„Dzwonię z działu bezpieczeństwa banku”. Rozłącz się."
 card: "Trzy zdania, po których to na pewno oszust."
 lead: "Na ekranie wyświetla się nazwa Twojego banku albo nawet jego prawdziwy numer. Uprzejmy konsultant mówi, że ktoś próbuje wyprowadzić Twoje pieniądze i trzeba działać natychmiast. To jeden z najskuteczniejszych przekrętów w Polsce, bo brzmi jak troska."
-date: 2026-11-21
+date: 2026-10-30
 faq:
   - q: "Czy bank może poprosić o zainstalowanie aplikacji do zdalnego dostępu?"
     a: "Nie. Bank nigdy nie prosi o instalację AnyDeska, TeamViewera ani podobnych programów. To znak oszustwa."

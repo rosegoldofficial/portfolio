@@ -6,7 +6,7 @@ cats: [konta, bank]
 title: "Zgubiony dowód osobisty: zastrzeż i unieważnij w mObywatelu"
 card: "Dwa kroki, które chronią przed kredytem na Twoje dane."
 lead: "Dowód osobisty to klucz do kredytu, umowy z operatorem i karty SIM na Twoje nazwisko. Jeśli zginie, trzeba zrobić dwie rzeczy: zastrzec go w systemie, który sprawdzają banki, i zgłosić utratę w urzędzie. Obie da się dziś zrobić w telefonie."
-date: 2026-11-22
+date: 2026-12-11
 faq:
   - q: "Czym różni się zastrzeżenie dowodu od unieważnienia?"
     a: "Zastrzeżenie wpisuje dokument do Systemu Dokumenty Zastrzeżone, który sprawdzają banki i operatorzy. Unieważnienie to zgłoszenie utraty w Rejestrze Dowodów Osobistych. Warto zrobić oba."

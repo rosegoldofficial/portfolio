@@ -6,7 +6,7 @@ cats: [zakupy, przewodniki]
 title: "Kupujesz z ogłoszenia na OLX, Vinted, Allegro Lokalnie albo Marketplace? Kompletny poradnik"
 card: "Jak kupić używaną rzecz i nie stracić pieniędzy."
 lead: "Używane rzeczy kupujemy coraz częściej: ubrania, telefony, rowery, konsole, części do auta. Większość sprzedających jest uczciwa, ale oszuści dobrze znają te serwisy i wiedzą, jak wyprowadzić rozmowę poza ich zabezpieczenia. Ten poradnik przechodzi przez cały zakup: od ogłoszenia, przez rozmowę i płatność, po odbiór."
-date: 2026-11-22
+date: 2026-12-22
 faq:
   - q: "Jaka forma płatności przy zakupie z ogłoszenia jest najbezpieczniejsza?"
     a: "Płatność przez system serwisu (np. przesyłka z ochroną kupującego) albo gotówka przy odbiorze osobistym po obejrzeniu towaru. Najmniej bezpieczny jest przelew lub BLIK na prywatny numer z góry."

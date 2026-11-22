@@ -4,7 +4,7 @@ slug: aitm-phishing
 tag: phishing
 title: "Adversary-in-the-middle phishing: why one-time codes are not enough"
 lead: "Classic phishing steals a password. Adversary-in-the-middle (AiTM) phishing sits between the victim and the real login page, relays everything in real time and keeps the session cookie the real site issues after a successful MFA prompt. The attacker never needs the code again."
-date: 2026-11-22
+date: 2026-11-19
 ---
 
 ## How it works

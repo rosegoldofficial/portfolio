@@ -6,7 +6,7 @@ cats: [zakupy, seniorzy]
 title: "Zbiórka na chore dziecko z cudzymi zdjęciami. Jak sprawdzić, zanim wpłacisz"
 card: "Trzy minuty sprawdzania, żeby pomoc trafiła tam, gdzie trzeba."
 lead: "Wzruszający post, zdjęcie dziecka w szpitalu, prośba o szybką wpłatę BLIK-iem na prywatny numer, bo „zbiórka na portalu trwa za długo”. Oszuści kopiują zdjęcia z prawdziwych zbiórek i zbierają pieniądze na siebie, szczególnie po głośnych tragediach i przed świętami."
-date: 2026-11-22
+date: 2026-12-15
 faq:
   - q: "Jak sprawdzić, czy zbiórka jest prawdziwa?"
     a: "Wpłacaj przez znane portale zbiórkowe albo bezpośrednio na konto fundacji. Organizację sprawdzisz w KRS. Uważaj na prośby o BLIK na prywatny numer."

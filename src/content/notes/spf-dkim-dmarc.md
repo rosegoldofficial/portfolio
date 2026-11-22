@@ -4,7 +4,7 @@ slug: spf-dkim-dmarc
 tag: email
 title: "SPF, DKIM and DMARC in a real header"
 lead: "When someone forwards me a suspicious email, the first thing I open is not the body but the headers. Three results in one line tell most of the story. They also show the limit of email authentication: it proves who sent a message, not that the sender is honest."
-date: 2026-11-21
+date: 2026-11-03
 ---
 
 ## Where to look

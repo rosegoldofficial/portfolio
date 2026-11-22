@@ -6,7 +6,7 @@ cats: [bank, seniorzy]
 title: "„Zainstaluj AnyDesk, pomogę zabezpieczyć konto”. Nigdy"
 card: "Aplikacja do zdalnej pomocy oddaje oszustowi Twój telefon."
 lead: "Dzwoni „pracownik banku” albo „technik”. Mówi, że na Twoim koncie jest podejrzana operacja, i prosi o zainstalowanie aplikacji, dzięki której „pomoże ją zablokować”. Po kilku minutach widzi Twój ekran, kody i powiadomienia z banku."
-date: 2026-11-22
+date: 2026-11-27
 faq:
   - q: "Czy bank może poprosić o zainstalowanie AnyDeska albo TeamViewera?"
     a: "Nie. Żaden bank nie prosi klienta o instalowanie programów do zdalnego pulpitu. Taka prośba oznacza oszustwo."

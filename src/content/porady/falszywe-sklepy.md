@@ -6,7 +6,7 @@ cats: [zakupy, bank]
 title: "Buty za 99 zł zamiast 600? Jak rozpoznać fałszywy sklep"
 card: "Pięć minut sprawdzania przed zakupem."
 lead: "Reklama w mediach społecznościowych, markowe produkty, „wyprzedaż z powodu zamknięcia sklepu” i ceny niższe o 80 procent. Fałszywe sklepy działają kilka tygodni, zbierają płatności i znikają. Paczka nie przychodzi albo przychodzi coś zupełnie innego."
-date: 2026-11-21
+date: 2026-11-14
 faq:
   - q: "Jak sprawdzić, czy sklep internetowy jest prawdziwy?"
     a: "Sprawdź pełne dane firmy i NIP w CEIDG lub KRS, poszukaj opinii poza sklepem i uważaj na ceny dużo niższe niż wszędzie indziej."

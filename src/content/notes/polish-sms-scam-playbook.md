@@ -4,7 +4,7 @@ slug: polish-sms-scam-playbook
 tag: threat intel
 title: "The Polish SMS scam playbook"
 lead: "Scam campaigns in Poland change their branding every few weeks, but the playbook underneath stays remarkably stable. I keep a running list of the lures that show up in my city and in reports. These are the patterns worth knowing."
-date: 2026-11-21
+date: 2026-11-01
 ---
 
 ## The lures

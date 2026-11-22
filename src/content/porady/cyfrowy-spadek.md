@@ -6,7 +6,7 @@ cats: [konta, seniorzy, przewodniki]
 title: "Konta po śmierci bliskiej osoby. Cyfrowy spadek, o którym warto pomyśleć wcześniej"
 card: "Co przygotować za życia i co zrobić z kontami po stracie."
 lead: "Po śmierci bliskiej osoby rodzina zostaje nie tylko z mieszkaniem i dokumentami, ale też z telefonem, pocztą, zdjęciami w chmurze, kontami w mediach społecznościowych i bankowością. Bez przygotowania dostęp do nich bywa bardzo trudny, a niezamknięte konta mogą zostać przejęte przez oszustów. Ten poradnik ma dwie części: co możesz przygotować dziś i co zrobić, gdy bliska osoba odejdzie."
-date: 2026-11-22
+date: 2027-01-01
 faq:
   - q: "Co dzieje się z kontem na Facebooku po śmierci użytkownika?"
     a: "Konto można upamiętnić albo usunąć. Za życia warto wskazać w ustawieniach kontakt przejmujący (legacy contact), który będzie mógł zarządzać upamiętnionym profilem. Bliscy mogą też zgłosić śmierć przez formularz Facebooka."

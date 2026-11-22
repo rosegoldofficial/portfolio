@@ -6,7 +6,7 @@ cats: [sms, konta, przewodniki]
 title: "Jak czytać link i e-mail, żeby nie dać się nabrać. Anatomia phishingu"
 card: "Praktyczna lekcja czytania adresów, nadawców i załączników."
 lead: "Większość porad mówi „nie klikaj w podejrzane linki”. Tylko jak odróżnić podejrzany od prawdziwego, skoro fałszywe strony wyglądają identycznie? Ten przewodnik uczy jednej umiejętności: czytania adresu i wiadomości tak, jak robią to specjaliści od bezpieczeństwa. Wystarczy 10 minut, żeby zostało na zawsze."
-date: 2026-11-22
+date: 2026-12-20
 faq:
   - q: "Która część adresu strony jest najważniejsza?"
     a: "Domena, czyli fragment tuż przed pierwszym pojedynczym ukośnikiem, czytany od prawej strony: np. w adresie logowanie.mbank.pl.weryfikacja.com/... właściwą domeną jest weryfikacja.com, a nie mbank.pl."

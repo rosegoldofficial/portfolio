@@ -3,11 +3,15 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 import markup from '../sections/home.html?raw';
 import '../styles/home.css';
 import { withBase } from '../lib/base';
+import { SHOW_CANDIDACY } from '../lib/flags';
 import { poradyBody, modals } from '../lib/blocks';
 import { graph, person, website, dungeonhub } from '../lib/seo';
 const site = Astro.site ?? new URL('https://mikolajborawski.pl');
 const ld = graph(website(site), person(site), dungeonhub(site));
-const html = withBase(markup.replace('<!--PORADY-->', poradyBody()).replace('<!--MODALS-->', modals()));
+const gated = SHOW_CANDIDACY
+  ? markup.replace(/<!--NC-->[\s\S]*?<!--\/NC-->/g, '').replace(/<!--\/?C-->/g, '')
+  : markup.replace(/<!--C-->[\s\S]*?<!--\/C-->/g, '').replace(/<!--\/?NC-->/g, '');
+const html = withBase(gated.replace('<!--PORADY-->', poradyBody()).replace('<!--MODALS-->', modals(SHOW_CANDIDACY)));
 ---
 <BaseLayout title="Mikołaj Borawski · Częstochowa" description="Mikołaj Borawski, 21 lat, Częstochowa. Patrzę miastu na ręce: jawne finanse, Kiedrzyn, bezpieczeństwo w sieci. Napisz albo zadzwoń." lang="pl" mountName="home" preloadImage={true} alternates={{ pl: "/", en: "/en/" }} type="profile" jsonLd={ld}>
   <Fragment set:html={html} />

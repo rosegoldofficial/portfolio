@@ -4,7 +4,7 @@ slug: first-sigma-rule
 tag: detection
 title: "Writing a first Sigma rule: detecting remote access tools installed by users"
 lead: "Sigma is a vendor-neutral format for detection rules. You describe what to look for in YAML once and convert it to the query language of your SIEM. This note walks through a small, realistic rule: a user starting a remote access tool that is not on the approved list."
-date: 2026-11-22
+date: 2026-12-05
 ---
 
 ## The idea

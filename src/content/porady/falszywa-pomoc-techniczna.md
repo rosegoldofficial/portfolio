@@ -6,7 +6,7 @@ cats: [seniorzy]
 title: "Czerwony ekran „Twój komputer jest zainfekowany, zadzwoń do pomocy Microsoft”"
 card: "Microsoft nie wyświetla numerów telefonu w alarmach."
 lead: "Podczas przeglądania internetu ekran nagle robi się czerwony albo niebieski, słychać alarm, a komunikat mówi o wirusie i blokadzie komputera. Trzeba „natychmiast zadzwonić” pod podany numer. Po drugiej stronie czeka oszust, który chce dostępu do komputera i pieniędzy za „naprawę”."
-date: 2026-11-22
+date: 2026-12-05
 faq:
   - q: "Czy Microsoft lub Windows wyświetla numer telefonu w ostrzeżeniu o wirusie?"
     a: "Nie. Prawdziwe ostrzeżenia systemu nie każą dzwonić pod numer i nie grają głośnych alarmów w przeglądarce."

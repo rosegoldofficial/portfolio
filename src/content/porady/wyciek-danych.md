@@ -6,7 +6,7 @@ cats: [konta, przewodniki]
 title: "Twoje dane wyciekły. Co zrobić po kolei, zależnie od tego, co wyciekło"
 card: "E-mail, hasło, PESEL, skan dowodu: każdy wyciek wymaga innej reakcji."
 lead: "Dostajesz maila od sklepu, przychodni albo serwisu: „doszło do naruszenia ochrony danych”. Albo widzisz w wiadomościach, że wyciekła baza firmy, w której masz konto. Nie każdy wyciek jest tak samo groźny. Ten przewodnik pomaga ocenić, co dokładnie wyciekło i co z tym zrobić."
-date: 2026-11-22
+date: 2026-12-19
 faq:
   - q: "Jak sprawdzić, czy mój e-mail był w wycieku?"
     a: "Wpisz adres na haveibeenpwned.com. Strona pokaże znane wycieki, w których występował. Nie wpisuj tam haseł."

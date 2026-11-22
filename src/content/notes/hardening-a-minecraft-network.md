@@ -4,7 +4,7 @@ slug: hardening-a-minecraft-network
 tag: hardening
 title: "Hardening a Minecraft server network: the mistakes I see most"
 lead: "I run a Minecraft network with a lobby, two game modes and servers split into sectors, and I know many owners on the Polish scene. Most compromises I hear about are not clever exploits. They are a handful of configuration mistakes that repeat from network to network."
-date: 2026-11-21
+date: 2026-11-05
 ---
 
 ## 1. Backend servers reachable from the internet

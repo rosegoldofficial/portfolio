@@ -6,7 +6,7 @@ cats: [bank]
 title: "Pierwszy wynik w Google to nie zawsze Twój bank"
 card: "Reklama w wyszukiwarce może prowadzić do kopii strony banku."
 lead: "Wpisujesz w wyszukiwarkę nazwę banku i klikasz pierwszy link. Strona wygląda znajomo, logujesz się, a potem pojawia się prośba o „dodatkową weryfikację” kodem. To kopia strony banku, wykupiona jako reklama nad prawdziwym wynikiem."
-date: 2026-11-22
+date: 2026-12-13
 faq:
   - q: "Jak bezpiecznie wejść na stronę banku?"
     a: "Używaj aplikacji banku albo zakładki w przeglądarce. Adres możesz też wpisać ręcznie. Nie wchodź na bank przez wyniki wyszukiwania ani reklamy."

@@ -6,7 +6,7 @@ cats: [seniorzy, konta, przewodniki]
 title: "Deepfake: podrobiony głos, twarz i wideo. Jak nie dać się oszukać sztucznej inteligencji"
 card: "Narzędzia AI zmieniły oszustwa. Te zasady działają mimo to."
 lead: "Jeszcze niedawno podrobienie czyjegoś głosu albo twarzy wymagało studia filmowego. Dziś wystarczy kilkanaście sekund nagrania z mediów społecznościowych i darmowa aplikacja. Oszuści używają tego w reklamach fałszywych inwestycji, w telefonach „od wnuczka” i w rozmowach wideo. Ten poradnik wyjaśnia, jak to działa i dlaczego proste zasady nadal skutecznie chronią."
-date: 2026-11-22
+date: 2026-12-27
 faq:
   - q: "Czy można rozpoznać deepfake po wyglądzie?"
     a: "Czasem tak, np. po nienaturalnych ruchach ust, mruganiu czy dziwnych dłoniach, ale technologia szybko się poprawia. Bezpieczniej opierać się na weryfikacji: oddzwonić, zadać pytanie, które zna tylko ta osoba, sprawdzić źródło."

@@ -6,7 +6,7 @@ cats: [sms, konta]
 title: "„Zainstaluj aplikację, żeby śledzić paczkę”. Pliki APK spoza Sklepu Play"
 card: "Aplikacja z linku może czytać Twoje SMS-y."
 lead: "SMS od „kuriera” albo „banku” każe pobrać aplikację z linku, bo inaczej przesyłka wróci do nadawcy. Telefon ostrzega, że plik pochodzi z nieznanego źródła. Jeśli zezwolisz, aplikacja może odczytywać SMS-y z kodami i wyświetlać fałszywe okna logowania."
-date: 2026-11-22
+date: 2026-12-03
 faq:
   - q: "Czy można bezpiecznie instalować aplikacje spoza Sklepu Play?"
     a: "Zwykły użytkownik nie potrzebuje tego wcale. Pobieraj aplikacje tylko ze Sklepu Google Play albo App Store."

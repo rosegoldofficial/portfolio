@@ -6,7 +6,7 @@ cats: [bank, seniorzy, przewodniki]
 title: "Zostałeś oszukany? Plan działania na pierwsze 24 godziny"
 card: "Co zrobić po kolei, kiedy pieniądze już zniknęły."
 lead: "Przelew poszedł, kod został podany, karta wpisana na fałszywej stronie. W takiej chwili większość ludzi czuje wstyd i paraliż. Tymczasem pierwsze godziny decydują o tym, czy da się zatrzymać kolejne przelewy, zablokować konto oszusta i odzyskać choć część pieniędzy. Ten poradnik przeprowadza przez wszystko po kolei."
-date: 2026-11-22
+date: 2026-12-17
 faq:
   - q: "Co zrobić najpierw, gdy zorientuję się, że to oszustwo?"
     a: "Zadzwoń do swojego banku z numeru na karcie albo z aplikacji i poproś o zablokowanie kart, bankowości i wstrzymanie przelewów. Każda minuta ma znaczenie."

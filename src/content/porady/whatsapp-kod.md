@@ -6,7 +6,7 @@ cats: [konta, sms]
 title: "„Wysłałem Ci kod przez pomyłkę, przepisz go”. Tak przejmują WhatsAppa"
 card: "Sześć cyfr wystarczy, żeby ktoś przejął Twoje konto."
 lead: "Przychodzi SMS z kodem WhatsAppa, o który nie prosiłeś. Chwilę później pisze znajomy: „Sorry, wysłałem Ci kod przez pomyłkę, możesz mi go przesłać?”. Znajomy ma już przejęte konto, a ten kod to klucz do Twojego."
-date: 2026-11-21
+date: 2026-11-11
 faq:
   - q: "Co zrobić, gdy znajomy prosi o kod z SMS-a, który dostałem?"
     a: "Nie przekazuj go. To próba przejęcia Twojego konta, a konto znajomego zostało już najpewniej przejęte."

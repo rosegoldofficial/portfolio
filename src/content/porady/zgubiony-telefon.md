@@ -6,7 +6,7 @@ cats: [sms, bank]
 title: "Zgubiłeś telefon? Co zrobić w pierwszej godzinie"
 card: "Lista kroków, które warto znać zawczasu."
 lead: "Telefon to dziś portfel, klucze do poczty, bank i dokumenty w mObywatelu. Kiedy znika, liczy się kolejność działań. Najlepiej przeczytać tę poradę, zanim będzie potrzebna, i sprawdzić dwie rzeczy w ustawieniach już dziś."
-date: 2026-11-21
+date: 2026-11-22
 faq:
   - q: "Co zrobić najpierw po zgubieniu telefonu?"
     a: "Zlokalizuj go przez Znajdź urządzenie lub Znajdź mój iPhone, zadzwoń do banku i zablokuj kartę SIM u operatora."

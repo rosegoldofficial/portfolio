@@ -4,7 +4,7 @@ slug: sim-swap
 tag: authentication
 title: "SIM swapping: when your phone number becomes someone else's second factor"
 lead: "Many services still treat a phone number as proof of identity: password resets, login codes, bank confirmations. A SIM swap moves that number to a SIM card the attacker controls, and every SMS meant for the victim follows it."
-date: 2026-11-22
+date: 2026-11-21
 ---
 
 ## The attack

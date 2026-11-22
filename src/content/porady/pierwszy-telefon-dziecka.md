@@ -6,7 +6,7 @@ cats: [dzieci]
 title: "Pierwszy telefon dziecka: 6 ustawień przed oddaniem w ręce"
 card: "Kontrola rodzicielska ustawiona w 15 minut."
 lead: "Telefon dla dziecka to nie tylko zabawka, ale też dostęp do całego internetu, komunikatorów i sklepów z aplikacjami. Kilka ustawień zrobionych na początku oszczędzi później kłótni, niespodzianek na rachunku i kontaktu z obcymi."
-date: 2026-11-21
+date: 2026-11-17
 faq:
   - q: "Jak ustawić kontrolę rodzicielską na telefonie dziecka?"
     a: "Na Androidzie przez Google Family Link, na iPhonie przez Czas przed ekranem w Chmurze rodzinnej."

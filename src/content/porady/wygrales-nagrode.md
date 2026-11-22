@@ -6,7 +6,7 @@ cats: [zakupy]
 title: "„Gratulacje, wygrałeś iPhone'a! Zapłać tylko 9 zł za wysyłkę”"
 card: "Darmowa nagroda, która kończy się subskrypcją."
 lead: "Wyskakujące okno albo SMS: jesteś milionowym odwiedzającym, wylosowano Cię w konkursie sieci sklepów, nagroda czeka. Trzeba tylko podać dane karty, żeby opłacić symboliczną wysyłkę. Nagroda nie przychodzi, a z karty co miesiąc schodzą opłaty."
-date: 2026-11-22
+date: 2026-12-08
 faq:
   - q: "Czy prawdziwy konkurs może wymagać opłaty za odbiór nagrody?"
     a: "Prawdziwe konkursy nie każą płacić kartą przez link, żeby odebrać wygraną. Prośba o „drobną opłatę” to typowy sposób na zdobycie danych karty."

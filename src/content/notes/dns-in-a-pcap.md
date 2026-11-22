@@ -4,7 +4,7 @@ slug: dns-in-a-pcap
 tag: network
 title: "What DNS tells you in a packet capture"
 lead: "When I open an unfamiliar capture in Wireshark, I start with DNS. It is small, mostly unencrypted on home and office networks, and it shows what a machine was trying to reach before anything else happened."
-date: 2026-11-21
+date: 2026-11-07
 ---
 
 ## Start with the overview

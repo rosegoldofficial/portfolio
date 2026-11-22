@@ -4,7 +4,7 @@ slug: reading-phishing-links
 tag: phishing
 title: "Reading a phishing link in ten seconds"
 lead: "Most phishing links are not technically clever. They rely on people reading a URL from left to right, the way we read sentences. Browsers and DNS read it the other way round. Once you read it like DNS does, most lures fall apart."
-date: 2026-11-21
+date: 2026-10-30
 ---
 
 ## Find the registrable domain first

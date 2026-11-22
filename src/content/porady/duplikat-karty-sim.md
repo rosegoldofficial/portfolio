@@ -6,7 +6,7 @@ cats: [sms, bank]
 title: "Telefon nagle bez zasięgu? Może ktoś wyrobił duplikat Twojej karty SIM"
 card: "Kto ma Twój numer, dostaje Twoje kody z SMS-ów."
 lead: "Telefon pokazuje „tylko połączenia alarmowe”, choć zwykle masz zasięg. Chwilę później przychodzi e-mail o zmianie hasła. Tak może wyglądać przejęcie numeru: ktoś na Twoje dane wyrobił duplikat karty SIM i teraz on dostaje SMS-y z kodami do banku i poczty."
-date: 2026-11-22
+date: 2026-12-14
 faq:
   - q: "Jak oszust może wyrobić duplikat mojej karty SIM?"
     a: "Najczęściej podszywając się pod Ciebie u operatora, z użyciem wykradzionych danych albo podrobionego dokumentu. Dlatego warto zastrzec PESEL i ustawić dodatkowe hasło u operatora."

@@ -6,7 +6,7 @@ cats: [seniorzy, sms, przewodniki]
 title: "Bezpieczny telefon dla mamy, taty i dziadków. Ustawienia krok po kroku"
 card: "Jedno popołudnie ustawień, które blokuje większość oszustw."
 lead: "Starsi rodzice dostają ten sam telefon co my, z tymi samymi aplikacjami i tymi samymi zagrożeniami, ale bez wieloletniego nawyku rozpoznawania podejrzanych wiadomości. Dobra wiadomość jest taka, że kilka ustawień robi ogromną różnicę. Ten przewodnik to lista na jedno popołudnie przy kawie: przejdźcie ją razem, punkt po punkcie."
-date: 2026-11-22
+date: 2026-12-18
 faq:
   - q: "Jak zablokować instalowanie aplikacji spoza sklepu na telefonie rodzica?"
     a: "Na Androidzie w Ustawieniach → Aplikacje → Specjalny dostęp → Instalowanie nieznanych aplikacji wyłącz zgodę dla wszystkich aplikacji, a w Sklepie Play zostaw włączony Play Protect."

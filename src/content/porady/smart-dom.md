@@ -6,7 +6,7 @@ cats: [konta, przewodniki]
 title: "Kamery, niania elektroniczna, inteligentny głośnik. Jak zabezpieczyć smart dom"
 card: "Urządzenia, które widzą i słyszą, wymagają kilku ustawień."
 lead: "Kamera przy drzwiach, niania elektroniczna w pokoju dziecka, głośnik z asystentem w kuchni, robot sprzątający z mapą mieszkania. Te urządzenia są wygodne, ale widzą i słyszą to, co dzieje się w domu. Źle zabezpieczone mogą pokazać obraz obcym ludziom. Ten przewodnik pokazuje, jak wybierać i ustawiać takie sprzęty."
-date: 2026-11-22
+date: 2026-12-31
 faq:
   - q: "Czy ktoś może podglądać moją kamerę domową?"
     a: "Może, jeśli kamera ma domyślne lub słabe hasło, nieaktualne oprogramowanie albo konto bez weryfikacji dwuetapowej. Zmiana hasła, aktualizacje i 2FA w aplikacji producenta znacząco zmniejszają to ryzyko."

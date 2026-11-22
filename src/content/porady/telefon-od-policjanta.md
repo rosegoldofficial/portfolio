@@ -6,7 +6,7 @@ cats: [seniorzy, bank]
 title: "„Mówi komisarz z CBŚ, pomoże nam Pani złapać oszusta”"
 card: "Policja nigdy nie prosi o wypłatę ani przelew pieniędzy."
 lead: "Dzwoni ktoś, kto przedstawia się jako policjant. Mówi, że w banku działa szajka, a pieniądze trzeba szybko wypłacić i przekazać „do zabezpieczenia” albo przelać na „konto techniczne”. Prosi o dyskrecję, bo „sprawa jest tajna”."
-date: 2026-11-22
+date: 2026-11-30
 faq:
   - q: "Czy policja może poprosić o wypłatę pieniędzy lub przelew?"
     a: "Nie. Policja nigdy nie prosi o przekazanie pieniędzy, przelew na inne konto ani o pozostawienie gotówki w umówionym miejscu."

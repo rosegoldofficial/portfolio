@@ -6,7 +6,7 @@ cats: [dzieci]
 title: "Zdjęcie dziecka w sieci zostaje na lata. 5 pytań przed publikacją"
 card: "Krótka lista przed wrzuceniem zdjęcia na Facebooka."
 lead: "Pierwszy dzień w szkole, wakacje, występ w przedszkolu. Zdjęcia dzieci to najczęściej publikowane zdjęcia w mediach społecznościowych. Problem w tym, że raz wrzucone mogą być kopiowane, a z kilku postów da się ustalić, gdzie dziecko chodzi do szkoły i o której z niej wychodzi."
-date: 2026-11-22
+date: 2026-12-07
 faq:
   - q: "Czy publikowanie zdjęć dzieci jest niebezpieczne?"
     a: "Samo zdjęcie zwykle nie, ale połączenie wizerunku z imieniem, szkołą, miejscem i stałymi godzinami pozwala obcym dużo o dziecku wiedzieć. Warto ograniczać szczegóły i grono odbiorców."

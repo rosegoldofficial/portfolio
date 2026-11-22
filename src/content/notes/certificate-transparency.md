@@ -4,7 +4,7 @@ slug: certificate-transparency
 tag: threat intel
 title: "Finding phishing domains early with Certificate Transparency logs"
 lead: "Almost every phishing site today uses HTTPS. To get a certificate, the operator has to request one from a public certificate authority, and every such certificate is published in Certificate Transparency (CT) logs. Watching those logs lets defenders see lookalike domains, sometimes before the first SMS is sent."
-date: 2026-11-22
+date: 2026-12-12
 ---
 
 ## What CT gives you

@@ -6,7 +6,7 @@ cats: [konta]
 title: "Zdjęcia z 10 lat w jednym telefonie? Kopia zapasowa w 10 minut"
 card: "Telefon można odkupić, zdjęć już nie."
 lead: "Telefon wpada do wody, ginie w autobusie albo przestaje się włączać. Pieniądze na nowy da się odłożyć, ale zdjęć dzieci, wiadomości i notatek z wielu lat już się nie odzyska. Kopia zapasowa robi się sama, wystarczy ją raz włączyć."
-date: 2026-11-21
+date: 2026-11-23
 faq:
   - q: "Jak zrobić kopię zapasową zdjęć z telefonu?"
     a: "Na Androidzie w Zdjęciach Google, na iPhonie przez Zdjęcia w iCloud. Wystarczy raz włączyć kopię zapasową."

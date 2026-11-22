@@ -6,7 +6,7 @@ cats: [seniorzy, sms]
 title: "„Na wnuczka” 2.0: głos bliskiej osoby może być podrobiony"
 card: "Ustalcie rodzinne hasło na takie telefony."
 lead: "Dzwoni wnuczka. Płacze, miała wypadek, potrzebuje pieniędzy na kaucję albo lekarza. Głos jest jej, intonacja też. Tylko że to nie ona. Programy do podrabiania głosu potrzebują dziś kilkunastu sekund nagrania, a takie nagranie da się wziąć z filmiku w mediach społecznościowych."
-date: 2026-11-21
+date: 2026-10-28
 faq:
   - q: "Czy oszust może podrobić głos członka rodziny?"
     a: "Tak. Programy do klonowania głosu potrzebują kilkunastu sekund nagrania, np. z filmiku w mediach społecznościowych."

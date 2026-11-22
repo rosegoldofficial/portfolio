@@ -6,7 +6,7 @@ cats: [sms, bank]
 title: "„Masz zwrot podatku, potwierdź dane w 48 godzin”"
 card: "Urząd skarbowy nie wysyła linków do zwrotu."
 lead: "SMS albo e-mail z logo urzędu skarbowego: masz do odebrania kilka tysięcy złotych nadpłaty, wystarczy potwierdzić rachunek. Link prowadzi do kopii e-Urzędu Skarbowego, która zbiera dane logowania do banku i karty."
-date: 2026-11-22
+date: 2026-11-29
 faq:
   - q: "Czy urząd skarbowy wysyła SMS-y o zwrocie podatku?"
     a: "Nie. Krajowa Administracja Skarbowa informuje, że nie wysyła SMS-ów ani e-maili z prośbą o potwierdzenie numeru konta do zwrotu nadpłaty."

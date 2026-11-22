@@ -6,7 +6,7 @@ cats: [konta]
 title: "„Czy to Ty na tym filmie?” Link, który kradnie konto na Facebooku"
 card: "Ciekawość to najstarsza przynęta."
 lead: "Znajomy pisze na Messengerze: „Czy to Ty na tym filmie?” albo „Zobacz, co o Tobie napisali”, a pod spodem jest link. Klikasz z ciekawości i widzisz stronę logowania do Facebooka. To nie Facebook."
-date: 2026-11-21
+date: 2026-11-25
 faq:
   - q: "Co oznacza wiadomość „Czy to Ty na tym filmie?”"
     a: "To zwykle link do fałszywej strony logowania wysłany z przejętego konta znajomego."

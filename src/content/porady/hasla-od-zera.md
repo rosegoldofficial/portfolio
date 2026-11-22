@@ -6,7 +6,7 @@ cats: [konta, przewodniki]
 title: "Hasła, menedżer haseł i klucze dostępu. Przewodnik od zera"
 card: "Jak przejść z jednego hasła do wszystkiego na porządny system w jeden weekend."
 lead: "Jedno hasło do wszystkiego, czasem z cyfrą na końcu. Tak wygląda zabezpieczenie większości kont. Problem polega na tym, że wystarczy jeden wyciek z jednego sklepu, żeby oszuści sprawdzili to samo hasło w poczcie, banku i na Facebooku. Ten przewodnik pokazuje, jak w jeden weekend przejść na system, który jest bezpieczniejszy i wygodniejszy zarazem."
-date: 2026-11-22
+date: 2026-12-26
 faq:
   - q: "Czy menedżer haseł jest bezpieczny? Przecież wszystkie hasła są w jednym miejscu."
     a: "Dobry menedżer szyfruje hasła tak, że bez Twojego hasła głównego nie odczyta ich nawet jego producent. Ryzyko jednego silnego zabezpieczenia jest dużo mniejsze niż ryzyko jednego hasła używanego wszędzie."

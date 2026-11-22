@@ -6,7 +6,7 @@ cats: [konta]
 title: "Jedno hasło do wszystkiego to otwarte drzwi. Menedżer haseł bez stresu"
 card: "Pamiętasz jedno hasło, resztę robi aplikacja."
 lead: "Jeśli używasz tego samego hasła na poczcie, w sklepie i na forum, to wyciek z forum otwiera Twoją pocztę. A z poczty da się zresetować prawie wszystko inne. Menedżer haseł rozwiązuje ten problem i nie wymaga pamiętania czegokolwiek poza jednym hasłem."
-date: 2026-11-21
+date: 2026-11-04
 faq:
   - q: "Czy menedżer haseł jest bezpieczny?"
     a: "Tak, jeśli ma mocne hasło główne i weryfikację dwuetapową. Dodatkowo nie wpisze hasła na fałszywej stronie, bo adres się nie zgadza."

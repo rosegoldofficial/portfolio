@@ -6,7 +6,7 @@ cats: [dzieci, przewodniki]
 title: "Roblox, Fortnite, Minecraft i Discord. Co rodzic powinien wiedzieć o grach online"
 card: "Czaty, obcy, zakupy i ustawienia w najpopularniejszych grach dzieci."
 lead: "Dla dzieci gra online to nie tylko zabawa, ale też miejsce spotkań z kolegami, jak kiedyś podwórko. Tak jak na podwórku, można tam trafić na kogoś, kto nie ma dobrych zamiarów, i na sprzedawców „darmowych” rzeczy. Ten przewodnik wyjaśnia, jak działają najpopularniejsze gry, gdzie są zagrożenia i co ustawić, bez zabierania dziecku przyjemności z grania."
-date: 2026-11-22
+date: 2026-12-29
 faq:
   - q: "Czy Roblox jest bezpieczny dla dziecka?"
     a: "Roblox ma ustawienia rodzicielskie, które pozwalają ograniczyć czat, wydatki i dostęp do gier według wieku. Bez ustawień dziecko może rozmawiać z obcymi i trafiać na gry nieodpowiednie do wieku. Konto rodzica połączone z kontem dziecka daje najwięcej kontroli."

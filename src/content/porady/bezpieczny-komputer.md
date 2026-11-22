@@ -6,7 +6,7 @@ cats: [konta, przewodniki]
 title: "Bezpieczny komputer domowy z Windowsem. Ustawienia krok po kroku"
 card: "Bez kupowania programów: wszystko, co potrzebne, jest już w systemie."
 lead: "Domowy laptop to bankowość, zdjęcia, dokumenty i konta całej rodziny. Nie potrzebujesz drogiego antywirusa ani specjalisty, żeby był dobrze zabezpieczony. Windows ma większość narzędzi wbudowanych, trzeba je tylko włączyć i raz przejrzeć. Ten przewodnik przeprowadza przez wszystko w godzinę."
-date: 2026-11-22
+date: 2026-12-28
 faq:
   - q: "Czy potrzebuję płatnego antywirusa?"
     a: "Dla większości domowych użytkowników wbudowane Zabezpieczenia Windows (Microsoft Defender) wystarczą, jeśli są włączone i aktualizowane. Ważniejsze od antywirusa są aktualizacje, rozsądne pobieranie programów i kopie zapasowe."

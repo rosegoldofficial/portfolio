@@ -132,4 +132,4 @@ export const POZA: ModalDef[] = [
   }
 ];
 
-export const modals = () => PROGRAM.concat(POZA).map(modal).join('');
+export const modals = (withProgram = true) => (withProgram ? PROGRAM.concat(POZA) : POZA).map(modal).join("");

@@ -6,7 +6,7 @@ cats: [bank, przewodniki]
 title: "„Zmieniliśmy numer konta, prosimy o płatność na nowy rachunek”. Oszustwa na firmy i faktury"
 card: "Dla jednoosobowych firm, wspólnot, stowarzyszeń i małych biur."
 lead: "Księgowa dostaje maila od stałego dostawcy: nowa faktura, tylko numer konta się zmienił, bo „przenieśliśmy się do innego banku”. Albo prezes pisze z wakacji: „pilnie przelej zaliczkę, szczegóły później”. To oszustwa na podmianę rachunku i na prezesa. Dotyczą nie tylko dużych firm, ale też jednoosobowych działalności, wspólnot mieszkaniowych, szkół i stowarzyszeń."
-date: 2026-11-22
+date: 2026-12-30
 faq:
   - q: "Jak sprawdzić, czy numer konta kontrahenta jest prawdziwy?"
     a: "Zadzwoń do kontrahenta na numer, który znasz z wcześniejszej współpracy albo z jego oficjalnej strony, a nie z maila z nowym numerem. U czynnych podatników VAT sprawdź też rachunek na białej liście podatników VAT."

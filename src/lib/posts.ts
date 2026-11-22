@@ -15,6 +15,7 @@ export interface Post extends PostMeta {
   Content: any;
 }
 
+import { isLive } from './today';
 const mods = import.meta.glob<any>('../content/porady/*.md', { eager: true });
 
 export const CATS: { id: string; label: string }[] = [
@@ -39,6 +40,7 @@ export const posts: Post[] = Object.values(mods)
       Content: m.Content
     };
   })
+  .filter((p) => isLive(p.date))
   .sort((a, b) => a.n - b.n);
 
 export const dateLabel = (d: string | Date) =>

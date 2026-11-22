@@ -6,7 +6,7 @@ cats: [bank, konta, przewodniki]
 title: "Wyjazd za granicę: telefon, karty, Wi‑Fi i dokumenty. Lista przed podróżą"
 card: "Co przygotować przed wyjazdem i co zrobić, gdy coś zginie."
 lead: "Na wakacjach jesteśmy zmęczeni, rozkojarzeni i korzystamy z obcych sieci, bankomatów i stron rezerwacji. To idealne warunki dla oszustów i kieszonkowców. Ten poradnik dzieli się na trzy części: co zrobić przed wyjazdem, jak zachowywać się na miejscu i co zrobić, gdy zginie telefon, portfel albo dowód."
-date: 2026-11-22
+date: 2026-12-25
 faq:
   - q: "Czy w Unii Europejskiej płacę za roaming?"
     a: "W krajach UE i EOG działa zasada roamingu jak w domu: dzwonisz i korzystasz z internetu na warunkach krajowych, z limitami fair use. Poza UE, w tym w Szwajcarii, Wielkiej Brytanii czy Turcji, opłaty mogą być wysokie. Sprawdź ofertę operatora przed wyjazdem."

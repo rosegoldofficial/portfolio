@@ -6,7 +6,7 @@ cats: [dzieci, zakupy]
 title: "Rachunek na 2000 zł za gry? Ustaw limity, zanim dziecko kupi skrzynki"
 card: "Trzy ustawienia, które blokują zakupy bez Twojej zgody."
 lead: "Dziecko gra na telefonie rodzica albo na koncie z podpiętą kartą. Jedno kliknięcie kupuje walutę w grze, skrzynki z losowymi nagrodami albo przepustkę sezonową. Po miesiącu na wyciągu jest kilkadziesiąt drobnych płatności."
-date: 2026-11-22
+date: 2026-12-06
 faq:
   - q: "Jak zablokować zakupy w aplikacjach na Androidzie?"
     a: "W Sklepie Google Play: Ustawienia → Uwierzytelnianie → wymagaj uwierzytelniania przy każdym zakupie. Dla konta dziecka użyj Family Link i zatwierdzania zakupów przez rodzica."

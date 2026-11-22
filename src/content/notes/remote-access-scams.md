@@ -4,7 +4,7 @@ slug: remote-access-scams
 tag: fraud
 title: "Remote access tools in bank fraud: the 'security department' call, step by step"
 lead: "One of the most common fraud chains in Poland starts with a phone call from a spoofed bank number and ends with the victim installing a legitimate remote desktop tool. Nothing in it requires malware, which is exactly why it works."
-date: 2026-11-22
+date: 2026-11-28
 ---
 
 ## The chain

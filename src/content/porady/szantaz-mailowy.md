@@ -6,7 +6,7 @@ cats: [konta]
 title: "„Mam nagrania z Twojej kamerki”. Mail z szantażem i Twoim starym hasłem"
 card: "Nie ma nagrań. Jest stare hasło z wycieku."
 lead: "E-mail zaczyna się od Twojego prawdziwego hasła sprzed lat. Autor twierdzi, że zainfekował komputer, nagrał Cię kamerką i opublikuje nagrania, jeśli nie zapłacisz w kryptowalutach w ciągu 48 godzin. Brzmi groźnie, ale to masowa wysyłka do tysięcy osób."
-date: 2026-11-22
+date: 2026-12-04
 faq:
   - q: "Skąd szantażysta zna moje hasło?"
     a: "Z wycieku danych jakiegoś serwisu sprzed lat. Hasła z takich wycieków krążą w sieci i są używane do masowych wysyłek."

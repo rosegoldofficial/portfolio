@@ -6,7 +6,7 @@ cats: [zakupy, bank]
 title: "Apartament nad morzem za pół ceny i „zaliczka na konto”"
 card: "Fałszywe ogłoszenia wynajmu na wakacje i na studia."
 lead: "Piękne zdjęcia, świetna lokalizacja, cena niższa niż wszędzie. Właściciel szybko odpisuje, ale chce zaliczki przelewem, bo „ma dużo chętnych”. Na miejscu okazuje się, że mieszkanie nie istnieje albo mieszka w nim ktoś zupełnie inny."
-date: 2026-11-21
+date: 2026-11-26
 faq:
   - q: "Jak rozpoznać fałszywe ogłoszenie wynajmu?"
     a: "Cena wyraźnie niższa niż w okolicy, właściciel za granicą i prośba o zaliczkę przelewem poza serwisem."

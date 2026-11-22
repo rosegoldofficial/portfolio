@@ -6,7 +6,7 @@ cats: [konta]
 title: "Kto widzi Twoje posty i numer telefonu? Przegląd prywatności na Facebooku w 10 minut"
 card: "Mniej informacji publicznie to mniej materiału dla oszustów."
 lead: "Data urodzenia, numer telefonu, lista znajomych, rodzina, miejsce pracy, zdjęcia z wakacji. To wszystko, czego oszust potrzebuje, żeby podszyć się pod Ciebie albo zadzwonić do Twoich rodziców jako „wnuczek”. Facebook ma narzędzie, które w kilka minut pokazuje, co jest publiczne."
-date: 2026-11-22
+date: 2026-12-16
 faq:
   - q: "Gdzie na Facebooku sprawdzić ustawienia prywatności?"
     a: "W menu: Ustawienia i prywatność → Kontrola prywatności. Nazwy w aplikacji czasem się zmieniają, ale narzędzie prowadzi krok po kroku przez najważniejsze ustawienia."

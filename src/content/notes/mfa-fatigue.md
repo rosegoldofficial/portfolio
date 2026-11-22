@@ -4,7 +4,7 @@ slug: mfa-fatigue
 tag: authentication
 title: "MFA fatigue: when the attacker just keeps pressing “send”"
 lead: "Push notifications are the friendliest form of two-factor authentication: a prompt appears, you tap “Approve”. That convenience is exactly what MFA fatigue attacks exploit."
-date: 2026-11-21
+date: 2026-11-13
 ---
 
 ## The attack

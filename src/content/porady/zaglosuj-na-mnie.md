@@ -6,7 +6,7 @@ cats: [konta]
 title: "„Zagłosuj na moją córkę w konkursie”. Tak kradną konta na Instagramie i Facebooku"
 card: "Głosowanie, które wymaga logowania, to pułapka."
 lead: "Znajomy pisze: córka bierze udział w konkursie tanecznym, brakuje kilku głosów, kliknij proszę. Strona prosi o zalogowanie przez Facebooka albo o numer telefonu i kod z SMS-a. Po chwili tracisz konto, a oszust pisze tę samą wiadomość do Twoich znajomych."
-date: 2026-11-22
+date: 2026-12-02
 faq:
   - q: "Dlaczego znajomy wysłał mi taki link?"
     a: "Najczęściej jego konto zostało przejęte tą samą metodą. Wiadomość wysyła już oszust, nie znajomy."

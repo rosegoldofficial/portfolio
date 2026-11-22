@@ -4,7 +4,7 @@ slug: reading-ssh-auth-log
 tag: logs
 title: "Reading an SSH auth log in five minutes"
 lead: "Any server with SSH open to the internet is under constant automated login attempts. Reading the authentication log is one of the first blue-team skills worth practising: it shows the noise, and it shows when the noise becomes something else."
-date: 2026-11-21
+date: 2026-11-15
 ---
 
 ## Where the log lives

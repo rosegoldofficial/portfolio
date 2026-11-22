@@ -6,7 +6,7 @@ cats: [sms]
 title: "SMS o nieopłaconym przejeździe autostradą? To pułapka"
 card: "Zarządcy dróg nie wysyłają mandatów SMS-em."
 lead: "„Nieopłacony przejazd. Ureguluj 9,80 zł w ciągu 24 godzin, inaczej nałożymy karę.” Kwota jest mała, termin krótki, link wygląda prawie jak oficjalny. Po kliknięciu strona prosi o numer rejestracyjny, a potem o dane karty."
-date: 2026-11-22
+date: 2026-11-28
 faq:
   - q: "Czy e-TOLL albo zarządca autostrady wysyła SMS-y z linkiem do zapłaty?"
     a: "Nie. Oficjalna strona e-TOLL zaleca ignorowanie takich SMS-ów, a zarządca odcinka A4 Katowice–Kraków podkreśla, że nie wysyła SMS-ów o mandatach."

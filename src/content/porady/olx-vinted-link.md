@@ -6,7 +6,7 @@ cats: [bank, zakupy]
 title: "Sprzedajesz na OLX lub Vinted? Uważaj na „link do odbioru płatności”"
 card: "Żeby dostać pieniądze, nie podajesz danych karty."
 lead: "Wystawiasz kurtkę za 120 zł. Po pięciu minutach pisze kupujący: „Biorę, już zapłaciłem, odbierz pieniądze tu”. Link wygląda jak strona serwisu albo kuriera. To najpopularniejszy przekręt na sprzedających w Polsce."
-date: 2026-11-21
+date: 2026-11-06
 faq:
   - q: "Czy żeby odebrać pieniądze za sprzedaż, trzeba podać dane karty?"
     a: "Nie. Żeby otrzymać pieniądze, nigdy nie podajesz numeru karty, kodu CVV ani kodów z banku."

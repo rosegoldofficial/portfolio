@@ -6,7 +6,7 @@ cats: [bank]
 title: "Zgubiłeś kartę? Zapisz numer 828 828 828"
 card: "Jeden numer do zastrzegania kart z wielu banków."
 lead: "Portfel zginął w autobusie, karta została w bankomacie, telefon z aplikacją banku jest rozładowany. W takiej chwili nikt nie pamięta numeru infolinii swojego banku. Dlatego warto znać jeden: 828 828 828."
-date: 2026-11-22
+date: 2026-12-10
 faq:
   - q: "Czym jest numer 828 828 828?"
     a: "To System Zastrzegania Kart Związku Banków Polskich. Po połączeniu system przekierowuje do Twojego banku, żeby zastrzec kartę. Działa całą dobę, z Polski i z zagranicy (+48 828 828 828)."

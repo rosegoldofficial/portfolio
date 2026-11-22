@@ -16,7 +16,7 @@ export function GET(context: APIContext) {
     '## O mnie',
     `- [O mnie i dla mediów](${u('/media/')}): biogram, fakty, odpowiedzi na najczęstsze pytania, zdjęcia`,
     `- [DungeonHub, case study](${u('/projekty/dungeonhub/')}): sieć serwerów Minecraft, historia od 2018 roku, rola założyciela`,
-    `- [Strona główna](${u('/')}): program, sport, cyberbezpieczeństwo, kontakt`,
+    `- [Strona główna](${u('/')}): porady, sport, cyberbezpieczeństwo, kontakt`,
     `- [English version](${u('/en/')})`,
     '',
     '## Bezpiecznie w sieci (porady po polsku)',

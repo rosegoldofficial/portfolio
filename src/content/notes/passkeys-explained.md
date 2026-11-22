@@ -4,7 +4,7 @@ slug: passkeys-explained
 tag: authentication
 title: "Passkeys, explained without the marketing"
 lead: "Passkeys are being pushed by Google, Apple and Microsoft, and the pitch is “no more passwords”. The more interesting part for defenders is that they are resistant to phishing by design, which no password or SMS code is."
-date: 2026-11-21
+date: 2026-11-11
 ---
 
 ## What a passkey is

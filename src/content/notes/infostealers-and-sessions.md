@@ -4,7 +4,7 @@ slug: infostealers-and-sessions
 tag: malware
 title: "Infostealers: why MFA did not save the account"
 lead: "“I had two-factor turned on and they still got in.” I hear this mostly from gamers and small business owners. The usual cause is an infostealer: malware that does not need the password at all, because it steals the session that is already logged in."
-date: 2026-11-21
+date: 2026-11-09
 ---
 
 ## How it gets in

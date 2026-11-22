@@ -4,7 +4,7 @@ slug: recovery-scams
 tag: fraud
 title: "Recovery scams: how fraud victims are targeted a second time"
 lead: "After an investment or marketplace scam, victims are often contacted again by people offering to get the money back: a law firm, a regulator, an international agency. The offer requires an upfront fee. It is the same fraud ecosystem coming back for more."
-date: 2026-11-22
+date: 2026-12-19
 ---
 
 ## How victims are found

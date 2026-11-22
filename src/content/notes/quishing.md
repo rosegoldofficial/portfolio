@@ -4,7 +4,7 @@ slug: quishing
 tag: phishing
 title: "Quishing: phishing through QR codes"
 lead: "Email filters have become good at spotting malicious links. Attackers responded by putting the link inside an image of a QR code. The filter sees a picture, the user scans it with a phone, and the phone usually has none of the company's protections."
-date: 2026-11-21
+date: 2026-11-17
 ---
 
 ## Where it shows up

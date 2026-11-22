@@ -6,7 +6,7 @@ cats: [konta]
 title: "Router od operatora stoi 5 lat bez zmian? 4 ustawienia na 10 minut"
 card: "Domowe Wi‑Fi to drzwi do wszystkich Twoich urządzeń."
 lead: "Router zwykle podłącza technik i nikt już do niego nie zagląda. Tymczasem to przez niego przechodzi cały ruch domowy: bankowość, kamery, telewizor i telefony dzieci. Kilka ustawień wystarczy, żeby nie był najsłabszym punktem w domu."
-date: 2026-11-22
+date: 2026-12-09
 faq:
   - q: "Jak wejść do ustawień routera?"
     a: "Adres i dane logowania są zwykle na naklejce na spodzie routera. Najczęściej to adres w rodzaju 192.168.0.1 lub 192.168.1.1 wpisany w przeglądarce."

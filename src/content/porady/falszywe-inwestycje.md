@@ -6,7 +6,7 @@ cats: [bank, seniorzy]
 title: "„Zainwestuj 1000 zł, zarób 20 000”. Fałszywe inwestycje ze znanymi twarzami"
 card: "Reklama ze znanym nazwiskiem to dziś najczęstsza przynęta."
 lead: "Na Facebooku albo YouTubie wyskakuje reklama: znany dziennikarz, sportowiec albo polityk „zdradza”, jak zarobić na akcjach dużej spółki albo na kryptowalutach. Film wygląda prawdziwie, bo często jest przerobiony przez sztuczną inteligencję. Za nim stoi jedna z najdroższych pułapek w polskim internecie."
-date: 2026-11-21
+date: 2026-11-10
 faq:
   - q: "Czy znani ludzie polecają inwestycje w reklamach na Facebooku?"
     a: "Nie. Takie reklamy, często z filmem przerobionym przez AI, to prawie zawsze oszustwo."

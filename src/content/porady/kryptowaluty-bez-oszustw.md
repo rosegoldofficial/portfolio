@@ -6,7 +6,7 @@ cats: [bank, przewodniki]
 title: "Kryptowaluty dla początkujących: jak nie dać się oszukać"
 card: "Siedem schematów oszustw i proste zasady ochrony."
 lead: "Kryptowaluty kuszą historiami o szybkich zyskach, a oszuści korzystają z tego bez litości. Większość strat zwykłych ludzi nie bierze się z wahań kursu, tylko z oszustw: fałszywych platform, „opiekunów inwestycji”, podrobionych aplikacji i „odzyskiwaczy” pieniędzy. Ten poradnik nie mówi, czy inwestować. Mówi, jak nie stracić wszystkiego przez oszusta."
-date: 2026-11-22
+date: 2026-12-24
 faq:
   - q: "Jak sprawdzić, czy platforma kryptowalutowa jest legalna?"
     a: "Sprawdź listę ostrzeżeń publicznych KNF i rejestry nadzorcze. Uważaj na platformy, o których dowiadujesz się z reklam ze znanymi twarzami albo od „doradcy”, który sam do Ciebie dzwoni."

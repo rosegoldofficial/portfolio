@@ -6,7 +6,7 @@ cats: [bank]
 title: "„Kancelaria odzyska Twoje stracone pieniądze”. Drugie oszustwo po pierwszym"
 card: "Oszuści wracają do swoich ofiar jako „pomoc”."
 lead: "Ktoś stracił pieniądze na fałszywej inwestycji albo w oszustwie na OLX. Kilka tygodni później dzwoni „kancelaria”, „departament KNF” albo „międzynarodowa agencja”. Mówią, że namierzyli oszustów i odzyskają pieniądze. Najpierw trzeba tylko zapłacić opłatę."
-date: 2026-11-22
+date: 2026-12-12
 faq:
   - q: "Skąd „kancelaria” wie, że zostałem oszukany?"
     a: "Często z danych tej samej grupy, która oszukała Cię za pierwszym razem, albo z formularzy, które zostawiłeś na fałszywych stronach. To kolejny etap tego samego oszustwa."

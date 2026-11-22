@@ -6,7 +6,7 @@ cats: [bank, przewodniki]
 title: "Aplikacja banku ma ustawienia bezpieczeństwa. Przejdź je wszystkie w 10 minut"
 card: "Limity, powiadomienia i blokady, które ograniczają każdą stratę."
 lead: "Większość z nas instaluje aplikację banku, loguje się i nigdy nie zagląda do ustawień. Tymczasem właśnie tam są funkcje, które w razie oszustwa decydują, czy stracisz 200 zł, czy oszczędności całego życia. Nazwy różnią się między bankami, ale funkcje są bardzo podobne. Ten poradnik przeprowadza przez wszystkie."
-date: 2026-11-22
+date: 2026-12-23
 faq:
   - q: "Jaki limit przelewów ustawić?"
     a: "Taki, który wystarcza na Twoje typowe wydatki w ciągu dnia. Większe przelewy zdarzają się rzadko i na czas takiej operacji limit można podnieść, zwykle z dodatkowym potwierdzeniem."
