@@ -132,3 +132,8 @@
 @media (prefers-reduced-motion: reduce) { .rq--miss, .art__pick.is-open, .rq-flash { animation: none; } }
 .rq--ok .rq__opt:has(input:checked) { border-color: var(--success); background: color-mix(in srgb, var(--success) 10%, transparent); }
 .rq--ok .rq__opt input { accent-color: var(--success); }
+@media print {
+  .prose strong, .prose b, .prose h2, .prose h3, .prose a, .art h1, .faq summary, .prose code { color: #000 !important; }
+  .prose strong, .prose b { font-weight: 700; }
+  .prose code { background: #f0f0f0 !important; }
+}

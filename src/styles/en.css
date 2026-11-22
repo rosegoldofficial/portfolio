@@ -14,3 +14,7 @@ a{color:var(--ink)}a:hover{color:var(--ink)}
 .pill{transition:background-color .25s,color .25s}
 .pill:hover{background:var(--surface-raised);color:var(--ink) !important}
 @media (prefers-reduced-motion: reduce){*{animation:none !important;transition:none !important}}
+.lnk{background:linear-gradient(var(--accent),var(--accent)) no-repeat left bottom/0% 1px;padding-bottom:2px;transition:background-size .35s,color .25s}
+.lnk:hover{background-size:100% 1px;color:#FFFFFF !important}
+.soc{transition:transform .35s cubic-bezier(.2,.8,.2,1),background-color .3s,border-color .3s,color .3s}
+.soc:hover{transform:translateY(-3px) rotate(-8deg);background:var(--accent);border-color:var(--accent) !important;color:var(--bg) !important}
