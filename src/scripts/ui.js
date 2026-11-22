@@ -24,6 +24,29 @@ export function initUI() {
     on(window, 'scroll', update, { passive: true });
   }
 
+  // Back-to-top button: hidden near the top; shows while scrolling up or at the bottom.
+  const top = document.querySelector('.totop');
+  if (top) {
+    let lastY = window.scrollY, ticking = false;
+    const show = v => { top.classList.toggle('is-visible', v); top.toggleAttribute('inert', !v); top.setAttribute('aria-hidden', v ? 'false' : 'true'); };
+    const check = () => {
+      const y = window.scrollY, h = window.innerHeight;
+      const atBottom = y + h >= document.documentElement.scrollHeight - 160;
+      if (y < h * 0.9) show(false);
+      else if (atBottom) show(true);
+      else if (y < lastY - 4) show(true);
+      else if (y > lastY + 4) show(false);
+      lastY = y; ticking = false;
+    };
+    show(false); check();
+    on(window, 'scroll', () => { if (!ticking) { ticking = true; requestAnimationFrame(check); } }, { passive: true });
+    on(top, 'click', e => {
+      e.preventDefault(); top.blur(); show(false);
+      window.scrollTo({ top: 0, behavior: reduceMotion() ? 'auto' : 'smooth' });
+      history.replaceState(null, '', location.pathname + location.search);
+    });
+  }
+
   // Nav indicator follows the active section; it also moves at once on click.
   const nav = document.querySelector('.hdr-nav');
   const ind = nav?.querySelector('.nav-ind');
