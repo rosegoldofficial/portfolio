@@ -1,0 +1,53 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import SubHeader from '../../components/SubHeader.astro';
+import '../../styles/prose.css';
+const base = import.meta.env.BASE_URL.replace(/\/$/, '');
+---
+<BaseLayout title="Sprawdziłeś adres? Dobrze. · Mikołaj Borawski" description="Zeskanowałeś kod z plakatu. Tak się sprawdza, dokąd prowadzi kod QR." noindex>
+  <div class="page">
+    <SubHeader back={{ href: '/', label: 'Strona główna' }} />
+    <main class="art qrp">
+      <span class="art__meta"><span class="k">~/qr</span></span>
+      <h1>Zeskanowałeś kod z&nbsp;plakatu<span style="color: var(--accent)">_</span></h1>
+      <p class="art__lead">Teraz zrób to, co warto robić przy każdym kodzie: spójrz na pasek adresu u&nbsp;góry ekranu.</p>
+
+      <div class="qrp__bar" aria-label="Adres, który powinieneś widzieć">
+        <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="11" width="16" height="10" rx="2"/><path d="M8 11V7a4 4 0 0 1 8 0v4"/></svg>
+        <span data-qr-host>mikolajborawski.pl/qr</span>
+      </div>
+      <p class="qrp__ok" data-qr-ok hidden>Zgadza się z adresem na plakacie. Tak ma być.</p>
+
+      <ol class="qrp__steps">
+        <li><b>Przed otwarciem czytaj podgląd.</b> Aparat pokazuje adres, zanim cokolwiek otworzysz. To najważniejsza sekunda.</li>
+        <li><b>Adres ma się zgadzać co do litery.</b> Oszuści rejestrują domeny podobne do prawdziwych, z&nbsp;jedną zmienioną literą albo dopiskiem.</li>
+        <li><b>Nie płać i&nbsp;nie loguj się po kodzie z&nbsp;naklejki.</b> Na parkometrze, paczce czy fakturze sprawdź, czy kod nie jest naklejony na oryginał.</li>
+      </ol>
+
+      <div class="qrp__acts">
+        <a class="tb tb--solid" href={`${base}/porady/kody-qr/`}>Cała porada o&nbsp;kodach QR</a>
+        <a class="tb" href={`${base}/#porady`}>Wszystkie porady</a>
+        <a class="tb" href={`${base}/#quiz`}>Quiz: czy to oszustwo?</a>
+      </div>
+    </main>
+  </div>
+  <script is:inline>
+    (function () {
+      var h = location.host.replace(/^www\./, '');
+      var el = document.querySelector('[data-qr-host]');
+      if (el) el.textContent = h + location.pathname.replace(/\/$/, '');
+      if (h === 'mikolajborawski.pl') document.querySelector('[data-qr-ok]').hidden = false;
+    })();
+  </script>
+</BaseLayout>
+
+<style>
+  .qrp h1 { text-wrap: balance; }
+  .qrp__bar { display: flex; align-items: center; gap: 12px; padding: 18px 22px; border: 1px solid var(--line-strong); border-radius: 999px; background: var(--surface); font-family: var(--font-mono); font-size: clamp(17px, 4.4vw, 22px); color: var(--ink); }
+  .qrp__bar svg { color: var(--accent); flex: none; }
+  .qrp__ok { margin: -10px 0 0 4px; color: var(--success); font-size: 15px; }
+  .qrp__ok[hidden] { display: none; }
+  .qrp__steps { margin: 0; padding-left: 22px; display: flex; flex-direction: column; gap: 14px; font-size: 18px; line-height: 1.55; color: var(--ink-soft); }
+  .qrp__steps b { color: var(--ink); }
+  .qrp__acts { display: flex; flex-wrap: wrap; gap: 10px; }
+</style>

@@ -16,6 +16,30 @@ export function initUI() {
   const off = [];
   const on = (target, type, fn, opts) => { target.addEventListener(type, fn, opts); off.push(() => target.removeEventListener(type, fn, opts)); };
 
+  // Section reveal + "~/label" typing, once per section per page load.
+  const secs = [...document.querySelectorAll('.rv')];
+  if (secs.length) {
+    const GL = '!<>-_\\/[]{}=+*^?#01';
+    const type = el => {
+      const full = el.dataset.label || el.textContent; let i = 0; el.classList.add('typing');
+      const tick = () => {
+        i++;
+        const done = full.slice(0, i), rest = full.length - i;
+        el.textContent = done + (rest > 0 ? Array.from({ length: Math.min(rest, 3) }, () => GL[Math.floor(Math.random() * GL.length)]).join('') : '');
+        if (i < full.length) el._t = setTimeout(tick, 38); else { el.textContent = full; el._t = setTimeout(() => el.classList.remove('typing'), 900); }
+      };
+      el.textContent = ''; el._t = setTimeout(tick, 220);
+    };
+    const show = sec => { if (sec.classList.contains('in')) return; sec.classList.add('in'); if (document.documentElement.classList.contains('rv-on')) sec.querySelectorAll('.scr').forEach(type); };
+    if (!('IntersectionObserver' in window)) secs.forEach(show);
+    else {
+      const io = new IntersectionObserver(es => es.forEach(e => { if (e.isIntersecting) { show(e.target); io.unobserve(e.target); } }), { rootMargin: '0px 0px -12% 0px', threshold: 0.08 });
+      secs.forEach(sec => io.observe(sec));
+      off.push(() => io.disconnect());
+    }
+    off.push(() => document.querySelectorAll('.scr').forEach(el => { clearTimeout(el._t); el.classList.remove('typing'); if (el.dataset.label) el.textContent = el.dataset.label; }));
+  }
+
   // Sticky header: turns into a floating translucent pill once the page scrolls.
   const hdr = document.querySelector('.hdr');
   if (hdr) {

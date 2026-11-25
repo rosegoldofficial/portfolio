@@ -34,7 +34,15 @@ a{color:var(--ink)}a:hover{color:var(--ink)}
 .gl{animation:glow 1.6s .2s ease-out both,breathe 6s 1.8s ease-in-out infinite}
 @keyframes breathe{0%,100%{opacity:1;transform:scale(1)}50%{opacity:.75;transform:scale(1.06)}}
 @keyframes rv{from{opacity:0;transform:translateY(48px)}to{opacity:1;transform:none}}
-@supports (animation-timeline: view()){.rv{animation:rv linear both;animation-timeline:view();animation-range:entry 0% cover 22%}}
+/* Section reveal: html.rv-on is set in <head> (skipped for reduced motion); ui.js adds .in once a section enters the viewport. */
+html.rv-on .rv > *{transition:opacity .9s cubic-bezier(.2,.8,.2,1),transform .9s cubic-bezier(.2,.8,.2,1)}
+html.rv-on .rv:not(.in) > *{opacity:0;transform:translateY(36px)}
+html.rv-on .rv.in > :nth-child(2){transition-delay:.08s}
+html.rv-on .rv.in > :nth-child(3){transition-delay:.16s}
+html.rv-on .rv.in > :nth-child(4){transition-delay:.24s}
+html.rv-on .rv.in > :nth-child(n+5){transition-delay:.3s}
+.scr.typing::after{content:'_';color:var(--accent);animation:scrBlink .5s steps(1) infinite}
+@keyframes scrBlink{50%{opacity:0}}
 @keyframes mq{from{transform:translateX(0)}to{transform:translateX(-50%)}}
 .mq{animation:mq 36s linear infinite}
 .mqw:hover .mq{animation-play-state:paused}
@@ -89,3 +97,4 @@ a{color:var(--ink)}a:hover{color:var(--ink)}
 .mb-pfoot { display: flex; align-items: center; justify-content: space-between; gap: 12px; flex-wrap: wrap; margin-top: 16px; }
 .mb-pfoot .mb-morebtn { margin-top: 0; }
 .mb-pfoot .mb-rand { margin-left: auto; }
+@media print{html.rv-on .rv > *{opacity:1 !important;transform:none !important}}

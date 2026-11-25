@@ -78,6 +78,7 @@ const GOATCOUNTER = 'rosegold';
     )}
     <ClientRouter />
     {GOATCOUNTER && <script is:inline data-goatcounter={`https://${GOATCOUNTER}.goatcounter.com/count`} async src="//gc.zgo.at/count.js"></script>}
+      <script is:inline>try{if(!matchMedia('(prefers-reduced-motion: reduce)').matches)document.documentElement.classList.add('rv-on')}catch(e){}</script>
   </head>
   <body>
     {mountName === 'home' && (
